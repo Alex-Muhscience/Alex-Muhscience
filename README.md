@@ -1,6 +1,6 @@
 # 👋 Hi there, I'm Alex Murimi Kamau!
 
-I'm a **passionate Computer Science student** and aspiring software developer based in Nairobi, Kenya. With a strong foundation in **algorithms, data structures, and theoretical computer science**, I am on a journey to solve real-world problems using technology.
+I'm a **passionate Computer Science student** and aspiring software developer based in Kisii, Kenya. With a strong foundation in **algorithms, data structures, and theoretical computer science**, I am on a journey to solve real-world problems using technology.
 
 ---
 
