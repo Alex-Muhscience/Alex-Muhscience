@@ -18,9 +18,7 @@ I'm a **passionate Computer Science student** and aspiring software developer ba
 ---
 
 ## 🏆 Notable Achievements
-- **Password Manager Application**: Designed and developed a secure password management app during my attachment at Secunets Technologies Ltd.  
-- **Hackathon Contributor**: Played a key technical support role in the National Research Fund Kenya Hackathon 2024.  
-- **Sintel GSMA_SAS-UP Audit**: Contributed to high-stakes cybersecurity audits.  
+- **Password Manager Application**: Designed and developed a secure password management app during my attachment at Secunets Technologies Ltd.
 
 ---
 
