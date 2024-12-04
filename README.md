@@ -30,7 +30,7 @@ I'm a **passionate Computer Science student** and aspiring software developer ba
 ---
 
 ## 🌍 Let's Connect
-- 🌐 [LinkedIn](https://linkedin.com/in/alex-kamau-20015b34)  
+- 🌐 [LinkedIn](https://linkedin.com/in/alex-kamau-20015b340)  
 - 📧 Email: [alexkamau712@gmail.com](mailto:alexkamau712@gmail.com)  
 - 📱 Phone: +254746254055  
 
