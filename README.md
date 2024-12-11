@@ -54,7 +54,7 @@ Explored Web3 innovations at a Blockchain Bootcamp using Internet Computer Proto
 
 ## 🌐 **Connect With Me**
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alexmurimi/)  
-📧 **Email**: alexkamau712@gmail.com  
+![image](https://github.com/user-attachments/assets/492a2f9a-934a-40b6-a65d-8af9598a9775)**Email**: alexkamau712@gmail.com  
 📱 **Phone**: +254 746 254 055  
 
 ---
