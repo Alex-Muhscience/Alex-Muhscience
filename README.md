@@ -28,7 +28,7 @@ A secure, user-friendly app for managing passwords with encryption, developed du
 ### 🚀 **Secure File Sharing Platform** *(Ongoing)*  
 This web application ensures your files are securely encrypted and decrypted during transfers. Built with **Node.js**, the platform supports **Docker containerization** and integrates seamlessly with **MongoDB** for efficient deployment and scalability.
 
-### 🔧 **CyberCafe Secure** *(Upcoming)*  
+### 🔧 **CyberCafe Secure** *(Ongoing)*  
 A comprehensive yet low-cost solution designed for cybercafes and small businesses to protect customer data and secure their systems.  
 Key Features:  
 - AI-powered threat detection  
