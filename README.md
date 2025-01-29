@@ -26,7 +26,7 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
 A secure, user-friendly app for managing passwords with encryption, developed during my attachment at Secunets Technologies Ltd.
 
 ### 🚀 **Secure File Sharing Platform** *(Ongoing)*  
-This web application ensures your files are securely encrypted and decrypted during transfers. Built with **Node.js**, the platform supports **Docker containerization** and integrates seamlessly with **MongoDB** for efficient deployment and scalability.
+This system enables secure file transfers using hybrid blockchain architecture. It encrypts files using AES-256, stores metadata (hash, permissions) on Ethereum smart contracts, and saves encrypted files in IPFS/AWS S3.
 
 ### 🔧 **CyberCafe Secure** *(Ongoing)*  
 A comprehensive yet low-cost solution designed for cybercafes and small businesses to protect customer data and secure their systems.  
