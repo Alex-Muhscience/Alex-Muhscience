@@ -1,5 +1,5 @@
 # 👋 Hi, I'm Alex Murimi Kamau!  
-💻 *Aspiring Software Developer | Cybersecurity Enthusiast | Innovating with Technology*
+💻 *Systems Developer | Software Developer | Cybersecurity Enthusiast | Innovating with Technology | CEO|Founder CyberMuhscience Tech iLabs LTD*
 
 ---
 
@@ -22,11 +22,10 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
 ---
 
 ## 🛠️ **Projects**
-### 🔒 **Password Manager Application**  
-A secure, user-friendly app for managing passwords with encryption, developed during my attachment at Secunets Technologies Ltd.
 
 ### 🚀 **Secure File Sharing Platform** *(Ongoing)*  
 This system enables secure file transfers using hybrid blockchain architecture. It encrypts files using AES-256, stores metadata (hash, permissions) on Ethereum smart contracts, and saves encrypted files in IPFS/AWS S3.
+![Secure File Sharing Platform](https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=800)
 
 ### 🔧 **CyberCafe Secure** *(Ongoing)*  
 A comprehensive yet low-cost solution designed for cybercafes and small businesses to protect customer data and secure their systems.  
@@ -35,7 +34,43 @@ Key Features:
 - Real-time monitoring  
 - User-friendly tools for owners and administrators  
 This solution will come as a **Desktop Application** and **Mobile App** for enhanced accessibility and control.
+![CyberCafe Secure](https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800)
 
+### 🛡️ **AI-Powered Threat Detection**
+- **Category**: Cybersecurity  
+- **Description**: Advanced threat detection system using machine learning algorithms.  
+- **Technologies**: Python, TensorFlow, AWS  
+- ![AI-Powered Threat Detection](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800)
+
+### 🏙️ **Smart City Infrastructure**
+- **Category**: IoT  
+- **Description**: IoT-based smart city monitoring and management system.  
+- **Technologies**: React, Node.js, MongoDB  
+- ![Smart City Infrastructure](https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=800)
+
+### 🔒 **Quantum-Safe Encryption**
+- **Category**: Cybersecurity  
+- **Description**: Post-quantum cryptography implementation for secure communications.  
+- **Technologies**: C++, Rust, OpenSSL  
+- ![Quantum-Safe Encryption](https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800)
+
+### 📈 **Autonomous Trading Platform**
+- **Category**: AI/ML  
+- **Description**: ML-powered trading platform with real-time market analysis.  
+- **Technologies**: Python, PyTorch, FastAPI  
+- ![Autonomous Trading Platform](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800)
+
+### 🏥 **Healthcare Data Platform**
+- **Category**: Software  
+- **Description**: Secure healthcare data management and analysis platform.  
+- **Technologies**: React, Node.js, PostgreSQL  
+- ![Healthcare Data Platform](https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800)
+
+### 📝 **Smart Contract Security**
+- **Category**: Blockchain  
+- **Description**: Automated security auditing for smart contracts.  
+- **Technologies**: Solidity, Python, Web3.js  
+- ![Smart Contract Security](https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800)
 ---
 
 ## 🔧 **Tech Stack & Expertise**
@@ -46,17 +81,23 @@ This solution will come as a **Desktop Application** and **Mobile App** for enha
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
 ![SQL](https://img.shields.io/badge/-SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)  
 ![C](https://img.shields.io/badge/-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)  
+![C++](https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)  
+![Rust](https://img.shields.io/badge/-Rust-000000?style=for-the-badge&logo=rust&logoColor=white)  
 
 ### **Frameworks & Tools**  
 ![Flutter](https://img.shields.io/badge/-Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)  
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)  
 ![Flask](https://img.shields.io/badge/-Flask-000000?style=for-the-badge&logo=flask&logoColor=white)  
 ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)  
+![Fast API](https://img.shields.io/badge/-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)  
+![Web3.js](https://img.shields.io/badge/-Web3.js-F16833?style=for-the-badge&logo=web3.js&logoColor=white)  
 
 ### **Database Management**  
 ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)  
 ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)  
 ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)  
+![SQLite](https://img.shields.io/badge/-SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)   
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)  
 
 ### **Networking & Security**  
 🔒 Network setup and troubleshooting  
