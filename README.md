@@ -38,46 +38,60 @@ This solution will come as a **Desktop Application** and **Mobile App** for enha
 
 ![CyberCafe Secure](https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800)
 
-### 🛡️ **AI-Powered Threat Detection** *(Incoming)*
+### 🔐 **KeyGen – Password Generator & Vault** *(Released)*  
+- **Category**: Cybersecurity / Utility  
+- **Description**: A secure cross-platform password generator and manager built using Flutter and SQLite.  
+- **Features**:  
+  - Strong password generation  
+  - Local secure storage using hashing and encryption  
+  - Biometric authentication for access  
+  - Export/import encrypted backups  
+- **Technologies**: Flutter, Dart, SQLite, AES Encryption  
+
+![KeyGen Project](https://sdmntprwestus.oaiusercontent.com/files/00000000-ee60-6230-9a1d-d04f5013b848/raw?se=2025-04-20T14%3A37%3A23Z&sp=r&sv=2024-08-04&sr=b&scid=237f275f-3513-5832-b523-48fa9f41ca26&skoid=acefdf70-07fd-4bd5-a167-a4a9b137d163&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-19T20%3A31%3A09Z&ske=2025-04-20T20%3A31%3A09Z&sks=b&skv=2024-08-04&sig=MvBWPnGAL6WiNHK1Id0m2TDYIXoJFGGfoW9rSgv1Dvs%3D))
+
+### 🛡️ **AI-Powered Threat Detection** *(Incoming)*  
 - **Category**: Cybersecurity  
 - **Description**: Advanced threat detection system using machine learning algorithms.  
 - **Technologies**: Python, TensorFlow, AWS  
-- ![AI-Powered Threat Detection](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800)
 
-### 🏙️ **Smart City Infrastructure** *(Ongoing)*
+![AI-Powered Threat Detection](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800)
+
+### 🏙️ **Smart City Infrastructure** *(Ongoing)*  
 - **Category**: IoT  
 - **Description**: IoT-based smart city monitoring and management system.  
-- **Technologies**: React, Node.js, MongoDB
-   
-- ![Smart City Infrastructure](https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=800)
+- **Technologies**: React, Node.js, MongoDB  
 
-### 🔒 **Quantum-Safe Encryption** *(Incoming)*
+![Smart City Infrastructure](https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=800)
+
+### 🔒 **Quantum-Safe Encryption** *(Incoming)*  
 - **Category**: Cybersecurity  
 - **Description**: Post-quantum cryptography implementation for secure communications.  
-- **Technologies**: C++, Rust, OpenSSL
-   
-- ![Quantum-Safe Encryption](https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800)
+- **Technologies**: C++, Rust, OpenSSL  
 
-### 📈 **Autonomous Trading Platform** *(Incoming)*
+![Quantum-Safe Encryption](https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800)
+
+### 📈 **Autonomous Trading Platform** *(Incoming)*  
 - **Category**: AI/ML  
 - **Description**: ML-powered trading platform with real-time market analysis.  
-- **Technologies**: Python, PyTorch, FastAPI
-  
-- ![Autonomous Trading Platform](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800)
+- **Technologies**: Python, PyTorch, FastAPI  
 
-### 🏥 **Healthcare Data Platform** *(Incoming)*
+![Autonomous Trading Platform](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800)
+
+### 🏥 **Healthcare Data Platform** *(Incoming)*  
 - **Category**: Software  
 - **Description**: Secure healthcare data management and analysis platform.  
-- **Technologies**: React, Node.js, PostgreSQL
--  
-- ![Healthcare Data Platform](https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800)
+- **Technologies**: React, Node.js, PostgreSQL  
 
-### 📝 **Smart Contract Security** *(Incoming)*
+![Healthcare Data Platform](https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800)
+
+### 📝 **Smart Contract Security** *(Incoming)*  
 - **Category**: Blockchain  
 - **Description**: Automated security auditing for smart contracts.  
-- **Technologies**: Solidity, Python, Web3.js
-   
-- ![Smart Contract Security](https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800)
+- **Technologies**: Solidity, Python, Web3.js  
+
+![Smart Contract Security](https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800)
+
 ---
 
 ## 🔧 **Tech Stack & Expertise**
@@ -103,7 +117,7 @@ This solution will come as a **Desktop Application** and **Mobile App** for enha
 ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)  
 ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)  
 ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)  
-![SQLite](https://img.shields.io/badge/-SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)   
+![SQLite](https://img.shields.io/badge/-SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)  
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)  
 
 ### **Networking & Security**  
