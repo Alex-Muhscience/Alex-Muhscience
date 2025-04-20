@@ -25,6 +25,7 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
 
 ### 🚀 **Secure File Sharing Platform** *(Ongoing)*  
 This system enables secure file transfers using hybrid blockchain architecture. It encrypts files using AES-256, stores metadata (hash, permissions) on Ethereum smart contracts, and saves encrypted files in IPFS/AWS S3.
+
 ![Secure File Sharing Platform](https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=800)
 
 ### 🔧 **CyberCafe Secure** *(Ongoing)*  
@@ -34,42 +35,48 @@ Key Features:
 - Real-time monitoring  
 - User-friendly tools for owners and administrators  
 This solution will come as a **Desktop Application** and **Mobile App** for enhanced accessibility and control.
+
 ![CyberCafe Secure](https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800)
 
-### 🛡️ **AI-Powered Threat Detection**
+### 🛡️ **AI-Powered Threat Detection** *(Incoming)*
 - **Category**: Cybersecurity  
 - **Description**: Advanced threat detection system using machine learning algorithms.  
 - **Technologies**: Python, TensorFlow, AWS  
 - ![AI-Powered Threat Detection](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800)
 
-### 🏙️ **Smart City Infrastructure**
+### 🏙️ **Smart City Infrastructure** *(Ongoing)*
 - **Category**: IoT  
 - **Description**: IoT-based smart city monitoring and management system.  
-- **Technologies**: React, Node.js, MongoDB  
+- **Technologies**: React, Node.js, MongoDB
+   
 - ![Smart City Infrastructure](https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=800)
 
-### 🔒 **Quantum-Safe Encryption**
+### 🔒 **Quantum-Safe Encryption** *(Incoming)*
 - **Category**: Cybersecurity  
 - **Description**: Post-quantum cryptography implementation for secure communications.  
-- **Technologies**: C++, Rust, OpenSSL  
+- **Technologies**: C++, Rust, OpenSSL
+   
 - ![Quantum-Safe Encryption](https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800)
 
-### 📈 **Autonomous Trading Platform**
+### 📈 **Autonomous Trading Platform** *(Incoming)*
 - **Category**: AI/ML  
 - **Description**: ML-powered trading platform with real-time market analysis.  
-- **Technologies**: Python, PyTorch, FastAPI  
+- **Technologies**: Python, PyTorch, FastAPI
+  
 - ![Autonomous Trading Platform](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800)
 
-### 🏥 **Healthcare Data Platform**
+### 🏥 **Healthcare Data Platform** *(Incoming)*
 - **Category**: Software  
 - **Description**: Secure healthcare data management and analysis platform.  
-- **Technologies**: React, Node.js, PostgreSQL  
+- **Technologies**: React, Node.js, PostgreSQL
+-  
 - ![Healthcare Data Platform](https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800)
 
-### 📝 **Smart Contract Security**
+### 📝 **Smart Contract Security** *(Incoming)*
 - **Category**: Blockchain  
 - **Description**: Automated security auditing for smart contracts.  
-- **Technologies**: Solidity, Python, Web3.js  
+- **Technologies**: Solidity, Python, Web3.js
+   
 - ![Smart Contract Security](https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800)
 ---
 
@@ -114,7 +121,7 @@ This solution will come as a **Desktop Application** and **Mobile App** for enha
 
 ## 🌐 **Connect With Me**
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alexmurimi/)  
-[![Email](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alexkamau712@gmail.com)  
+[![Email](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alex.kamau.2558@gmail.com)  
 [![Phone](https://img.shields.io/badge/-Call-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+254746254055)  
 
 ---
