@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Alex Murimi Kamau  
 
-💻 *Systems Developer | Software Developer | Cybersecurity Enthusiast | Innovating with Technology | CEO|Founder CyberMuhscience Tech iLabs LTD*
+💻 *Systems Developer | Software Developer | Cybersecurity Enthusiast | Innovating with Technology | CEO & Founder CyberMuhscience Tech iLabs LTD*
 
 ---
 
@@ -18,8 +18,7 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
 
 ## 🏆 **Achievements**
 
-- **Mozilla Responsible Computing Challenge**: Ranked Top 5 for *Unified Threat Detection and Response System*, advancing ethical AI in cybersecurity (2023).
-- **National Research Fund Kenya Hackathon**: Won *Best Cybersecurity Innovation* for *KeyGen Password Generator & Vault* (2024).
+- **Mozilla Responsible Computing Challenge**: Ranked Top 5 for *Unified Threat Detection and Response System*, advancing ethical AI in cybersecurity (2025).
 - **Blockchain Bootcamp**: Explored Web3 innovations with Internet Computer Protocol (ICP) (2023).
 - **Attachment at Secunets Technologies Ltd.**: Designed and developed a secure password management application (2024).
 
@@ -36,7 +35,7 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
   - Modular, cloud-deployed architecture reducing costs by 50%.  
   - React-based dashboard for real-time analytics.  
 - **Technologies**: Python, Flask, React, MongoDB, TensorFlow, AWS  
-- **Impact**: Recognized in Mozilla’s Responsible Computing Challenge (Top 5, 2023) for ethical AI.  
+- **Impact**: Recognized in Mozilla’s Responsible Computing Challenge Kisii University (Top 5, 2025) for ethical AI.  
 
 ![UTDRS](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800)
 
@@ -90,7 +89,7 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
 
 ![Secure File Sharing Platform](https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=800)
 
-### 🛡️ **AI-Powered Threat Detection** *(Incoming)*  
+### 🛡️ **AI-Powered Threat Detection** *(Upcoming)*  
 
 - **Category**: Cybersecurity  
 - **Description**: Advanced threat detection system using machine learning algorithms.  
@@ -106,7 +105,7 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
 
 ![Smart City Infrastructure](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800)
 
-### 🔒 **Quantum-Safe Encryption** *(Incoming)*  
+### 🔒 **Quantum-Safe Encryption** *(Upcoming)*  
 
 - **Category**: Cybersecurity  
 - **Description**: Post-quantum cryptography implementation for secure communications.  
@@ -114,7 +113,7 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
 
 ![Quantum-Safe Encryption](https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800)
 
-### 📈 **Autonomous Trading Platform** *(Incoming)*  
+### 📈 **Autonomous Trading Platform** *(Upcoming)*  
 
 - **Category**: AI/ML  
 - **Description**: ML-powered trading platform with real-time market analysis.  
@@ -122,7 +121,7 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
 
 ![Autonomous Trading Platform](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800)
 
-### 📝 **Smart Contract Security** *(Incoming)*  
+### 📝 **Smart Contract Security** *(Upcoming)*  
 
 - **Category**: Blockchain  
 - **Description**: Automated security auditing for smart contracts.  
