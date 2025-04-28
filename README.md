@@ -61,7 +61,7 @@ I'm a passionate Computer Science student at Kisii University, Kenya, with a str
   - Biometric authentication for access.  
   - Export/import encrypted backups.  
 - **Technologies**: Flutter, Dart, SQLite, AES Encryption  
-- **Impact**: Awarded *Best Cybersecurity Innovation* at National Research Fund Kenya Hackathon (2024).  
+    
 
 ![KeyGen Project](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800)
 
