@@ -1,30 +1,60 @@
-# Hi there, I'm Alex Murimi Kamau 👨‍💻
+<div align="center">
 
-<img src="https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif" width="100" align="right" alt="Tech Orbit">
+# 👋 Hey there, I'm Alex Murimi Kamau!
 
-💻 **Full-Stack Developer | Software Engineer | Cybersecurity Innovator**  
-🌍 Based in Nairobi, Kenya  
-📧 Reach out: [alexkamau712@gmail.com](mailto:alexkamau712@gmail.com)  
-🔗 [GitHub](https://github.com/Alex-Muhscience) | [LinkedIn](https://linkedin.com/in/alex-kamau-20015b340)
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=4000&pause=1000&color=6366F1&center=true&vCenter=true&width=700&lines=Full-Stack+Developer;Cybersecurity+Innovator;Computer+Science+Student;Problem+Solver+%26+Tech+Enthusiast;Building+Solutions+for+Africa" alt="Typing SVG" />
+</p>
+
+<img src="https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif" width="120" align="right" alt="Tech Orbit">
+
+### 💻 Full-Stack Developer | 🛡️ Cybersecurity Innovator | 🎓 CS Student
+
+**🌍 Based in Nairobi, Kenya** • **🎓 Graduating December 2025**
+
+[![Email](https://img.shields.io/badge/Email-alexkamau712@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alexkamau712@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/alex-kamau-20015b340)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alex-Muhscience)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-purple?style=for-the-badge&logo=safari&logoColor=white)](https://cybermuhscience-portfolio.vercel.app)
+
+![Profile Views](https://komarev.com/ghpvc/?username=Alex-Muhscience&color=blueviolet&style=for-the-badge)
+![GitHub followers](https://img.shields.io/github/followers/Alex-Muhscience?style=for-the-badge&color=blue)
+
+</div>
 
 ---
 
-## About Me 🌟
+## 🚀 About Me
 
-I’m a Computer Science student at Kisii University (graduating December 2025), driven to create secure, scalable, and innovative solutions for the African tech ecosystem. As a full-stack developer and cybersecurity enthusiast, I’ve built impactful projects like the Unified Threat Detection and Response System (UTDRS), earning a Top 5 spot in Mozilla’s Responsible Computing Challenge (2025). My expertise spans Python, React, Flask, and beyond, and I’m passionate about solving real-world challenges through technology.
+> *"Driven to create secure, scalable, and innovative solutions for the African tech ecosystem"*
 
-- 📚 **Currently Learning**: , AWS, Advanced React  
-- 🚀 **Open to**: Exciting projects and collaborations  
-- ✔ **Ask Me About**: Full-stack dev, cybersecurity, or tech innovation!  
-- 🎮 **Outside Tech**: I love movies, 🎵 music, and 🎸 chatting with friends.
+I'm a **Computer Science student at Kisii University** with a passion for building impactful technology solutions. As a **full-stack developer and cybersecurity enthusiast**, I've earned recognition including a **Top 5 spot in Mozilla's Responsible Computing Challenge (2025)** for my **Unified Threat Detection and Response System (UTDRS)**.
+
+<div align="left">
+
+### 🎯 What I'm Up To
+
+- 🔭 **Currently Working On**: UTDRS pilot phase preparation & advanced cybersecurity solutions
+- 🌱 **Currently Learning**: AWS Cloud Architecture, Advanced React Patterns, Machine Learning for Security
+- 🤝 **Open To**: Exciting collaborations, internships, and innovative projects
+- 💬 **Ask Me About**: Full-stack development, cybersecurity, system architecture, or tech innovation
+- ⚡ **Fun Fact**: I love movies 🎬, music 🎵, and connecting with fellow tech enthusiasts 🎸
+
+</div>
 
 ---
 
-## TROPHY 🏆 My Achievements
+## 🏆 Achievements & Recognition
 
-- 🌟 **Mozilla Responsible Computing Challenge (2023-2025)**: Top 5 for UTDRS  
-- 🎉 **NRF Kenya Hackathon (2024)**: Technical Support Excellence  
-- 🏆 **Blockchain Bootcamp (2023)**: Explored Web3 with ICP  
+<div align="center">
+
+| 🏅 **Award** | 🎯 **Category** | 📅 **Year** | 🚀 **Impact** |
+|:-------------|:---------------|:------------|:-------------|
+| **Top 5 Finalist** | Mozilla Responsible Computing Challenge | 2023-2025 | UTDRS - 97% Phishing Detection |
+| **Technical Excellence** | NRF Kenya Hackathon | 2024 | Outstanding Technical Support |
+| **Web3 Explorer** | ICP Blockchain Bootcamp | 2023 | Decentralized Solutions |
+
+</div>
 
 ---
 
@@ -66,30 +96,81 @@ A low-cost security solution for cybercafes using Python, TensorFlow, and MongoD
 
 ---
 
-## GitHub Stats 📊
+## 📈 GitHub Analytics & Activity
 
-| **Contribution Stats** | **Streak Stats** |
-|-------------------------|-------------------|
-| ![Alex's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Alex-Muhscience&show_icons=true&theme=dracula) | [![GitHub Streak](https://streak-stats.demolab.com/?user=Alex-Muhscience&theme=dracula)](https://git.io/streak-stats) |
+<div align="center">
 
----
+### 🔥 Contribution Overview
 
-## Visitors Counter 👀
+| **📈 Stats** | **🔥 Streak** | **🏆 Trophies** |
+|:---------------:|:------------------:|:---------------------:|
+| ![Alex's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Alex-Muhscience&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=6366F1&icon_color=6366F1&text_color=C9D1D9) | ![GitHub Streak](https://streak-stats.demolab.com/?user=Alex-Muhscience&theme=radical&hide_border=true&background=0D1117&stroke=6366F1&ring=6366F1&fire=FF6B6B&currStreakLabel=C9D1D9) | ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=Alex-Muhscience&theme=radical&no-frame=true&no-bg=false&margin-w=4&row=2&column=3) |
 
-![Visitor Count](https://profile-counter.glitch.me/Alex-Muhscience/count.svg)
+### 🔥 Activity Graph
+![Alex's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Alex-Muhscience&theme=react-dark&hide_border=true&bg_color=0D1117&color=6366F1&line=6366F1&point=FF6B6B)
 
----
+### 🎨 Most Used Languages
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Alex-Muhscience&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=6366F1&text_color=C9D1D9)
 
-## Pinned Loading 🌐
-
-- [UTDRS](https://github.com/Alex-Muhscience/utdrs) - Cybersecurity for SMEs  
-- [TruckRoutePlanner](https://github.com/Alex-Muhscience/truckrouteplanner) - Logistics optimization  
-- [Healthcare Data Platform](https://github.com/Alex-Muhscience/healthcare-platform) - Healthcare tech  
-- [KeyGen](https://github.com/Alex-Muhscience/keygen) - Secure password management  
-- [CyberCafe Secure](https://github.com/Alex-Muhscience/cybercafe-secure) - SME security solution  
+</div>
 
 ---
 
-## Footer 🎉
+## 👀 Profile Views & Engagement
 
-© 2025 Alex Murimi Kamau | Built with ❤️, ☕, and a touch of 🌍 innovation
+<div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=Alex-Muhscience&color=6366f1&style=for-the-badge&label=Profile+Views)
+![Stars](https://img.shields.io/github/stars/Alex-Muhscience?style=for-the-badge&color=yellow&logo=github)
+![Forks](https://img.shields.io/github/forks/Alex-Muhscience?style=for-the-badge&color=green&logo=github)
+
+</div>
+
+---
+
+## 📌 Featured Repositories
+
+<div align="center">
+
+| 🚀 **Project** | 📝 **Description** | 🛠️ **Tech Stack** | 🔗 **Links** |
+|:-------------|:------------------|:-----------------|:-------------|
+| **UTDRS** | Cybersecurity platform for SMEs | React, Flask, Python, MongoDB | [🔗 GitHub](https://github.com/Alex-Muhscience/utdrs) |
+| **TruckRoutePlanner** | Logistics route optimization | Django, React, PostgreSQL | [🔗 GitHub](https://github.com/Alex-Muhscience/truckrouteplanner) |
+| **Healthcare Platform** | Secure healthcare data management | React, Node.js, PostgreSQL | [🔗 GitHub](https://github.com/Alex-Muhscience/healthcare-platform) |
+| **KeyGen** | Password generator & vault | Flutter, SQLite | [🔗 GitHub](https://github.com/Alex-Muhscience/keygen) |
+| **CyberCafe Secure** | Low-cost cybercafe security | Python, TensorFlow, MongoDB | [🔗 GitHub](https://github.com/Alex-Muhscience/cybercafe-secure) |
+
+</div>
+
+---
+
+## 🤝 Let's Connect & Collaborate!
+
+<div align="center">
+
+### 💬 Get in Touch
+
+**I'm always excited to discuss new opportunities, collaborate on innovative projects, or just chat about technology!**
+
+📧 **Email**: [alexkamau712@gmail.com](mailto:alexkamau712@gmail.com)  
+👼 **LinkedIn**: [Connect with me](https://linkedin.com/in/alex-kamau-20015b340)  
+🌐 **Portfolio**: [View my work](https://cybermuhscience-portfolio.vercel.app)  
+📝 **Blog**: Coming soon...  
+
+### 🎆 Thank You for Visiting!
+
+*If you found my work interesting, don't forget to ⭐ star some repositories and follow for updates!*
+
+---
+
+<div align="center">
+
+**🌍 Built with ❤️ by Alex Murimi Kamau**
+
+*Crafting innovative solutions for a better tomorrow* ✨
+
+© 2025 • All rights reserved • Made in Kenya 🇰🇪
+
+</div>
+
+</div>
