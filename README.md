@@ -87,7 +87,7 @@ This repository serves as my **professional GitHub profile** showcasing my journ
 
 ### Exploring My Work
 1. **Browse Featured Projects**: Check out the projects section below
-2. **Visit My Portfolio**: [cybermuhscience-portfolio.vercel.app](https://cybermuhscience-portfolio.vercel.app)
+2. **Visit My Portfolio**: [https://portfolio-alex-m-kamau.vercel.app](https://portfolio-alex-m-kamau.vercel.app)
 3. **Connect on LinkedIn**: [alex-kamau-20015b340](https://linkedin.com/in/alex-kamau-20015b340)
 4. **Explore My Repositories**: Navigate through my GitHub repositories
 
