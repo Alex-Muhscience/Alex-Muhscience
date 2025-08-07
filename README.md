@@ -1,25 +1,33 @@
 <div align="center">
 
-# 👋 Hey there, I'm **Alex Murimi Kamau**  
+# 👋 Hi, I'm **Alex Murimi Kamau**  
 ### **Tech Founder & Innovator – Building Secure, Scalable & Transformative Solutions for Africa's Digital Future**
 
+---
+
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&duration=4000&pause=1000&color=6366F1&center=true&vCenter=true&width=750&lines=Full-Stack+Developer;Cybersecurity+Innovator;Tech+Founder+%26+Problem+Solver;Building+Secure+%26+Scalable+Solutions;Driving+Digital+Transformation+Across+Africa" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&duration=4000&pause=1000&color=6366F1&center=true&vCenter=true&width=800&lines=Founder+%26+CEO+at+Muhscience+Tech+Labs;Cybersecurity+Innovator;Full-Stack+Developer;Blockchain+%26+SaaS+Solutions+Architect;Driving+Digital+Transformation+Across+Africa" alt="Typing SVG" />
 </p>
 
-<img src="https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif" width="120" align="right" alt="Tech Orbit">
+> **“Technology, when secure and scalable, can transform lives. I build to empower Africa’s digital future.”**
 
-### 💻 Full-Stack Developer | 🛡️ Cybersecurity Innovator | 🎓 CS Graduand | 🚀 CEO & Founder, Muhscience Tech Labs  
+<img src="https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif" width="140" align="right" alt="Tech Orbit">
 
-**🌍 Based in Nairobi, Kenya** • **🎓 Graduating December 2025**
+### 💻 Full-Stack Developer | 🛡️ Cybersecurity Innovator | 🚀 Tech Entrepreneur | 🎓 CS Graduand (Dec 2025)  
 
-[![Email](https://img.shields.io/badge/Email-alexkamau712@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alexkamau712@gmail.com)
+**🌍 Based in Nairobi, Kenya**  
+
+---
+
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alexkamau712@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/alex-kamau-20015b340)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Alex-Muhscience)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-purple?style=for-the-badge&logo=safari&logoColor=white)](https://cybermuhscience-portfolio.vercel.app)
 
 ![Profile Views](https://komarev.com/ghpvc/?username=Alex-Muhscience&color=blueviolet&style=for-the-badge)
 ![GitHub followers](https://img.shields.io/github/followers/Alex-Muhscience?style=for-the-badge&color=blue)
+
+---
 
 </div>
 
