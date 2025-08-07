@@ -1,14 +1,15 @@
 <div align="center">
 
-# 👋 Hey there, I'm Alex Murimi Kamau!
+# 👋 Hey there, I'm **Alex Murimi Kamau**  
+### **Tech Founder & Innovator – Building Secure, Scalable & Transformative Solutions for Africa's Digital Future**
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=4000&pause=1000&color=6366F1&center=true&vCenter=true&width=700&lines=Full-Stack+Developer;Cybersecurity+Innovator;Computer+Science+Student;Problem+Solver+%26+Tech+Enthusiast;Building+Solutions+for+Africa" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&duration=4000&pause=1000&color=6366F1&center=true&vCenter=true&width=750&lines=Full-Stack+Developer;Cybersecurity+Innovator;Tech+Founder+%26+Problem+Solver;Building+Secure+%26+Scalable+Solutions;Driving+Digital+Transformation+Across+Africa" alt="Typing SVG" />
 </p>
 
 <img src="https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif" width="120" align="right" alt="Tech Orbit">
 
-### 💻 Full-Stack Developer | 🛡️ Cybersecurity Innovator | 🎓 CS Graduand | CEO & Founder Muhscience Tech Labs 
+### 💻 Full-Stack Developer | 🛡️ Cybersecurity Innovator | 🎓 CS Graduand | 🚀 CEO & Founder, Muhscience Tech Labs  
 
 **🌍 Based in Nairobi, Kenya** • **🎓 Graduating December 2025**
 
@@ -22,25 +23,33 @@
 
 </div>
 
+
 ---
 
 ## 🚀 About Me
 
-> *"Driven to create secure, scalable, and innovative solutions for the African tech ecosystem"*
+> **"Tech Founder & Innovator – Building secure, scalable, and transformative solutions for Africa's digital future."**
 
-I'm a **Computer Science graduand at Kisii University** with a passion for building impactful technology solutions. As a **full-stack developer and cybersecurity enthusiast**, I've earned recognition including a **Top 5 spot in Mozilla's Responsible Computing Challenge (2025)** for my **Unified Threat Detection and Response System (UTDRS)**.
+I’m **Alex Murimi Kamau** – a **Computer Science graduand at Kisii University**, **full-stack developer**, **cybersecurity innovator**, and **Founder & CEO of Muhscience Tech Labs**.  
+At Muhscience Tech Labs, I lead the creation of **secure, scalable, and impact-driven technologies** across **cybersecurity, blockchain, healthcare, and property management**.  
+My work has earned recognition including a **Top 5 placement in Mozilla’s Responsible Computing Challenge** for my **Unified Threat Detection and Response System (UTDRS)**, achieving **97% phishing detection accuracy**.
 
-<div align="left">
+### Why I Do What I Do  
+I believe technology can **transform Africa’s digital landscape** when built with **security, scalability, and inclusivity** at its core. My mission is to **empower SMEs and communities with enterprise-grade solutions**, enabling them to thrive in an ever-evolving digital economy.
+
+### Key Achievements as CEO  
+- **CyberShield Lite Desktop Suite** – Enterprise cybersecurity platform with subscription management and M-Pesa integration.  
+- **Hybrid Blockchain Secure File Transfer** – On-chain access control with off-chain encrypted storage.  
+- **Healthcare Information System Modernization** – Real-time logs, automated alerts, and modern UX for healthcare providers.  
+- **Property Management Mobile App** – Odoo-integrated solution for tenants and property owners.  
 
 ### 🎯 What I'm Up To
+- 🔭 **Currently Working On**: UTDRS pilot rollout & next-gen cybersecurity solutions  
+- 🌱 **Currently Learning**: Cloud architecture, ML-driven security, advanced frontend design systems  
+- 🤝 **Open To**: Innovative collaborations, internships, and tech entrepreneurship opportunities  
+- 💬 **Ask Me About**: Full-stack development, cybersecurity, software architecture, and startup strategy  
+- ⚡ **Fun Fact**: I love movies 🎬, music 🎵, and connecting with tech visionaries 🎸
 
-- 🔭 **Currently Working On**: UTDRS pilot phase preparation & advanced cybersecurity solutions
-- 🌱 **Currently Learning**: AWS Cloud Architecture, Advanced React Patterns, Machine Learning for Security
-- 🤝 **Open To**: Exciting collaborations, internships, and innovative projects
-- 💬 **Ask Me About**: Full-stack development, cybersecurity, system architecture, or tech innovation
-- ⚡ **Fun Fact**: I love movies 🎬, music 🎵, and connecting with fellow tech enthusiasts 🎸
-
-</div>
 
 ---
 
