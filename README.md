@@ -39,6 +39,7 @@
 > **"Tech Founder & Innovator – Building secure, scalable, and transformative solutions for Africa's digital future."**
 
 I’m **Alex Murimi Kamau** – a **Computer Science graduand at Kisii University**, **full-stack developer**, **cybersecurity innovator**, and **Founder & CEO of Muhscience Tech Labs**.  
+
 At Muhscience Tech Labs, I lead the creation of **secure, scalable, and impact-driven technologies** across **cybersecurity, blockchain, healthcare, and property management**.  
 My work has earned recognition including a **Top 5 placement in Mozilla’s Responsible Computing Challenge** for my **Unified Threat Detection and Response System (UTDRS)**, achieving **97% phishing detection accuracy**.
 
