@@ -8,7 +8,7 @@
 
 <img src="https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif" width="120" align="right" alt="Tech Orbit">
 
-### 💻 Full-Stack Developer | 🛡️ Cybersecurity Innovator | 🎓 CS Student
+### 💻 Full-Stack Developer | 🛡️ Cybersecurity Innovator | 🎓 CS Graduand | CEO & Founder Muhscience Tech Labs 
 
 **🌍 Based in Nairobi, Kenya** • **🎓 Graduating December 2025**
 
@@ -28,7 +28,7 @@
 
 > *"Driven to create secure, scalable, and innovative solutions for the African tech ecosystem"*
 
-I'm a **Computer Science student at Kisii University** with a passion for building impactful technology solutions. As a **full-stack developer and cybersecurity enthusiast**, I've earned recognition including a **Top 5 spot in Mozilla's Responsible Computing Challenge (2025)** for my **Unified Threat Detection and Response System (UTDRS)**.
+I'm a **Computer Science graduand at Kisii University** with a passion for building impactful technology solutions. As a **full-stack developer and cybersecurity enthusiast**, I've earned recognition including a **Top 5 spot in Mozilla's Responsible Computing Challenge (2025)** for my **Unified Threat Detection and Response System (UTDRS)**.
 
 <div align="left">
 
