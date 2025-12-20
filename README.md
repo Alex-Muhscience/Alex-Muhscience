@@ -13,7 +13,7 @@
 
 <img src="https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif" width="140" align="right" alt="Tech Orbit">
 
-### 💻 Full-Stack Developer | 🛡️ Cybersecurity Innovator | 🚀 Tech Entrepreneur | 🎓 CS Graduand (Dec 2025)  
+### 💻 Full-Stack Developer | 🛡️ Cybersecurity Innovator | 🚀 Tech Entrepreneur | 🎓 CS Graduate (17th Dec 2025)  
 
 **🌍 Based in Nairobi, Kenya**  
 
