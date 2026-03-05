@@ -130,9 +130,9 @@ Tech: **Flutter • SQLite**
 
 <div align="center">
 
-![Alex's GitHub stats](https://github-readme-stats.vercel.app/api?username=Alex-Muhscience&show_icons=true&theme=radical)
+![GitHub Stats](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=Alex-Muhscience&show_icons=true&theme=tokyonight)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Alex-Muhscience&layout=compact&theme=radical)
+![Top Languages](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=Alex-Muhscience&layout=compact&theme=tokyonight)
 
 </div>
 
