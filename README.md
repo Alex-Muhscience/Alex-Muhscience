@@ -32,13 +32,13 @@ My work spans:
 - DevOps, CI/CD pipelines, and Linux infrastructure
 - Technical SEO and performance engineering
 
-**Top 5 Finalist — Mozilla Responsible Computing Challenge 2025** for co-developing UTDRS, an AI-driven cybersecurity threat detection platform grounded in ethical AI principles.
+**Top 5 Finalist - Mozilla Responsible Computing Challenge 2025** for co-developing UTDRS, an AI-driven cybersecurity threat detection platform grounded in ethical AI principles.
 
 ---
 
 ## Currently Working On
 
-- **EuroAfrique Corporate Skills Platform** — ongoing feature development, performance optimisation, and infrastructure improvements
+- **EuroAfrique Corporate Skills Platform** - ongoing feature development, performance optimisation, and infrastructure improvements
 - **Chania Publishers LMS** — video streaming, payment flows, and course management enhancements
 
 ---
@@ -117,7 +117,7 @@ Laravel-based B2B corporate training platform supporting programme delivery for 
 ### Chania Publishers LMS
 [chaniapublishers.com](https://chaniapublishers.com)
 
-Full Learning Management System built from scratch — covering UI/UX, video streaming infrastructure for pre-recorded classes, M-Pesa and card payment rails, automated enrollment workflows, RBAC-controlled course access, and technical SEO. Achieved a 60% improvement in page speed post-launch.
+Full Learning Management System built from scratch covering UI/UX, video streaming infrastructure for pre-recorded classes, M-Pesa and card payment rails, automated enrollment workflows, RBAC-controlled course access, and technical SEO. Achieved a 60% improvement in page speed post-launch.
 
 **Stack:** Laravel · MySQL · Redis · M-Pesa API · RBAC · Technical SEO
 
@@ -126,7 +126,7 @@ Full Learning Management System built from scratch — covering UI/UX, video str
 ### Unified Threat Detection & Response System (UTDRS)
 Capstone Project · 2024–2025
 
-AI-driven real-time cybersecurity threat detection platform built on ethical AI principles. Recognised as a **Top 5 Finalist in the Mozilla Responsible Computing Challenge 2025** — a global competition in Responsible and Ethical AI.
+AI-driven real-time cybersecurity threat detection platform built on ethical AI principles. Recognised as a **Top 5 Finalist in the Mozilla Responsible Computing Challenge 2025** - a global competition in Responsible and Ethical AI.
 
 **Stack:** Python · Flask · AI/ML · Cybersecurity
 
