@@ -104,7 +104,12 @@ My work spans:
 ---
 
 ## Featured Projects
+### AfriAsia Career Center
+[afriasiacareercenter.com](https://afriasiacareercenter.com)
 
+Premium corporate training platform for an experiential in-person training organisation operating across Africa and Asia. Supports high-value client enrollment, programme scheduling, and payment processing for executive training programmes delivered in high-end hotels and tourist destinations.
+
+**Stack:** Laravel · MySQL · Redis · Cloudflare · GitHub Actions · Payment Integration
 ### EuroAfrique Corporate Skills Platform
 [euroafriquecorporateskills.com](https://www.euroafriquecorporateskills.com)
 
