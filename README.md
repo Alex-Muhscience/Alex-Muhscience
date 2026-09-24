@@ -152,7 +152,7 @@ Flutter mobile application with AES-encrypted local storage, biometric authentic
 
 ![GitHub Streak](https://streak-stats.demolab.com?user=Alex-Muhscience&theme=tokyonight)
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Alex-Muhscience&theme=tokyo-night)
+![Activity Chart](https://git-commits-track-chart.vercel.app/graph?username=Alex-Muhscience&theme=tokyo-night)
 
 </div>
 
