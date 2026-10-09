@@ -112,14 +112,14 @@ Executive-training, booking and document platform with a public catalogue and an
 <tr>
 <td width="50%" valign="top">
 
-#### 🛡️ [UTDRS — Threat Detection & Response](https://github.com/Alex-Muhscience/utdrs-core-engine)
+#### 🛡️ [UTDRS — Threat Detection & Response](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project)
 `🏆 Mozilla RCC Top 5` · `Open source`
 
-Threat detection combining MITRE ATT&CK-mapped rules, anomaly detection and ML behind an authenticated API gateway — built to keep AI explainable.
+Every event runs through MITRE ATT&CK-mapped rules, anomaly and ML detectors, and analysts triage the alerts in a React dashboard — built to keep AI explainable.
 
-[Core engine](https://github.com/Alex-Muhscience/utdrs-core-engine) · [API gateway](https://github.com/Alex-Muhscience/utdrs-api-gateway) · [Data processor](https://github.com/Alex-Muhscience/UTDRS-Data-Processor) · [Device scanner](https://github.com/Alex-Muhscience/UTDRS-Device-Scanner)
+[Source](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project) · [Dashboard](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project/tree/main/frontend) · [API gateway](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project/tree/main/services/api-gateway) · [Core engine](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project/tree/main/services/core-engine)
 
-<sub>Python · Flask · FastAPI · MongoDB · Docker · JWT</sub>
+<sub>Python · FastAPI · React · TypeScript · MongoDB · C · Docker</sub>
 
 </td>
 <td width="50%" valign="top">
