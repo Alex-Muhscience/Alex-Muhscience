@@ -186,7 +186,11 @@ Company site on the Next.js App Router with server-handled enquiry forms, techni
 
 <img src="https://streak-stats.demolab.com?user=Alex-Muhscience&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub streak" />
 
-<a href="https://github.com/Alex-Muhscience"><img src="https://github-readme-activity-graph.vercel.app/graph?username=Alex-Muhscience&theme=tokyo-night&hide_border=true&area=true&radius=10" width="100%" alt="Contribution activity graph" /></a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-contribution-grid-snake.svg" />
+  <img src="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution graph" />
+</picture>
 
 </div>
 
