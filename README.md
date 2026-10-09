@@ -32,13 +32,13 @@ My work spans:
 - DevOps, CI/CD pipelines, and Linux infrastructure
 - Technical SEO and performance engineering
 
-**Top 5 Finalist - Mozilla Responsible Computing Challenge 2025** for co-developing UTDRS, an AI-driven cybersecurity threat detection platform grounded in ethical AI principles.
+**Top 5 Finalist — Mozilla Responsible Computing Challenge 2025** for co-developing UTDRS, an AI-driven cybersecurity threat detection platform grounded in ethical AI principles.
 
 ---
 
 ## Currently Working On
 
-- **EuroAfrique Corporate Skills Platform** - ongoing feature development, performance optimisation, and infrastructure improvements
+- **EuroAfrique Corporate Skills Platform** — ongoing feature development, performance optimisation, and infrastructure improvements
 - **Chania Publishers LMS** — video streaming, payment flows, and course management enhancements
 
 ---
@@ -51,6 +51,7 @@ My work spans:
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 ---
@@ -61,6 +62,7 @@ My work spans:
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 
 ---
 
@@ -104,12 +106,16 @@ My work spans:
 ---
 
 ## Featured Projects
+
 ### AfriAsia Career Center
 [afriasiacareercenter.com](https://afriasiacareercenter.com)
 
 Premium corporate training platform for an experiential in-person training organisation operating across Africa and Asia. Supports high-value client enrollment, programme scheduling, and payment processing for executive training programmes delivered in high-end hotels and tourist destinations.
 
 **Stack:** Laravel · MySQL · Redis · Cloudflare · GitHub Actions · Payment Integration
+
+---
+
 ### EuroAfrique Corporate Skills Platform
 [euroafriquecorporateskills.com](https://www.euroafriquecorporateskills.com)
 
@@ -131,7 +137,7 @@ Full Learning Management System built from scratch covering UI/UX, video streami
 ### Unified Threat Detection & Response System (UTDRS)
 Capstone Project · 2024–2025
 
-AI-driven real-time cybersecurity threat detection platform built on ethical AI principles. Recognised as a **Top 5 Finalist in the Mozilla Responsible Computing Challenge 2025** - a global competition in Responsible and Ethical AI.
+AI-driven real-time cybersecurity threat detection platform built on ethical AI principles. Recognised as a **Top 5 Finalist in the Mozilla Responsible Computing Challenge 2025** — a global competition in Responsible and Ethical AI.
 
 **Stack:** Python · Flask · AI/ML · Cybersecurity
 
