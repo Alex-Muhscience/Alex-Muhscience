@@ -1,217 +1,205 @@
 <div align="center">
 
-# Alex Murimi Kamau
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a8a,100:dc2626&height=200&section=header&text=Alex%20Murimi%20Kamau&fontSize=48&fontColor=ffffff&fontAlignY=36&desc=Full-Stack%20Developer%20%C2%B7%20Systems%20that%20run%20in%20production&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Alex Murimi Kamau — Full-Stack Developer" />
 
-### Full-Stack Developer · Laravel · Next.js · React · TypeScript · PostgreSQL · DevOps · Secure Systems
+<a href="https://portfolio-alex-m-kamau.vercel.app">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=3200&pause=900&color=3B82F6&center=true&vCenter=true&width=640&lines=I+build+and+run+production+platforms+end+to+end;Laravel+%C2%B7+Next.js+%C2%B7+React+%C2%B7+TypeScript+%C2%B7+PostgreSQL;Payments%2C+multi-tenancy%2C+RBAC+and+audit+trails;Linux%2C+Docker%2C+CI%2FCD+and+keeping+it+all+running" alt="Typing intro" />
+</a>
 
-🌍 Nairobi, Kenya (EAT, UTC+3) · Open to Remote
+<br/>
 
----
-
-[![Email](https://img.shields.io/badge/Email-alex.kamau.2558@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alex.kamau.2558@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alex-m-kamau-20015b340)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-purple?style=for-the-badge&logo=safari&logoColor=white)](https://portfolio-alex-m-kamau.vercel.app)
-[![Resume](https://img.shields.io/badge/Resume-View-green?style=for-the-badge&logo=readdotcv&logoColor=white)](https://flowcv.com/resume/t249m8own6)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/Alex-Muhscience)
+[![Portfolio](https://img.shields.io/badge/Portfolio-0f172a?style=flat-square&logo=vercel&logoColor=white)](https://portfolio-alex-m-kamau.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alex-m-kamau-20015b340)
+[![Resume](https://img.shields.io/badge/Resume-16a34a?style=flat-square&logo=readdotcv&logoColor=white)](https://flowcv.com/resume/t249m8own6)
+[![Email](https://img.shields.io/badge/Email-dc2626?style=flat-square&logo=gmail&logoColor=white)](mailto:alex.kamau.2558@gmail.com)
+![Location](https://img.shields.io/badge/Nairobi%2C%20Kenya%20·%20UTC%2B3-334155?style=flat-square&logo=googlemaps&logoColor=white)
+![Open to remote](https://img.shields.io/badge/Open%20to%20remote-22c55e?style=flat-square)
 
 </div>
 
 ---
 
-## About Me
+### 👋 Hi, I'm Alex
 
-I'm a Full-Stack Developer building production web applications and business systems across React, Next.js, TypeScript, Laravel, PostgreSQL, MySQL and Linux infrastructure.
+I design, build and **operate** business-critical web platforms — from the first requirements conversation to the production server, and everything after it ships.
 
-I'm the full-stack developer and technical owner for three businesses under the same ownership — **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on its own platform, and I take each one from requirements through architecture, build and launch, then keep it running: releases, infrastructure, security and production support.
+Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system on Laravel, Next.js and PostgreSQL.
 
-My work spans:
-
-- Software architecture and full-stack development
-- Payment integrations (M-Pesa and card via Paystack) confirmed through signed provider callbacks
-- Automation of enrolment and document workflows (invoices, invitation letters, certificates)
-- Authentication, RBAC, MFA, multi-tenant isolation and audit trails
-- Linux infrastructure, Docker, CI/CD pipelines, caching and queues
-- Performance engineering and technical SEO
-
-**Top 5 Finalist — Mozilla Responsible Computing Challenge** for UTDRS, a threat detection and response system built with explainable, accountable AI.
-
----
-
-## Currently Working On
-
-- **BusinessOS** — a multi-tenant business operating system (CRM, sales, procurement, inventory, finance, HR, projects) on Laravel, Next.js and PostgreSQL with row-level security
-- **EuroAfrique, Chania Publishers and AfriAsia platforms** — ongoing feature development, maintenance and infrastructure
-
----
-
-## Tech Stack
-
-### Languages
-
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-
----
-
-### Frontend & Mobile
-
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Livewire](https://img.shields.io/badge/Livewire-4E56A6?style=for-the-badge&logo=livewire&logoColor=white)
-![Alpine.js](https://img.shields.io/badge/Alpine.js-8BC0D0?style=for-the-badge&logo=alpinedotjs&logoColor=black)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
----
-
-### Backend & Frameworks
-
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-
----
-
-### Databases
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-
----
-
-### DevOps & Infrastructure
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![nginx](https://img.shields.io/badge/nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
-
----
-
-### Security
-
-![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
-![RBAC](https://img.shields.io/badge/RBAC-555555?style=for-the-badge&logo=letsencrypt&logoColor=white)
-![TOTP MFA](https://img.shields.io/badge/TOTP_MFA-555555?style=for-the-badge&logo=authy&logoColor=white)
-![Row-Level Security](https://img.shields.io/badge/Row--Level_Security-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-
----
-
-## Featured Projects
-
-Full case studies are on my [portfolio](https://portfolio-alex-m-kamau.vercel.app/work).
-
-### BusinessOS
-In development · private repository · 2026 – present
-
-Multi-tenant business operating system that puts CRM, sales, procurement, inventory, finance, HR and projects on one governed data model. A Laravel modular monolith with a server-rendered Next.js front end and PostgreSQL row-level security, running as a containerised stack with queue workers, a transactional outbox for signed webhooks, verified backups, and CI covering API tests, Playwright end-to-end tests and k6 load tests.
-
-**Stack:** Laravel 13 · PHP 8.5 · Next.js 16 · React 19 · TypeScript · PostgreSQL 18 · Redis · Docker · nginx · GitHub Actions · Playwright · k6
-
----
-
-### EuroAfrique Corporate Skills Platform
-[euroafriquecorporateskills.com](https://www.euroafriquecorporateskills.com) · In production · 2025 – present
-
-Production training platform handling programme publishing, individual and corporate applications, M-Pesa and card payments, and the documents generated around each enrolment (invoices, invitation letters, brochures, certificates). Serves an alumni network of **25,000+ professionals across 50+ countries**.
-
-- ~35% lower average latency through Redis and Cloudflare caching
-- ~60% less manual operational work through payment, enrolment and document automation
-- GitHub Actions pipeline gating deployment on lint, security audits and tests
-
-**Stack:** Laravel · PHP · MySQL · Redis · Tailwind CSS · Algolia · Paystack · M-Pesa · GitHub Actions · Cloudflare · Linux
-
----
-
-### Chania Publishers LMS
-[chaniapublishers.com](https://chaniapublishers.com) · In production · 2025 – present
-
-Learning management system for an educational publisher, built from concept to production: authentication and RBAC, course and lesson management, enrolment and subscriptions granted only on verified payment, and video lessons streamed through an access-checked endpoint. Page speed improved by **~60%** through caching and asset optimisation.
-
-**Stack:** PHP · MySQL · JavaScript · HTML · CSS · Linux
-
----
-
-### AfriAsia Career Development Center
-[afriasiacareercenter.com](https://afriasiacareercenter.com) · In production · 2026 – present
-
-Training, booking and document-management platform with a public course catalogue and a Livewire administration portal. Features Paystack checkout in USD or KES with idempotent payment recording, queued PDF/DOCX document generation, Spatie roles and permissions, TOTP MFA for administrators and single-session enforcement.
-
-**Stack:** Laravel 12 · PHP · Livewire · Alpine.js · Tailwind CSS · MySQL · Redis · Paystack
-
----
-
-### Unified Threat Detection & Response System (UTDRS)
-Research project · 2025 – 2026 · [Core engine](https://github.com/Alex-Muhscience/utdrs-core-engine) · [API gateway](https://github.com/Alex-Muhscience/utdrs-api-gateway) · [Data processor](https://github.com/Alex-Muhscience/UTDRS-Data-Processor) · [Device scanner](https://github.com/Alex-Muhscience/UTDRS-Device-Scanner)
-
-Python threat-detection system combining rule-based (MITRE ATT&CK-mapped), anomaly and machine-learning detection behind an authenticated API gateway. Recognised as a **Top 5 Finalist in the Mozilla Responsible Computing Challenge**.
-
-**Stack:** Python · Flask · FastAPI · MongoDB · Docker · JWT
-
----
-
-### Muhscience Tech Labs Website
-[Live site](https://muhscience-tech-labs-website.vercel.app) · [Repository](https://github.com/Alex-Muhscience/Muhscience-Tech-Labs-Website)
-
-Company website built with the Next.js App Router, server-handled contact and enquiry forms, technical SEO and security headers, deployed on Vercel.
-
-**Stack:** Next.js 15 · React 19 · TypeScript · Tailwind CSS · shadcn/ui · MongoDB · Vercel
-
----
-
-### KeyGen — Password Manager & Generator
-[github.com/Alex-Muhscience/Pass-KeyGen](https://github.com/Alex-Muhscience/Pass-KeyGen)
-
-Flutter mobile application with AES-encrypted local storage, biometric authentication, and PBKDF2 key derivation. Stress-tested with 100+ mock users during my Secunets Technologies internship.
-
-**Stack:** Flutter · Dart · SQLite · AES Encryption · Biometric Auth
-
----
-
-## Experience
-
-| Role | Organisation | Period |
-|---|---|---|
-| Full-Stack Developer & Technical Owner | EuroAfrique Corporate Skills, Chania Publishers, AfriAsia Career Development Center | Aug 2025 – Present |
-| Freelance Web Development Tutor | Self-employed | May 2025 – Aug 2025 |
-| Network Technician | Gicatech Enterprise Solutions | Aug 2024 – Feb 2025 |
-| Software Development Intern | Secunets Technologies | May 2024 – Aug 2024 |
-
-**Education:** BSc Computer Science, Kisii University (2021 – 2025) — Second Class Honours (Upper Division)
-
----
-
-## GitHub Stats
+```yaml
+focus:      [architecture, full-stack delivery, payments, security, infrastructure]
+building:   BusinessOS — multi-tenant ERP with Postgres row-level security
+shipping:   3 production platforms, owned end to end
+recognised: Top 5 Finalist — Mozilla Responsible Computing Challenge
+```
 
 <div align="center">
 
-![GitHub Streak](https://streak-stats.demolab.com?user=Alex-Muhscience&theme=tokyonight)
-
-![Activity Chart](https://git-commits-track-chart.vercel.app/graph?username=Alex-Muhscience&theme=tokyo-night)
+| 🏢 Platforms in production | 🌍 Professionals served | 🗺️ Countries reached | ⚙️ Manual work automated | ⚡ LMS page speed gain |
+|:---:|:---:|:---:|:---:|:---:|
+| **3** | **25,000+** | **50+** | **~60%** | **~60%** |
 
 </div>
 
 ---
 
-## Let's Connect
+### 🚀 Featured work
 
-Open to software engineering roles, technical collaborations, and impactful product work.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-📧 alex.kamau.2558@gmail.com
-🔗 [linkedin.com/in/alex-m-kamau-20015b340](https://www.linkedin.com/in/alex-m-kamau-20015b340)
-🌐 [portfolio-alex-m-kamau.vercel.app](https://portfolio-alex-m-kamau.vercel.app)
-📄 [Resume](https://flowcv.com/resume/t249m8own6)
+#### 🧩 [BusinessOS](https://portfolio-alex-m-kamau.vercel.app/work/businessos)
+`In development` · `Private`
+
+Multi-tenant operating system for SMEs — CRM, sales, procurement, inventory, finance, HR and projects on one governed data model.
+
+- Postgres **row-level security** + app-level authorization
+- Transactional **outbox**, signed webhooks, idempotent writes
+- JWT with rotating refresh tokens, TOTP 2FA
+- CI with Playwright E2E and **k6** load tests
+
+<sub>Laravel 13 · Next.js 16 · PostgreSQL 18 · Redis · Docker · nginx</sub>
+
+</td>
+<td width="50%" valign="top">
+
+#### 🎓 [EuroAfrique Corporate Skills](https://www.euroafriquecorporateskills.com)
+`In production` · `Sole technical owner`
+
+Corporate training platform: programme publishing, applications, M-Pesa and card payments, and automated enrolment documents.
+
+- **25,000+** alumni across **50+** countries
+- **~35%** lower latency via Redis + Cloudflare
+- **~60%** less manual ops through automation
+- Deploys gated on lint, audits and tests
+
+<sub>Laravel · MySQL · Redis · Paystack · M-Pesa · Algolia · Cloudflare</sub>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 📚 [Chania Publishers LMS](https://chaniapublishers.com)
+`In production` · `Sole technical owner`
+
+Learning management system built from concept to production for an educational publisher.
+
+- Access granted only on **verified payment**
+- Video streamed through an **access-checked** endpoint
+- Layered auth / admin / subscriber middleware
+- **~60%** faster pages after optimisation
+
+<sub>PHP · MySQL · JavaScript · Linux</sub>
+
+</td>
+<td width="50%" valign="top">
+
+#### 🌏 [AfriAsia Career Development Center](https://afriasiacareercenter.com)
+`In production` · `Sole technical owner`
+
+Executive-training, booking and document platform with a public catalogue and an admin portal.
+
+- Paystack in **USD/KES**, idempotent payment recording
+- Queued PDF/DOCX invoices, letters and certificates
+- Admin **TOTP MFA**, single-session enforcement
+- Spatie roles & permissions, audit logs
+
+<sub>Laravel 12 · Livewire · Alpine.js · Tailwind · MySQL · Redis</sub>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🛡️ [UTDRS — Threat Detection & Response](https://github.com/Alex-Muhscience/utdrs-core-engine)
+`🏆 Mozilla RCC Top 5` · `Open source`
+
+Threat detection combining MITRE ATT&CK-mapped rules, anomaly detection and ML behind an authenticated API gateway — built to keep AI explainable.
+
+[Core engine](https://github.com/Alex-Muhscience/utdrs-core-engine) · [API gateway](https://github.com/Alex-Muhscience/utdrs-api-gateway) · [Data processor](https://github.com/Alex-Muhscience/UTDRS-Data-Processor) · [Device scanner](https://github.com/Alex-Muhscience/UTDRS-Device-Scanner)
+
+<sub>Python · Flask · FastAPI · MongoDB · Docker · JWT</sub>
+
+</td>
+<td width="50%" valign="top">
+
+#### 🌐 [Muhscience Tech Labs](https://muhscience-tech-labs-website.vercel.app)
+`Live on Vercel` · `Open source`
+
+Company site on the Next.js App Router with server-handled enquiry forms, technical SEO and security headers.
+
+[Live site](https://muhscience-tech-labs-website.vercel.app) · [Repository](https://github.com/Alex-Muhscience/Muhscience-Tech-Labs-Website)
+
+<sub>Next.js 15 · React 19 · TypeScript · Tailwind · shadcn/ui · MongoDB</sub>
+
+</td>
+</tr>
+</table>
+
+<sub>🔐 Also built: <a href="https://github.com/Alex-Muhscience/Pass-KeyGen"><b>KeyGen</b></a> — a Flutter password manager with AES-encrypted storage, PBKDF2 and biometric unlock. Full case studies live on my <a href="https://portfolio-alex-m-kamau.vercel.app/work">portfolio</a>.</sub>
+
+---
+
+### 🧠 How I build
+
+- **Architecture follows requirements.** A content site, a payment workflow and a multi-tenant ledger don't want the same design.
+- **Modular monolith first.** Services get extracted when a domain proves it needs to scale or release on its own.
+- **Contain failure.** A slow PDF render or a dead webhook should never fail an unrelated checkout.
+- **Security and audit are architecture,** designed in from the first schema — not bolted on later.
+- **Measure, then optimise.** Find the bottleneck with real data volume, then fix that one thing.
+- **Build systems that can be operated.** Health checks, correlated logs, repeatable deploys and tested restores are part of the feature.
+
+---
+
+### 🛠️ Toolbox
+
+<div align="center">
+
+**Languages & frameworks**<br/>
+<img src="https://skillicons.dev/icons?i=php,laravel,ts,js,react,nextjs,tailwind,nodejs,python,flask,fastapi,dart,flutter&perline=13" alt="Languages and frameworks" />
+
+**Data & infrastructure**<br/>
+<img src="https://skillicons.dev/icons?i=postgres,mysql,redis,mongodb,sqlite,docker,nginx,linux,githubactions,cloudflare,vercel,git&perline=12" alt="Data and infrastructure" />
+
+<sub>Also: Livewire · Alpine.js · Playwright · k6 · JWT · TOTP MFA · RBAC · Row-level security · M-Pesa · Paystack · Algolia</sub>
+
+</div>
+
+---
+
+### 📈 Journey
+
+| When | Role | Where |
+|---|---|---|
+| **Aug 2025 → now** | Full-Stack Developer & Technical Owner | EuroAfrique Corporate Skills · Chania Publishers · AfriAsia Career Development Center |
+| May – Aug 2025 | Freelance Web Development Tutor | Self-employed |
+| Aug 2024 – Feb 2025 | Network Technician | Gicatech Enterprise Solutions |
+| May – Aug 2024 | Software Development Intern | Secunets Technologies |
+| 2021 – 2025 | 🎓 BSc Computer Science, Second Class Honours (Upper) | Kisii University |
+
+---
+
+### 📊 GitHub activity
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=Alex-Muhscience&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub streak" />
+
+<img src="https://git-commits-track-chart.vercel.app/graph?username=Alex-Muhscience&theme=tokyo-night" width="100%" alt="Contribution activity" />
+
+</div>
+
+---
+
+<div align="center">
+
+### 🤝 Let's build something that lasts
+
+Open to **full-stack and backend engineering roles**, technical partnerships and product work where reliability matters.
+
+[**portfolio-alex-m-kamau.vercel.app**](https://portfolio-alex-m-kamau.vercel.app) · [**LinkedIn**](https://www.linkedin.com/in/alex-m-kamau-20015b340) · [**alex.kamau.2558@gmail.com**](mailto:alex.kamau.2558@gmail.com)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:dc2626,50:1e3a8a,100:0f172a&height=110&section=footer" width="100%" alt="" />
+
+</div>
