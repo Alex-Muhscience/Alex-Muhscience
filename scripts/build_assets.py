@@ -51,6 +51,8 @@ BUTTONS = [
      '<path d="M4,1.5 H11 L14.5,5 V16.5 H4 Z M11,1.5 V5 H14.5 M6.5,9 H12 M6.5,12 H12"/>'),
     ("email", "Email", "#dc2626",
      '<rect x="1.5" y="3.5" width="15" height="11" rx="2"/><path d="M2,4.5 L9,10 L16,4.5"/>'),
+    ("whatsapp", "WhatsApp", "#1da851",
+     '<path d="M3.4,13.6 A7.2,7.2 0 1 1 5.6,15.4 L1.9,16.3 Z"/><path d="M6.7,6.3 C6.7,9.2 8.9,11.4 11.7,11.4"/>'),
 ]
 
 # The header draws the stack as four layers, top to bottom. (name, tools, colour)
