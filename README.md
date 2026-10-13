@@ -8,8 +8,6 @@
 </picture>
 </a>
 
-<br/><br/>
-
 [**Portfolio**](https://portfolio-alex-m-kamau.vercel.app) &nbsp;·&nbsp; [**Case studies**](https://portfolio-alex-m-kamau.vercel.app/work) &nbsp;·&nbsp; [**Résumé**](https://flowcv.com/resume/t249m8own6) &nbsp;·&nbsp; [**LinkedIn**](https://www.linkedin.com/in/alex-m-kamau-20015b340) &nbsp;·&nbsp; [**Email**](mailto:alex.kamau.2558@gmail.com)
 
 </div>
@@ -37,6 +35,8 @@ Not one system, but the shape most of mine share: a boring, fast request path, w
   <source media="(prefers-color-scheme: light)" srcset="assets/architecture-light.svg" />
   <img src="assets/architecture-dark.svg" width="100%" alt="Request path: client, Cloudflare, nginx, the Laravel and Next.js application, PostgreSQL. Behind the request: Redis, queue workers fed by an outbox, generated documents, signed webhooks and verified payment callbacks. On every layer: security, delivery and operations." />
 </picture>
+
+**The rules behind it**
 
 - **Architecture follows requirements.** A content site, a payment workflow and a multi-tenant ledger don't want the same design.
 - **Modular monolith first.** Services get extracted when a domain proves it needs to scale or release on its own.
