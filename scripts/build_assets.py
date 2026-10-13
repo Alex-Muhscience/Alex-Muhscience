@@ -29,7 +29,8 @@ NAME = "Alex Murimi Kamau"
 STATUS = "open to remote · Nairobi, Kenya · UTC+3"
 ROLE = ("Full-stack developer", " · systems that run in production")
 ROTATING = [
-    "Laravel · Next.js · React · TypeScript · PostgreSQL",
+    "TypeScript · React · Next.js · Node.js",
+    "Python · FastAPI · Flask · PHP · Laravel",
     "Payments, multi-tenancy, RBAC and audit trails",
     "Linux, Docker, CI/CD and keeping it all running",
 ]
@@ -38,13 +39,6 @@ PLATFORMS = [
     ("Chania Publishers LMS", "production", "ok"),
     ("AfriAsia Career Development Center", "production", "ok"),
     ("BusinessOS", "in development", "warn"),
-]
-METRICS = [
-    ("3", "platforms in production"),
-    ("25,000+", "professionals served"),
-    ("50+", "countries reached"),
-    ("~60%", "manual work automated"),
-    ("~60%", "faster LMS pages"),
 ]
 
 # --- helpers -----------------------------------------------------------------
@@ -73,11 +67,12 @@ def base_style(t):
 
 def hero(t):
     w, h = 1200, 300
+    share = 100 // len(ROTATING)  # each line's slice of the cycle, in percent
     style = base_style(t) + (
         "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}"
-        "@keyframes rot{0%{opacity:0}4%{opacity:1}29%{opacity:1}33%,100%{opacity:0}}"
+        f"@keyframes rot{{0%{{opacity:0}}3%{{opacity:1}}{share - 3}%{{opacity:1}}{share}%,100%{{opacity:0}}}}"
         ".p{animation:pulse 2.4s ease-in-out infinite}"
-        ".r{opacity:0;animation:rot 12s linear infinite}"
+        f".r{{opacity:0;animation:rot {len(ROTATING) * 4}s linear infinite}}"
     )
     rows = []
     for i, (name, state, tone) in enumerate(PLATFORMS):
@@ -119,32 +114,15 @@ def hero(t):
     return svg(w, h, f"{NAME} — full-stack developer, systems that run in production", style, body)
 
 
-# --- metrics -----------------------------------------------------------------
-
-
-def metrics(t):
-    w, h, cell, gap = 1200, 118, 224, 20
-    cells = []
-    for i, (value, label) in enumerate(METRICS):
-        x = i * (cell + gap)
-        cells.append(
-            f'<rect x="{x + 1}" y="1" width="{cell - 2}" height="{h - 2}" rx="14" fill="{t["panel"]}" stroke="{t["stroke"]}"/>'
-            f'<text class="s t" x="{x + cell / 2}" y="62" font-size="38" font-weight="700" letter-spacing="-.8" text-anchor="middle">{escape(value)}</text>'
-            f'<text class="s mu" x="{x + cell / 2}" y="90" font-size="14.5" text-anchor="middle">{escape(label)}</text>'
-        )
-    label = "; ".join(f"{v} {l}" for v, l in METRICS)
-    return svg(w, h, label, base_style(t), "".join(cells))
-
-
 # --- architecture ------------------------------------------------------------
 
-# (x, y, width, height, title, subtitle)
+# (x, y, width, height, title, subtitle lines)
 BOXES = {
     "client": (24, 56, 160, 92, "Client", "browser · mobile"),
     "edge": (232, 56, 190, 92, "Cloudflare", "edge caching"),
     "nginx": (470, 56, 170, 92, "nginx", "reverse proxy · TLS"),
-    "app": (688, 56, 230, 92, "Application", "Laravel API · Next.js"),
-    "pg": (966, 56, 210, 92, "PostgreSQL", "row-level security"),
+    "app": (688, 56, 230, 92, "Application", "React · Next.js · Node.js\nLaravel · FastAPI · Flask"),
+    "pg": (966, 56, 210, 92, "Database", "PostgreSQL · MySQL\nMongoDB"),
     "pay": (232, 250, 190, 92, "Paystack · M-Pesa", "verified callbacks"),
     "redis": (688, 250, 230, 92, "Redis", "cache · sessions · queues"),
     "work": (966, 250, 210, 92, "Queue workers", "idempotent jobs"),
@@ -171,7 +149,7 @@ PACKETS = [
     ("M1010,342 V388 H803 V432", 3.0, 1.8, "accent2"),
 ]
 BANDS = [
-    ("Security", "JWT with rotating refresh · TOTP 2FA · RBAC · audit log"),
+    ("Security", "JWT · TOTP 2FA · RBAC · row-level security · audit log"),
     ("Delivery", "CI gates: lint · audits · tests · Playwright · k6"),
     ("Operations", "health checks · correlated logs · tested restores"),
 ]
@@ -190,12 +168,18 @@ def architecture(t):
         f'<circle r="4.5" fill="{t[c]}"><animateMotion dur="{dur}s" begin="-{delay}s" repeatCount="indefinite" path="{d}"/></circle>'
         for d, dur, delay, c in PACKETS
     )
-    boxes = "".join(
-        f'<rect x="{x}" y="{y}" width="{bw}" height="{bh}" rx="12" fill="{t["panel"]}" stroke="{t["stroke"]}"/>'
-        f'<text class="s t" x="{x + bw / 2}" y="{y + 42}" font-size="18" font-weight="600" text-anchor="middle">{escape(title)}</text>'
-        f'<text class="s mu" x="{x + bw / 2}" y="{y + 66}" font-size="14.5" text-anchor="middle">{escape(sub)}</text>'
-        for x, y, bw, bh, title, sub in BOXES.values()
-    )
+    boxes = ""
+    for x, y, bw, bh, title, sub in BOXES.values():
+        lines = sub.split("\n")
+        top = y + (42 if len(lines) == 1 else 33)
+        boxes += (
+            f'<rect x="{x}" y="{y}" width="{bw}" height="{bh}" rx="12" fill="{t["panel"]}" stroke="{t["stroke"]}"/>'
+            f'<text class="s t" x="{x + bw / 2}" y="{top}" font-size="18" font-weight="600" text-anchor="middle">{escape(title)}</text>'
+        )
+        for i, line in enumerate(lines):
+            boxes += (
+                f'<text class="s mu" x="{x + bw / 2}" y="{top + 24 + i * 20}" font-size="14.5" text-anchor="middle">{escape(line)}</text>'
+            )
     bands = "".join(
         f'<text class="s t" x="48" y="{452 + i * 28}" font-size="15" font-weight="600">{escape(k)}</text>'
         f'<text class="s mu" x="150" y="{452 + i * 28}" font-size="14.5">{escape(v)}</text>'
@@ -212,8 +196,8 @@ def architecture(t):
 <text class="m mu" x="48" y="420" font-size="12.5" letter-spacing="1.4">ON EVERY LAYER</text>
 {bands}"""
     label = (
-        "How the platforms are put together: client, Cloudflare, nginx, the Laravel and Next.js application "
-        "and PostgreSQL on the request path; Redis, queue workers, documents, signed webhooks and payment "
+        "How the platforms are put together: client, Cloudflare, nginx, the application (React, Next.js, Node.js, "
+        "Laravel, FastAPI, Flask) and the database on the request path; Redis, queue workers, documents, signed webhooks and payment "
         "callbacks behind it; security, delivery and operations on every layer."
     )
     return svg(w, h, label, style, body)
@@ -222,7 +206,7 @@ def architecture(t):
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     for theme, tokens in THEMES.items():
-        for name, build in (("hero", hero), ("metrics", metrics), ("architecture", architecture)):
+        for name, build in (("hero", hero), ("architecture", architecture)):
             path = OUT / f"{name}-{theme}.svg"
             path.write_text(build(tokens), encoding="utf-8")
             print(f"wrote {path.relative_to(OUT.parent)}")

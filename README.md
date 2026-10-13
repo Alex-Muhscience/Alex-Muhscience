@@ -16,15 +16,9 @@
 
 I design, build and **operate** business-critical web platforms — from the first requirements conversation to the production server, and everything after it ships.
 
-Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system on Laravel, Next.js and PostgreSQL. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
+Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
 
-<br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/metrics-light.svg" />
-  <img src="assets/metrics-dark.svg" width="100%" alt="3 platforms in production; 25,000+ professionals served; 50+ countries reached; about 60% of manual work automated; about 60% faster LMS pages" />
-</picture>
+I pick the stack to fit the problem: **React** and **Next.js** on the front, **Node.js**, **Laravel**, **FastAPI** or **Flask** behind it, and **TypeScript**, **Python** and **PHP** as the working languages.
 
 ## How I put a platform together
 
@@ -33,7 +27,7 @@ Not one system, but the shape most of mine share: a boring, fast request path, w
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="assets/architecture-light.svg" />
-  <img src="assets/architecture-dark.svg" width="100%" alt="Request path: client, Cloudflare, nginx, the Laravel and Next.js application, PostgreSQL. Behind the request: Redis, queue workers fed by an outbox, generated documents, signed webhooks and verified payment callbacks. On every layer: security, delivery and operations." />
+  <img src="assets/architecture-dark.svg" width="100%" alt="Request path: client, Cloudflare, nginx, the application (React, Next.js, Node.js, Laravel, FastAPI, Flask) and the database. Behind the request: Redis, queue workers fed by an outbox, generated documents, signed webhooks and verified payment callbacks. On every layer: security, delivery and operations." />
 </picture>
 
 **The rules behind it**
@@ -71,9 +65,9 @@ Multi-tenant operating system for SMEs — CRM, sales, procurement, inventory, f
 
 Corporate training platform: programme publishing, applications, M-Pesa and card payments, and automated enrolment documents.
 
-- **25,000+** alumni across **50+** countries
-- **~35%** lower latency via Redis + Cloudflare
-- **~60%** less manual ops through automation
+- Faster responses via **Redis + Cloudflare** caching
+- Manual operations replaced with **automation**
+- Enrolment documents generated automatically
 - Deploys gated on lint, audits and tests
 
 <sub>Laravel · MySQL · Redis · Paystack · M-Pesa · Algolia · Cloudflare</sub>
@@ -91,7 +85,7 @@ Learning management system built from concept to production for an educational p
 - Access granted only on **verified payment**
 - Video streamed through an **access-checked** endpoint
 - Layered auth / admin / subscriber middleware
-- **~60%** faster pages after optimisation
+- Pages optimised for speed
 
 <sub>PHP · MySQL · JavaScript · Linux</sub>
 
@@ -144,15 +138,17 @@ Company site on the Next.js App Router with server-handled enquiry forms, techni
 
 ## Toolbox
 
-| Layer | What I reach for |
-|---|---|
-| **Backend** | PHP · Laravel · Livewire · Python · FastAPI · Flask · Node.js |
-| **Frontend** | TypeScript · React · Next.js · Tailwind · Alpine.js |
-| **Mobile** | Dart · Flutter |
-| **Data** | PostgreSQL · MySQL · Redis · MongoDB · SQLite · Algolia |
-| **Infrastructure** | Linux · Docker · nginx · Cloudflare · Vercel · GitHub Actions |
-| **Quality & security** | Playwright · k6 · JWT · TOTP MFA · RBAC · row-level security |
-| **Payments** | M-Pesa · Paystack |
+<div align="center">
+
+**Languages & frameworks**<br/>
+<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,python,fastapi,flask,php,laravel,tailwind,dart,flutter&perline=13" alt="TypeScript, JavaScript, React, Next.js, Node.js, Python, FastAPI, Flask, PHP, Laravel, Tailwind, Dart, Flutter" />
+
+**Data & infrastructure**<br/>
+<img src="https://skillicons.dev/icons?i=postgres,mysql,redis,mongodb,sqlite,docker,nginx,linux,githubactions,cloudflare,vercel,git&perline=12" alt="PostgreSQL, MySQL, Redis, MongoDB, SQLite, Docker, nginx, Linux, GitHub Actions, Cloudflare, Vercel, Git" />
+
+<sub>Also: Livewire · Alpine.js · Playwright · k6 · JWT · TOTP MFA · RBAC · Row-level security · M-Pesa · Paystack · Algolia</sub>
+
+</div>
 
 ## Journey
 
@@ -192,6 +188,6 @@ Open to **full-stack and backend engineering roles**, technical partnerships and
 
 [**portfolio-alex-m-kamau.vercel.app**](https://portfolio-alex-m-kamau.vercel.app) &nbsp;·&nbsp; [**LinkedIn**](https://www.linkedin.com/in/alex-m-kamau-20015b340) &nbsp;·&nbsp; [**alex.kamau.2558@gmail.com**](mailto:alex.kamau.2558@gmail.com)
 
-<sub>The header, metrics and diagram on this page are generated by <a href="scripts/build_assets.py"><code>scripts/build_assets.py</code></a> — no third-party widgets.</sub>
+<sub>The header and diagram on this page are generated by <a href="scripts/build_assets.py"><code>scripts/build_assets.py</code></a>.</sub>
 
 </div>
