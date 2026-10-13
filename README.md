@@ -41,98 +41,95 @@ Not one system, but the shape most of mine share: a boring, fast request path, w
 
 ## Featured work
 
-<table>
-<tr>
-<td width="50%" valign="top">
+Each card traces what the system does, left to right. Click one to open it.
 
-#### [BusinessOS](https://portfolio-alex-m-kamau.vercel.app/work/businessos)
-`In development` · `Private`
+<a href="https://portfolio-alex-m-kamau.vercel.app/work/businessos">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-businessos-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-businessos-light.svg" />
+  <img src="assets/project-businessos-dark.svg" width="100%" alt="BusinessOS — multi-tenant operating system for SMEs, in development. Laravel, Next.js, PostgreSQL, Redis, Docker, nginx." />
+</picture>
+</a>
 
-Multi-tenant operating system for SMEs — CRM, sales, procurement, inventory, finance, HR and projects on one governed data model.
+<a href="https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-utdrs-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-utdrs-light.svg" />
+  <img src="assets/project-utdrs-dark.svg" width="100%" alt="UTDRS — unified threat detection and response, in development, Mozilla RCC Top 5. Python, FastAPI, React, TypeScript, MongoDB, C, Docker." />
+</picture>
+</a>
 
+<a href="https://www.euroafriquecorporateskills.com">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-euroafrique-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-euroafrique-light.svg" />
+  <img src="assets/project-euroafrique-dark.svg" width="100%" alt="EuroAfrique Corporate Skills — corporate training platform, in production. Laravel, MySQL, Redis, Paystack, M-Pesa, Algolia, Cloudflare." />
+</picture>
+</a>
+
+<a href="https://afriasiacareercenter.com">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-afriasia-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-afriasia-light.svg" />
+  <img src="assets/project-afriasia-dark.svg" width="100%" alt="AfriAsia Career Development Center — executive-training, booking and document platform, in production. Laravel, Livewire, Alpine.js, Tailwind, MySQL, Redis." />
+</picture>
+</a>
+
+<a href="https://chaniapublishers.com">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-chania-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-chania-light.svg" />
+  <img src="assets/project-chania-dark.svg" width="100%" alt="Chania Publishers LMS — learning management system, in production. PHP, MySQL, JavaScript, Linux." />
+</picture>
+</a>
+
+<a href="https://muhscience-tech-labs-website.vercel.app">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-muhscience-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-muhscience-light.svg" />
+  <img src="assets/project-muhscience-dark.svg" width="100%" alt="Muhscience Tech Labs — company site on the Next.js App Router, live on Vercel. Next.js, React, TypeScript, Tailwind, shadcn/ui, MongoDB." />
+</picture>
+</a>
+
+<details>
+<summary><b>Engineering notes for each project</b></summary>
+
+<br/>
+
+**[BusinessOS](https://portfolio-alex-m-kamau.vercel.app/work/businessos)** — in development, private
 - Postgres **row-level security** + app-level authorization
 - Transactional **outbox**, signed webhooks, idempotent writes
 - JWT with rotating refresh tokens, TOTP 2FA
 - CI with Playwright E2E and **k6** load tests
 
-<sub>Laravel 13 · Next.js 16 · PostgreSQL 18 · Redis · Docker · nginx</sub>
+**[UTDRS](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)** — in development, private, Mozilla RCC Top 5
+- Every event runs through MITRE ATT&CK-mapped rules, anomaly and ML detectors
+- Analysts triage the alerts in a React dashboard
+- Built to keep AI explainable
 
-</td>
-<td width="50%" valign="top">
-
-#### [EuroAfrique Corporate Skills](https://www.euroafriquecorporateskills.com)
-`In production` · `Sole technical owner`
-
-Corporate training platform: programme publishing, applications, M-Pesa and card payments, and automated enrolment documents.
-
+**[EuroAfrique Corporate Skills](https://www.euroafriquecorporateskills.com)** — in production, sole technical owner
 - Faster responses via **Redis + Cloudflare** caching
 - Manual operations replaced with **automation**
 - Enrolment documents generated automatically
 - Deploys gated on lint, audits and tests
 
-<sub>Laravel · MySQL · Redis · Paystack · M-Pesa · Algolia · Cloudflare</sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### [Chania Publishers LMS](https://chaniapublishers.com)
-`In production` · `Sole technical owner`
-
-Learning management system built from concept to production for an educational publisher.
-
-- Access granted only on **verified payment**
-- Video streamed through an **access-checked** endpoint
-- Layered auth / admin / subscriber middleware
-- Pages optimised for speed
-
-<sub>PHP · MySQL · JavaScript · Linux</sub>
-
-</td>
-<td width="50%" valign="top">
-
-#### [AfriAsia Career Development Center](https://afriasiacareercenter.com)
-`In production` · `Sole technical owner`
-
-Executive-training, booking and document platform with a public catalogue and an admin portal.
-
+**[AfriAsia Career Development Center](https://afriasiacareercenter.com)** — in production, sole technical owner
 - Paystack in **USD/KES**, idempotent payment recording
 - Queued PDF/DOCX invoices, letters and certificates
 - Admin **TOTP MFA**, single-session enforcement
 - Spatie roles & permissions, audit logs
 
-<sub>Laravel 12 · Livewire · Alpine.js · Tailwind · MySQL · Redis</sub>
+**[Chania Publishers LMS](https://chaniapublishers.com)** — in production, sole technical owner
+- Access granted only on **verified payment**
+- Video streamed through an **access-checked** endpoint
+- Layered auth / admin / subscriber middleware
+- Pages optimised for speed
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+**[Muhscience Tech Labs](https://muhscience-tech-labs-website.vercel.app)** — live on Vercel, open source · [repository](https://github.com/Alex-Muhscience/Muhscience-Tech-Labs-Website)
+- Next.js App Router with server-handled enquiry forms
+- Technical SEO and security headers
 
-#### [UTDRS — Threat Detection & Response](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)
-`Mozilla RCC Top 5` · `In development` · `Private`
-
-Every event runs through MITRE ATT&CK-mapped rules, anomaly and ML detectors, and analysts triage the alerts in a React dashboard — built to keep AI explainable.
-
-[Case study](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)
-
-<sub>Python · FastAPI · React · TypeScript · MongoDB · C · Docker</sub>
-
-</td>
-<td width="50%" valign="top">
-
-#### [Muhscience Tech Labs](https://muhscience-tech-labs-website.vercel.app)
-`Live on Vercel` · `Open source`
-
-Company site on the Next.js App Router with server-handled enquiry forms, technical SEO and security headers.
-
-[Live site](https://muhscience-tech-labs-website.vercel.app) · [Repository](https://github.com/Alex-Muhscience/Muhscience-Tech-Labs-Website)
-
-<sub>Next.js 15 · React 19 · TypeScript · Tailwind · shadcn/ui · MongoDB</sub>
-
-</td>
-</tr>
-</table>
+</details>
 
 <sub>Also built: <a href="https://github.com/Alex-Muhscience/Pass-KeyGen"><b>KeyGen</b></a> — a Flutter password manager with AES-encrypted storage, PBKDF2 and biometric unlock. Full case studies live on my <a href="https://portfolio-alex-m-kamau.vercel.app/work">portfolio</a>.</sub>
 
@@ -188,6 +185,6 @@ Open to **full-stack and backend engineering roles**, technical partnerships and
 
 [**portfolio-alex-m-kamau.vercel.app**](https://portfolio-alex-m-kamau.vercel.app) &nbsp;·&nbsp; [**LinkedIn**](https://www.linkedin.com/in/alex-m-kamau-20015b340) &nbsp;·&nbsp; [**alex.kamau.2558@gmail.com**](mailto:alex.kamau.2558@gmail.com)
 
-<sub>The header and diagram on this page are generated by <a href="scripts/build_assets.py"><code>scripts/build_assets.py</code></a>.</sub>
+<sub>The header, diagram and project cards on this page are generated by <a href="scripts/build_assets.py"><code>scripts/build_assets.py</code></a>.</sub>
 
 </div>
