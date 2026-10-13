@@ -32,16 +32,16 @@ NAME = "Alex Murimi Kamau"
 STATUS = "open to remote · Nairobi, Kenya · UTC+3"
 ROLE = ("Full-stack developer", " · systems that run in production")
 ROTATING = [
-    "TypeScript · React · Next.js · Node.js",
-    "Python · FastAPI · Flask · PHP · Laravel",
+    "I build and run production platforms end to end",
     "Payments, multi-tenancy, RBAC and audit trails",
     "Linux, Docker, CI/CD and keeping it all running",
 ]
-PLATFORMS = [
-    ("EuroAfrique Corporate Skills", "production", "ok"),
-    ("Chania Publishers LMS", "production", "ok"),
-    ("AfriAsia Career Development Center", "production", "ok"),
-    ("BusinessOS", "in development", "warn"),
+# The header draws the stack as four layers, top to bottom. (name, tools, colour)
+LAYERS = [
+    ("INTERFACE", "React · Next.js · TypeScript", "blue"),
+    ("APPLICATION", "Node.js · Laravel · FastAPI · Flask", "violet"),
+    ("DATA", "PostgreSQL · MySQL · MongoDB · Redis", "teal"),
+    ("INFRASTRUCTURE", "Linux · Docker · nginx · CI/CD", "amber"),
 ]
 
 # Featured projects. Each card shows what the system does as a four-step flow.
@@ -108,32 +108,52 @@ def base_style(t):
 
 
 def hero(t):
-    w, h = 1200, 300
+    w, h = 1200, 320
     share = 100 // len(ROTATING)  # each line's slice of the cycle, in percent
     style = base_style(t) + (
         "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}"
         f"@keyframes rot{{0%{{opacity:0}}3%{{opacity:1}}{share - 3}%{{opacity:1}}{share}%,100%{{opacity:0}}}}"
+        "@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}"
         ".p{animation:pulse 2.4s ease-in-out infinite}"
         f".r{{opacity:0;animation:rot {len(ROTATING) * 4}s linear infinite}}"
+        ".b{animation:bob 5s ease-in-out infinite}"
     )
-    rows = []
-    for i, (name, state, tone) in enumerate(PLATFORMS):
-        y = 132 + i * 34
-        rows.append(
-            f'<circle class="{tone} p" style="animation-delay:{i * 0.4}s" cx="730" cy="{y - 5}" r="4.5"/>'
-            f'<text class="s t" x="748" y="{y}" font-size="16">{escape(name)}</text>'
-            f'<text class="m {tone}" x="1126" y="{y}" font-size="13" text-anchor="end">{state}</text>'
-        )
     rotating = "".join(
         f'<text class="m mu r{" r1" if i == 0 else ""}" style="animation-delay:{i * 4}s" '
-        f'x="82" y="250" font-size="17">{escape(line)}</text>'
+        f'x="82" y="262" font-size="17">{escape(line)}</text>'
         for i, line in enumerate(ROTATING)
     )
+    # Isometric stack: each layer is a slab (top face plus two sides), drawn bottom-up.
+    cx, a, b, depth, first, step = 1036, 124, 62, 13, 88, 46
+    slabs = ""
+    for i in reversed(range(len(LAYERS))):
+        name, tools, colour = LAYERS[i]
+        c, cy = t[colour], first + i * step
+        top = f"{cx},{cy - b} {cx + a},{cy} {cx},{cy + b} {cx - a},{cy}"
+        left = f"{cx - a},{cy} {cx},{cy + b} {cx},{cy + b + depth} {cx - a},{cy + depth}"
+        right = f"{cx + a},{cy} {cx},{cy + b} {cx},{cy + b + depth} {cx + a},{cy + depth}"
+        slabs += (
+            f'<g class="b" style="animation-delay:{i * 0.35}s">'
+            f'<polygon points="{left}" fill="{t["inset"]}" stroke="{c}" stroke-opacity=".55" stroke-linejoin="round"/>'
+            f'<polygon points="{left}" fill="{c}" fill-opacity=".22"/>'
+            f'<polygon points="{right}" fill="{t["inset"]}" stroke="{c}" stroke-opacity=".55" stroke-linejoin="round"/>'
+            f'<polygon points="{right}" fill="{c}" fill-opacity=".1"/>'
+            f'<polygon points="{top}" fill="{t["panel"]}" stroke="{c}" stroke-width="1.4" stroke-linejoin="round"/>'
+            f'<polygon points="{top}" fill="{c}" fill-opacity=".14"/>'
+            f'<path d="M{cx - a - 6},{cy} H{cx - a - 34}" stroke="{c}" stroke-width="1.4"/>'
+            f'<circle cx="{cx - a - 6}" cy="{cy}" r="2.6" fill="{c}"/>'
+            f'<text class="m" x="{cx - a - 44}" y="{cy - 2}" font-size="12" font-weight="700" letter-spacing="1.3" text-anchor="end" fill="{c}">{name}</text>'
+            f'<text class="s mu" x="{cx - a - 44}" y="{cy + 16}" font-size="13.5" text-anchor="end">{escape(tools)}</text>'
+            "</g>"
+        )
+    last = first + (len(LAYERS) - 1) * step
+    # A request travelling down the stack's right edge, and the response coming back.
+    wire = f"M{cx + a + 14},{first} V{last}"
     body = f"""<defs>
-<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="{t['muted']}" opacity=".45"/></pattern>
-<linearGradient id="fade" x1="0" x2="1"><stop offset=".25" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="{t['muted']}" opacity=".4"/></pattern>
+<linearGradient id="fade" x1="0" x2="1"><stop offset=".3" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
 <mask id="m"><rect width="{w}" height="{h}" fill="url(#fade)"/></mask>
-<radialGradient id="glow" cx="1" cy="0" r="1"><stop offset="0" stop-color="{t['accent']}" stop-opacity=".22"/><stop offset=".6" stop-color="{t['accent']}" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow" gradientUnits="userSpaceOnUse" cx="{cx}" cy="{h / 2}" r="330"><stop offset="0" stop-color="{t['accent']}" stop-opacity=".2"/><stop offset="1" stop-color="{t['accent']}" stop-opacity="0"/></radialGradient>
 <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="{t['accent']}"/><stop offset="1" stop-color="{t['accent2']}"/></linearGradient>
 <clipPath id="c"><rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18"/></clipPath>
 </defs>
@@ -143,17 +163,20 @@ def hero(t):
 <rect width="{w}" height="{h}" fill="url(#glow)"/>
 </g>
 <rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="none" stroke="{t['stroke']}"/>
-<circle class="ok p" cx="62" cy="67" r="5"/>
-<text class="m mu" x="78" y="72" font-size="15">{escape(STATUS)}</text>
-<text class="s t" x="54" y="146" font-size="58" font-weight="700" letter-spacing="-1.2">{escape(NAME)}</text>
-<text class="s" x="56" y="190" font-size="21"><tspan class="t" font-weight="600">{escape(ROLE[0])}</tspan><tspan class="mu">{escape(ROLE[1])}</tspan></text>
-<rect x="56" y="210" width="64" height="4" rx="2" fill="url(#bar)"/>
-<text class="m ac" x="56" y="250" font-size="17" font-weight="700">›</text>
+<circle class="ok p" cx="62" cy="77" r="5"/>
+<text class="m mu" x="78" y="82" font-size="15">{escape(STATUS)}</text>
+<text class="s t" x="54" y="158" font-size="58" font-weight="700" letter-spacing="-1.2">{escape(NAME)}</text>
+<text class="s" x="56" y="202" font-size="21"><tspan class="t" font-weight="600">{escape(ROLE[0])}</tspan><tspan class="mu">{escape(ROLE[1])}</tspan></text>
+<rect x="56" y="222" width="64" height="4" rx="2" fill="url(#bar)"/>
+<text class="m ac" x="56" y="262" font-size="17" font-weight="700">›</text>
 {rotating}
-<rect x="700" y="62" width="450" height="188" rx="14" fill="{t['inset']}" stroke="{t['stroke']}"/>
-<text class="m mu" x="724" y="96" font-size="12.5" letter-spacing="1.4">PLATFORMS I OWN END TO END</text>
-{''.join(rows)}"""
-    return svg(w, h, f"{NAME} — full-stack developer, systems that run in production", style, body)
+<ellipse cx="{cx}" cy="{last + b + depth + 8}" rx="{a * 0.8}" ry="8" fill="#000" opacity=".1"/>
+<path d="{wire}" stroke="{t['stroke']}" stroke-width="1.6" stroke-dasharray="3 5"/>
+<circle r="4" fill="{t['accent']}"><animateMotion dur="2.8s" repeatCount="indefinite" path="{wire}"/></circle>
+<circle r="4" fill="{t['accent2']}"><animateMotion dur="2.8s" begin="-1.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" path="{wire}"/></circle>
+{slabs}"""
+    layers = "; ".join(f"{name.lower()}: {tools}" for name, tools, _ in LAYERS)
+    return svg(w, h, f"{NAME} — full-stack developer, systems that run in production. The stack, top to bottom: {layers}.", style, body)
 
 
 # --- architecture ------------------------------------------------------------
