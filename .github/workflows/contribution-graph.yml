@@ -2,7 +2,7 @@ name: Contribution graph
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "23 */12 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -20,15 +20,25 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Generate contribution snake
-        uses: Platane/snk@v3
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#3b82f6
 
+      # Cache the streak card so the README never depends on the service being up.
+      # If the fetch fails, keep the copy already published on the output branch.
+      - name: Fetch streak card
+        env:
+          STREAK_URL: https://streak-stats.demolab.com?user=${{ github.repository_owner }}&theme=tokyonight&hide_border=true&border_radius=10
+          PREVIOUS_URL: https://raw.githubusercontent.com/${{ github.repository }}/output/github-streak.svg
+        run: |
+          fetch() { curl -fsSL --retry 3 --max-time 30 "$1" -o dist/github-streak.svg && grep -q '<svg' dist/github-streak.svg; }
+          fetch "$STREAK_URL" || fetch "$PREVIOUS_URL" || { rm -f dist/github-streak.svg; echo "::warning::Streak card unavailable"; }
+
       - name: Publish to output branch
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
         with:
           target_branch: output
           build_dir: dist

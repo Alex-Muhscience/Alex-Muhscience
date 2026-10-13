@@ -112,12 +112,12 @@ Executive-training, booking and document platform with a public catalogue and an
 <tr>
 <td width="50%" valign="top">
 
-#### 🛡️ [UTDRS — Threat Detection & Response](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project)
-`🏆 Mozilla RCC Top 5` · `Open source`
+#### 🛡️ [UTDRS — Threat Detection & Response](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)
+`🏆 Mozilla RCC Top 5` · `Capstone project`
 
 Every event runs through MITRE ATT&CK-mapped rules, anomaly and ML detectors, and analysts triage the alerts in a React dashboard — built to keep AI explainable.
 
-[Source](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project) · [Dashboard](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project/tree/main/frontend) · [API gateway](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project/tree/main/services/api-gateway) · [Core engine](https://github.com/Alex-Muhscience/UTDRS-Capstone-Project/tree/main/services/core-engine)
+[Case study](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)
 
 <sub>Python · FastAPI · React · TypeScript · MongoDB · C · Docker</sub>
 
@@ -184,7 +184,7 @@ Company site on the Next.js App Router with server-handled enquiry forms, techni
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=Alex-Muhscience&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub streak" />
+<img src="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-streak.svg" alt="GitHub streak" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-contribution-grid-snake-dark.svg" />
