@@ -113,7 +113,7 @@ Executive-training, booking and document platform with a public catalogue and an
 <td width="50%" valign="top">
 
 #### 🛡️ [UTDRS — Threat Detection & Response](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)
-`🏆 Mozilla RCC Top 5` · `Capstone project`
+`🏆 Mozilla RCC Top 5` · `In development` · `Private`
 
 Every event runs through MITRE ATT&CK-mapped rules, anomaly and ML detectors, and analysts triage the alerts in a React dashboard — built to keep AI explainable.
 
