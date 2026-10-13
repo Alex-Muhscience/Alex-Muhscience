@@ -1,54 +1,57 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a8a,100:dc2626&height=200&section=header&text=Alex%20Murimi%20Kamau&fontSize=48&fontColor=ffffff&fontAlignY=36&desc=Full-Stack%20Developer%20%C2%B7%20Systems%20that%20run%20in%20production&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Alex Murimi Kamau — Full-Stack Developer" />
-
 <a href="https://portfolio-alex-m-kamau.vercel.app">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=3200&pause=900&color=3B82F6&center=true&vCenter=true&width=640&lines=I+build+and+run+production+platforms+end+to+end;Laravel+%C2%B7+Next.js+%C2%B7+React+%C2%B7+TypeScript+%C2%B7+PostgreSQL;Payments%2C+multi-tenancy%2C+RBAC+and+audit+trails;Linux%2C+Docker%2C+CI%2FCD+and+keeping+it+all+running" alt="Typing intro" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg" />
+  <img src="assets/hero-dark.svg" width="100%" alt="Alex Murimi Kamau — full-stack developer, systems that run in production" />
+</picture>
 </a>
+
+<br/><br/>
+
+[**Portfolio**](https://portfolio-alex-m-kamau.vercel.app) &nbsp;·&nbsp; [**Case studies**](https://portfolio-alex-m-kamau.vercel.app/work) &nbsp;·&nbsp; [**Résumé**](https://flowcv.com/resume/t249m8own6) &nbsp;·&nbsp; [**LinkedIn**](https://www.linkedin.com/in/alex-m-kamau-20015b340) &nbsp;·&nbsp; [**Email**](mailto:alex.kamau.2558@gmail.com)
+
+</div>
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-0f172a?style=flat-square&logo=vercel&logoColor=white)](https://portfolio-alex-m-kamau.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alex-m-kamau-20015b340)
-[![Resume](https://img.shields.io/badge/Resume-16a34a?style=flat-square&logo=readdotcv&logoColor=white)](https://flowcv.com/resume/t249m8own6)
-[![Email](https://img.shields.io/badge/Email-dc2626?style=flat-square&logo=gmail&logoColor=white)](mailto:alex.kamau.2558@gmail.com)
-![Location](https://img.shields.io/badge/Nairobi%2C%20Kenya%20·%20UTC%2B3-334155?style=flat-square&logo=googlemaps&logoColor=white)
-![Open to remote](https://img.shields.io/badge/Open%20to%20remote-22c55e?style=flat-square)
-
-</div>
-
----
-
-### 👋 Hi, I'm Alex
-
 I design, build and **operate** business-critical web platforms — from the first requirements conversation to the production server, and everything after it ships.
 
-Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system on Laravel, Next.js and PostgreSQL.
+Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system on Laravel, Next.js and PostgreSQL. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
 
-```yaml
-focus:      [architecture, full-stack delivery, payments, security, infrastructure]
-building:   BusinessOS — multi-tenant ERP with Postgres row-level security
-shipping:   3 production platforms, owned end to end
-recognised: Top 5 Finalist — Mozilla Responsible Computing Challenge
-```
+<br/>
 
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/metrics-light.svg" />
+  <img src="assets/metrics-dark.svg" width="100%" alt="3 platforms in production; 25,000+ professionals served; 50+ countries reached; about 60% of manual work automated; about 60% faster LMS pages" />
+</picture>
 
-| 🏢 Platforms in production | 🌍 Professionals served | 🗺️ Countries reached | ⚙️ Manual work automated | ⚡ LMS page speed gain |
-|:---:|:---:|:---:|:---:|:---:|
-| **3** | **25,000+** | **50+** | **~60%** | **~60%** |
+## How I put a platform together
 
-</div>
+Not one system, but the shape most of mine share: a boring, fast request path, with everything slow or failure-prone pushed behind it.
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/architecture-light.svg" />
+  <img src="assets/architecture-dark.svg" width="100%" alt="Request path: client, Cloudflare, nginx, the Laravel and Next.js application, PostgreSQL. Behind the request: Redis, queue workers fed by an outbox, generated documents, signed webhooks and verified payment callbacks. On every layer: security, delivery and operations." />
+</picture>
 
-### 🚀 Featured work
+- **Architecture follows requirements.** A content site, a payment workflow and a multi-tenant ledger don't want the same design.
+- **Modular monolith first.** Services get extracted when a domain proves it needs to scale or release on its own.
+- **Contain failure.** A slow PDF render or a dead webhook should never fail an unrelated checkout.
+- **Security and audit are architecture,** designed in from the first schema — not bolted on later.
+- **Measure, then optimise.** Find the bottleneck with real data volume, then fix that one thing.
+- **Build systems that can be operated.** Health checks, correlated logs, repeatable deploys and tested restores are part of the feature.
+
+## Featured work
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-#### 🧩 [BusinessOS](https://portfolio-alex-m-kamau.vercel.app/work/businessos)
+#### [BusinessOS](https://portfolio-alex-m-kamau.vercel.app/work/businessos)
 `In development` · `Private`
 
 Multi-tenant operating system for SMEs — CRM, sales, procurement, inventory, finance, HR and projects on one governed data model.
@@ -63,7 +66,7 @@ Multi-tenant operating system for SMEs — CRM, sales, procurement, inventory, f
 </td>
 <td width="50%" valign="top">
 
-#### 🎓 [EuroAfrique Corporate Skills](https://www.euroafriquecorporateskills.com)
+#### [EuroAfrique Corporate Skills](https://www.euroafriquecorporateskills.com)
 `In production` · `Sole technical owner`
 
 Corporate training platform: programme publishing, applications, M-Pesa and card payments, and automated enrolment documents.
@@ -80,7 +83,7 @@ Corporate training platform: programme publishing, applications, M-Pesa and card
 <tr>
 <td width="50%" valign="top">
 
-#### 📚 [Chania Publishers LMS](https://chaniapublishers.com)
+#### [Chania Publishers LMS](https://chaniapublishers.com)
 `In production` · `Sole technical owner`
 
 Learning management system built from concept to production for an educational publisher.
@@ -95,7 +98,7 @@ Learning management system built from concept to production for an educational p
 </td>
 <td width="50%" valign="top">
 
-#### 🌏 [AfriAsia Career Development Center](https://afriasiacareercenter.com)
+#### [AfriAsia Career Development Center](https://afriasiacareercenter.com)
 `In production` · `Sole technical owner`
 
 Executive-training, booking and document platform with a public catalogue and an admin portal.
@@ -112,8 +115,8 @@ Executive-training, booking and document platform with a public catalogue and an
 <tr>
 <td width="50%" valign="top">
 
-#### 🛡️ [UTDRS — Threat Detection & Response](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)
-`🏆 Mozilla RCC Top 5` · `In development` · `Private`
+#### [UTDRS — Threat Detection & Response](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)
+`Mozilla RCC Top 5` · `In development` · `Private`
 
 Every event runs through MITRE ATT&CK-mapped rules, anomaly and ML detectors, and analysts triage the alerts in a React dashboard — built to keep AI explainable.
 
@@ -124,7 +127,7 @@ Every event runs through MITRE ATT&CK-mapped rules, anomaly and ML detectors, an
 </td>
 <td width="50%" valign="top">
 
-#### 🌐 [Muhscience Tech Labs](https://muhscience-tech-labs-website.vercel.app)
+#### [Muhscience Tech Labs](https://muhscience-tech-labs-website.vercel.app)
 `Live on Vercel` · `Open source`
 
 Company site on the Next.js App Router with server-handled enquiry forms, technical SEO and security headers.
@@ -137,38 +140,21 @@ Company site on the Next.js App Router with server-handled enquiry forms, techni
 </tr>
 </table>
 
-<sub>🔐 Also built: <a href="https://github.com/Alex-Muhscience/Pass-KeyGen"><b>KeyGen</b></a> — a Flutter password manager with AES-encrypted storage, PBKDF2 and biometric unlock. Full case studies live on my <a href="https://portfolio-alex-m-kamau.vercel.app/work">portfolio</a>.</sub>
+<sub>Also built: <a href="https://github.com/Alex-Muhscience/Pass-KeyGen"><b>KeyGen</b></a> — a Flutter password manager with AES-encrypted storage, PBKDF2 and biometric unlock. Full case studies live on my <a href="https://portfolio-alex-m-kamau.vercel.app/work">portfolio</a>.</sub>
 
----
+## Toolbox
 
-### 🧠 How I build
+| Layer | What I reach for |
+|---|---|
+| **Backend** | PHP · Laravel · Livewire · Python · FastAPI · Flask · Node.js |
+| **Frontend** | TypeScript · React · Next.js · Tailwind · Alpine.js |
+| **Mobile** | Dart · Flutter |
+| **Data** | PostgreSQL · MySQL · Redis · MongoDB · SQLite · Algolia |
+| **Infrastructure** | Linux · Docker · nginx · Cloudflare · Vercel · GitHub Actions |
+| **Quality & security** | Playwright · k6 · JWT · TOTP MFA · RBAC · row-level security |
+| **Payments** | M-Pesa · Paystack |
 
-- **Architecture follows requirements.** A content site, a payment workflow and a multi-tenant ledger don't want the same design.
-- **Modular monolith first.** Services get extracted when a domain proves it needs to scale or release on its own.
-- **Contain failure.** A slow PDF render or a dead webhook should never fail an unrelated checkout.
-- **Security and audit are architecture,** designed in from the first schema — not bolted on later.
-- **Measure, then optimise.** Find the bottleneck with real data volume, then fix that one thing.
-- **Build systems that can be operated.** Health checks, correlated logs, repeatable deploys and tested restores are part of the feature.
-
----
-
-### 🛠️ Toolbox
-
-<div align="center">
-
-**Languages & frameworks**<br/>
-<img src="https://skillicons.dev/icons?i=php,laravel,ts,js,react,nextjs,tailwind,nodejs,python,flask,fastapi,dart,flutter&perline=13" alt="Languages and frameworks" />
-
-**Data & infrastructure**<br/>
-<img src="https://skillicons.dev/icons?i=postgres,mysql,redis,mongodb,sqlite,docker,nginx,linux,githubactions,cloudflare,vercel,git&perline=12" alt="Data and infrastructure" />
-
-<sub>Also: Livewire · Alpine.js · Playwright · k6 · JWT · TOTP MFA · RBAC · Row-level security · M-Pesa · Paystack · Algolia</sub>
-
-</div>
-
----
-
-### 📈 Journey
+## Journey
 
 | When | Role | Where |
 |---|---|---|
@@ -176,15 +162,17 @@ Company site on the Next.js App Router with server-handled enquiry forms, techni
 | May – Aug 2025 | Freelance Web Development Tutor | Self-employed |
 | Aug 2024 – Feb 2025 | Network Technician | Gicatech Enterprise Solutions |
 | May – Aug 2024 | Software Development Intern | Secunets Technologies |
-| 2021 – 2025 | 🎓 BSc Computer Science, Second Class Honours (Upper) | Kisii University |
+| 2021 – 2025 | BSc Computer Science, Second Class Honours (Upper) | Kisii University |
 
----
-
-### 📊 GitHub activity
+## Activity
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-streak.svg" alt="GitHub streak" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-streak.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-streak-light.svg" />
+  <img src="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-streak.svg" alt="GitHub streak" />
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-contribution-grid-snake-dark.svg" />
@@ -198,12 +186,12 @@ Company site on the Next.js App Router with server-handled enquiry forms, techni
 
 <div align="center">
 
-### 🤝 Let's build something that lasts
+### Let's build something that lasts
 
 Open to **full-stack and backend engineering roles**, technical partnerships and product work where reliability matters.
 
-[**portfolio-alex-m-kamau.vercel.app**](https://portfolio-alex-m-kamau.vercel.app) · [**LinkedIn**](https://www.linkedin.com/in/alex-m-kamau-20015b340) · [**alex.kamau.2558@gmail.com**](mailto:alex.kamau.2558@gmail.com)
+[**portfolio-alex-m-kamau.vercel.app**](https://portfolio-alex-m-kamau.vercel.app) &nbsp;·&nbsp; [**LinkedIn**](https://www.linkedin.com/in/alex-m-kamau-20015b340) &nbsp;·&nbsp; [**alex.kamau.2558@gmail.com**](mailto:alex.kamau.2558@gmail.com)
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:dc2626,50:1e3a8a,100:0f172a&height=110&section=footer" width="100%" alt="" />
+<sub>The header, metrics and diagram on this page are generated by <a href="scripts/build_assets.py"><code>scripts/build_assets.py</code></a> — no third-party widgets.</sub>
 
 </div>

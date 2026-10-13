@@ -27,15 +27,20 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#3b82f6
 
-      # Cache the streak card so the README never depends on the service being up.
-      # If the fetch fails, keep the copy already published on the output branch.
-      - name: Fetch streak card
+      # Cache the streak cards so the README never depends on the service being up.
+      # If a fetch fails, keep the copy already published on the output branch.
+      - name: Fetch streak cards
         env:
-          STREAK_URL: https://streak-stats.demolab.com?user=${{ github.repository_owner }}&theme=tokyonight&hide_border=true&border_radius=10
-          PREVIOUS_URL: https://raw.githubusercontent.com/${{ github.repository }}/output/github-streak.svg
+          STREAK_URL: https://streak-stats.demolab.com?user=${{ github.repository_owner }}&hide_border=true&border_radius=10
+          PREVIOUS_URL: https://raw.githubusercontent.com/${{ github.repository }}/output
         run: |
-          fetch() { curl -fsSL --retry 3 --max-time 30 "$1" -o dist/github-streak.svg && grep -q '<svg' dist/github-streak.svg; }
-          fetch "$STREAK_URL" || fetch "$PREVIOUS_URL" || { rm -f dist/github-streak.svg; echo "::warning::Streak card unavailable"; }
+          fetch() { curl -fsSL --retry 3 --max-time 30 "$1" -o "dist/$2" && grep -q '<svg' "dist/$2"; }
+          card() {
+            fetch "$STREAK_URL&theme=$2" "$1" || fetch "$PREVIOUS_URL/$1" "$1" ||
+              { rm -f "dist/$1"; echo "::warning::$1 unavailable"; }
+          }
+          card github-streak.svg tokyonight
+          card github-streak-light.svg default
 
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
