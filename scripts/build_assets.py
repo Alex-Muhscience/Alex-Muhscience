@@ -73,6 +73,16 @@ PROJECTS = [
      ["Next.js 15", "React 19", "TypeScript", "Tailwind", "shadcn/ui", "MongoDB"]),
 ]
 
+# (when, role, where, kind) — newest first; kind is "now", "past" or "study"
+JOURNEY = [
+    ("Aug 2025 → now", "Full-Stack Developer & Technical Owner",
+     "EuroAfrique Corporate Skills · Chania Publishers · AfriAsia Career Development Center", "now"),
+    ("May – Aug 2025", "Freelance Web Development Tutor", "Self-employed", "past"),
+    ("Aug 2024 – Feb 2025", "Network Technician", "Gicatech Enterprise Solutions", "past"),
+    ("May – Aug 2024", "Software Development Intern", "Secunets Technologies", "past"),
+    ("2021 – 2025", "BSc Computer Science, Second Class Honours (Upper)", "Kisii University", "study"),
+]
+
 # --- helpers -----------------------------------------------------------------
 
 
@@ -286,10 +296,42 @@ def project(t, index, colour, status, title, description, steps, stack):
     return svg(w, h, label, style, body)
 
 
+# --- journey -----------------------------------------------------------------
+
+
+def journey(t):
+    w, row, top = 1000, 68, 34
+    h = top + row * len(JOURNEY) - 8
+    rail = 222
+    style = base_style(t) + (
+        "@keyframes ring{0%{r:6px;opacity:.7}100%{r:16px;opacity:0}}"
+        ".g{animation:ring 2.4s ease-out infinite}"
+    )
+    body = f'<path d="M{rail},{top} V{top + row * (len(JOURNEY) - 1)}" stroke="{t["stroke"]}" stroke-width="2"/>'
+    for i, (when, role, where, kind) in enumerate(JOURNEY):
+        y = top + i * row
+        if kind == "now":
+            mark = (
+                f'<circle class="g" cx="{rail}" cy="{y}" r="6" fill="{t["accent"]}"/>'
+                f'<circle cx="{rail}" cy="{y}" r="6" fill="{t["accent"]}"/>'
+            )
+        elif kind == "study":
+            mark = f'<rect x="{rail - 6}" y="{y - 6}" width="12" height="12" rx="2" transform="rotate(45 {rail} {y})" fill="{t["panel"]}" stroke="{t["muted"]}" stroke-width="2"/>'
+        else:
+            mark = f'<circle cx="{rail}" cy="{y}" r="5" fill="{t["panel"]}" stroke="{t["muted"]}" stroke-width="2"/>'
+        body += (
+            f'{mark}<text class="m {"ac" if kind == "now" else "mu"}" x="{rail - 28}" y="{y + 5}" font-size="13.5" text-anchor="end">{escape(when)}</text>'
+            f'<text class="s t" x="{rail + 30}" y="{y + 5}" font-size="17" font-weight="600">{escape(role)}</text>'
+            f'<text class="s mu" x="{rail + 30}" y="{y + 27}" font-size="14.5">{escape(where)}</text>'
+        )
+    label = "Journey. " + " ".join(f"{when}: {role}, {where}." for when, role, where, _ in JOURNEY)
+    return svg(w, h, label, style, body)
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     for theme, tokens in THEMES.items():
-        for name, build in (("hero", hero), ("architecture", architecture)):
+        for name, build in (("hero", hero), ("architecture", architecture), ("journey", journey)):
             path = OUT / f"{name}-{theme}.svg"
             path.write_text(build(tokens), encoding="utf-8")
             print(f"wrote {path.relative_to(OUT.parent)}")

@@ -31,16 +31,17 @@ jobs:
       # If a fetch fails, keep the copy already published on the output branch.
       - name: Fetch streak cards
         env:
-          STREAK_URL: https://streak-stats.demolab.com?user=${{ github.repository_owner }}&hide_border=true&border_radius=10
+          STREAK_URL: https://streak-stats.demolab.com?user=${{ github.repository_owner }}&border_radius=14
           PREVIOUS_URL: https://raw.githubusercontent.com/${{ github.repository }}/output
         run: |
           fetch() { curl -fsSL --retry 3 --max-time 30 "$1" -o "dist/$2" && grep -q '<svg' "dist/$2"; }
           card() {
-            fetch "$STREAK_URL&theme=$2" "$1" || fetch "$PREVIOUS_URL/$1" "$1" ||
+            fetch "$STREAK_URL&$2" "$1" || fetch "$PREVIOUS_URL/$1" "$1" ||
               { rm -f "dist/$1"; echo "::warning::$1 unavailable"; }
           }
-          card github-streak.svg tokyonight
-          card github-streak-light.svg default
+          # Colours match the dark and light palettes in scripts/build_assets.py.
+          card github-streak.svg "background=0f1622&border=273244&stroke=273244&ring=5b9cf8&fire=f2605c&currStreakNum=e6edf3&sideNums=e6edf3&currStreakLabel=5b9cf8&sideLabels=e6edf3&dates=8b98a9"
+          card github-streak-light.svg "background=f7f9fc&border=d5dce6&stroke=d5dce6&ring=2563eb&fire=dc2626&currStreakNum=0f172a&sideNums=0f172a&currStreakLabel=2563eb&sideLabels=0f172a&dates=566273"
 
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
