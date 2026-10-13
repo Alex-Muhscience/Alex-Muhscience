@@ -8,10 +8,7 @@
 </picture>
 </a>
 
-<a href="https://portfolio-alex-m-kamau.vercel.app"><img src="assets/button-portfolio.svg" height="38" alt="Portfolio" /></a>
-<a href="https://www.linkedin.com/in/alex-m-kamau-20015b340"><img src="assets/button-linkedin.svg" height="38" alt="LinkedIn" /></a>
-<a href="https://flowcv.com/resume/t249m8own6"><img src="assets/button-resume.svg" height="38" alt="Résumé" /></a>
-<a href="mailto:alex.kamau.2558@gmail.com"><img src="assets/button-email.svg" height="38" alt="Email" /></a>
+<a href="https://portfolio-alex-m-kamau.vercel.app"><img src="assets/button-portfolio.svg" height="38" alt="Portfolio" /></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/alex-m-kamau-20015b340"><img src="assets/button-linkedin.svg" height="38" alt="LinkedIn" /></a>&nbsp;&nbsp;<a href="https://flowcv.com/resume/t249m8own6"><img src="assets/button-resume.svg" height="38" alt="Résumé" /></a>&nbsp;&nbsp;<a href="mailto:alex.kamau.2558@gmail.com"><img src="assets/button-email.svg" height="38" alt="Email" /></a>
 
 </div>
 
@@ -188,10 +185,7 @@ Each card traces what the system does, left to right. Click one to open it.
 </picture>
 </a>
 
-<a href="https://portfolio-alex-m-kamau.vercel.app"><img src="assets/button-portfolio.svg" height="38" alt="Portfolio" /></a>
-<a href="https://www.linkedin.com/in/alex-m-kamau-20015b340"><img src="assets/button-linkedin.svg" height="38" alt="LinkedIn" /></a>
-<a href="https://flowcv.com/resume/t249m8own6"><img src="assets/button-resume.svg" height="38" alt="Résumé" /></a>
-<a href="mailto:alex.kamau.2558@gmail.com"><img src="assets/button-email.svg" height="38" alt="Email" /></a>
+<a href="https://portfolio-alex-m-kamau.vercel.app"><img src="assets/button-portfolio.svg" height="38" alt="Portfolio" /></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/alex-m-kamau-20015b340"><img src="assets/button-linkedin.svg" height="38" alt="LinkedIn" /></a>&nbsp;&nbsp;<a href="https://flowcv.com/resume/t249m8own6"><img src="assets/button-resume.svg" height="38" alt="Résumé" /></a>&nbsp;&nbsp;<a href="mailto:alex.kamau.2558@gmail.com"><img src="assets/button-email.svg" height="38" alt="Email" /></a>
 
 <br/>
 
