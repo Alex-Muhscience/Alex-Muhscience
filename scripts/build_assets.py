@@ -36,6 +36,23 @@ ROTATING = [
     "Payments, multi-tenancy, RBAC and audit trails",
     "Linux, Docker, CI/CD and keeping it all running",
 ]
+CLOSING = (
+    "Let's build something that lasts",
+    "Open to full-stack and backend engineering roles, technical partnerships and product work where reliability matters.",
+    "alex.kamau.2558@gmail.com",
+)
+# Link buttons: solid colours that read on both light and dark pages. (slug, label, colour, icon)
+BUTTONS = [
+    ("portfolio", "Portfolio", "#2563eb",
+     '<circle cx="9" cy="9" r="7.2"/><ellipse cx="9" cy="9" rx="3.1" ry="7.2"/><path d="M1.8,9 H16.2"/>'),
+    ("linkedin", "LinkedIn", "#0a66c2",
+     '<rect x="1.5" y="1.5" width="15" height="15" rx="3"/><path d="M5.6,8 V13 M5.6,5.2 V5.3 M8.8,13 V8 M8.8,10.4 C8.8,7.4 12.6,7.4 12.6,10.4 V13"/>'),
+    ("resume", "Résumé", "#15803d",
+     '<path d="M4,1.5 H11 L14.5,5 V16.5 H4 Z M11,1.5 V5 H14.5 M6.5,9 H12 M6.5,12 H12"/>'),
+    ("email", "Email", "#dc2626",
+     '<rect x="1.5" y="3.5" width="15" height="11" rx="2"/><path d="M2,4.5 L9,10 L16,4.5"/>'),
+]
+
 # The header draws the stack as four layers, top to bottom. (name, tools, colour)
 LAYERS = [
     ("INTERFACE", "React · Next.js · TypeScript", "blue"),
@@ -104,6 +121,22 @@ def base_style(t):
     )
 
 
+def slab(t, colour, cx, cy, a, b, depth):
+    """One isometric layer: two side faces and a top face."""
+    c = t[colour]
+    top = f"{cx},{cy - b} {cx + a},{cy} {cx},{cy + b} {cx - a},{cy}"
+    left = f"{cx - a},{cy} {cx},{cy + b} {cx},{cy + b + depth} {cx - a},{cy + depth}"
+    right = f"{cx + a},{cy} {cx},{cy + b} {cx},{cy + b + depth} {cx + a},{cy + depth}"
+    return (
+        f'<polygon points="{left}" fill="{t["inset"]}" stroke="{c}" stroke-opacity=".55" stroke-linejoin="round"/>'
+        f'<polygon points="{left}" fill="{c}" fill-opacity=".22"/>'
+        f'<polygon points="{right}" fill="{t["inset"]}" stroke="{c}" stroke-opacity=".55" stroke-linejoin="round"/>'
+        f'<polygon points="{right}" fill="{c}" fill-opacity=".1"/>'
+        f'<polygon points="{top}" fill="{t["panel"]}" stroke="{c}" stroke-width="1.4" stroke-linejoin="round"/>'
+        f'<polygon points="{top}" fill="{c}" fill-opacity=".14"/>'
+    )
+
+
 # --- hero --------------------------------------------------------------------
 
 
@@ -129,22 +162,15 @@ def hero(t):
     for i in reversed(range(len(LAYERS))):
         name, tools, colour = LAYERS[i]
         c, cy = t[colour], first + i * step
-        top = f"{cx},{cy - b} {cx + a},{cy} {cx},{cy + b} {cx - a},{cy}"
-        left = f"{cx - a},{cy} {cx},{cy + b} {cx},{cy + b + depth} {cx - a},{cy + depth}"
-        right = f"{cx + a},{cy} {cx},{cy + b} {cx},{cy + b + depth} {cx + a},{cy + depth}"
         slabs += (
             f'<g class="b" style="animation-delay:{i * 0.35}s">'
-            f'<polygon points="{left}" fill="{t["inset"]}" stroke="{c}" stroke-opacity=".55" stroke-linejoin="round"/>'
-            f'<polygon points="{left}" fill="{c}" fill-opacity=".22"/>'
-            f'<polygon points="{right}" fill="{t["inset"]}" stroke="{c}" stroke-opacity=".55" stroke-linejoin="round"/>'
-            f'<polygon points="{right}" fill="{c}" fill-opacity=".1"/>'
-            f'<polygon points="{top}" fill="{t["panel"]}" stroke="{c}" stroke-width="1.4" stroke-linejoin="round"/>'
-            f'<polygon points="{top}" fill="{c}" fill-opacity=".14"/>'
+            + slab(t, colour, cx, cy, a, b, depth)
+            +
             f'<path d="M{cx - a - 6},{cy} H{cx - a - 34}" stroke="{c}" stroke-width="1.4"/>'
             f'<circle cx="{cx - a - 6}" cy="{cy}" r="2.6" fill="{c}"/>'
             f'<text class="m" x="{cx - a - 44}" y="{cy - 2}" font-size="12" font-weight="700" letter-spacing="1.3" text-anchor="end" fill="{c}">{name}</text>'
             f'<text class="s mu" x="{cx - a - 44}" y="{cy + 16}" font-size="13.5" text-anchor="end">{escape(tools)}</text>'
-            "</g>"
+            + "</g>"
         )
     last = first + (len(LAYERS) - 1) * step
     # A request travelling down the stack's right edge, and the response coming back.
@@ -177,6 +203,57 @@ def hero(t):
 {slabs}"""
     layers = "; ".join(f"{name.lower()}: {tools}" for name, tools, _ in LAYERS)
     return svg(w, h, f"{NAME} — full-stack developer, systems that run in production. The stack, top to bottom: {layers}.", style, body)
+
+
+# --- link buttons and footer -------------------------------------------------
+
+
+def button(label, colour, icon):
+    w, h = round(len(label) * 8.6) + 62, 38
+    body = (
+        f'<rect width="{w}" height="{h}" rx="9" fill="{colour}"/>'
+        f'<g transform="translate(16,10)" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{icon}</g>'
+        f'<text x="{44 + (w - 60) / 2}" y="24.5" font-family="{SANS}" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">{escape(label)}</text>'
+    )
+    return svg(w, h, label, "", body)
+
+
+def footer(t):
+    w, h = 1200, 220
+    title, pitch, email = CLOSING
+    style = base_style(t) + (
+        "@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}"
+        ".b{animation:bob 5s ease-in-out infinite}"
+    )
+    lines = "".join(
+        f'<text class="s mu" x="56" y="{118 + i * 24}" font-size="17">{escape(line)}</text>'
+        for i, line in enumerate(textwrap.wrap(pitch, 74)[:2])
+    )
+    cx, a, b, depth, first, step = 1040, 92, 46, 10, 66, 32
+    slabs = "".join(
+        f'<g class="b" style="animation-delay:{i * 0.35}s">{slab(t, LAYERS[i][2], cx, first + i * step, a, b, depth)}</g>'
+        for i in reversed(range(len(LAYERS)))
+    )
+    body = f"""<defs>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="{t['muted']}" opacity=".4"/></pattern>
+<linearGradient id="fade" x1="0" x2="1"><stop offset=".3" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
+<mask id="m"><rect width="{w}" height="{h}" fill="url(#fade)"/></mask>
+<radialGradient id="glow" gradientUnits="userSpaceOnUse" cx="{cx}" cy="{h / 2}" r="300"><stop offset="0" stop-color="{t['accent']}" stop-opacity=".2"/><stop offset="1" stop-color="{t['accent']}" stop-opacity="0"/></radialGradient>
+<linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="{t['accent']}"/><stop offset="1" stop-color="{t['accent2']}"/></linearGradient>
+<clipPath id="c"><rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+<rect width="{w}" height="{h}" fill="{t['panel']}"/>
+<rect width="{w}" height="{h}" fill="url(#dots)" mask="url(#m)"/>
+<rect width="{w}" height="{h}" fill="url(#glow)"/>
+</g>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="none" stroke="{t['stroke']}"/>
+<rect x="56" y="38" width="64" height="4" rx="2" fill="url(#bar)"/>
+<text class="s t" x="54" y="86" font-size="36" font-weight="700" letter-spacing="-.8">{escape(title)}</text>
+{lines}
+<text class="m" x="56" y="186" font-size="16"><tspan class="ac" font-weight="700">›</tspan><tspan class="t" dx="10">{escape(email)}</tspan></text>
+{slabs}"""
+    return svg(w, h, f"{title}. {pitch} {email}", style, body)
 
 
 # --- architecture ------------------------------------------------------------
@@ -353,8 +430,12 @@ def journey(t):
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
+    for slug, *spec in BUTTONS:
+        path = OUT / f"button-{slug}.svg"
+        path.write_text(button(*spec), encoding="utf-8")
+        print(f"wrote {path.relative_to(OUT.parent)}")
     for theme, tokens in THEMES.items():
-        for name, build in (("hero", hero), ("architecture", architecture), ("journey", journey)):
+        for name, build in (("hero", hero), ("architecture", architecture), ("journey", journey), ("footer", footer)):
             path = OUT / f"{name}-{theme}.svg"
             path.write_text(build(tokens), encoding="utf-8")
             print(f"wrote {path.relative_to(OUT.parent)}")
