@@ -16,7 +16,7 @@
 
 I design, build and **operate** business-critical web platforms — from the first requirements conversation to the production server, and everything after it ships.
 
-Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
+Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system, and a **secure file sharing platform** for teams. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
 
 I pick the stack to fit the problem: **React** and **Next.js** on the front, **Node.js**, **Laravel**, **FastAPI** or **Flask** behind it, and **TypeScript**, **Python** and **PHP** as the working languages.
 
@@ -56,6 +56,14 @@ Each card traces what the system does, left to right. Click one to open it.
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-utdrs-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="assets/project-utdrs-light.svg" />
   <img src="assets/project-utdrs-dark.svg" width="100%" alt="UTDRS — unified threat detection and response, in development, Mozilla RCC Top 5. Python, FastAPI, React, TypeScript, MongoDB, C, Docker." />
+</picture>
+</a>
+
+<a href="https://portfolio-alex-m-kamau.vercel.app/work/secure-file-sharing">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-secure-file-sharing-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-secure-file-sharing-light.svg" />
+  <img src="assets/project-secure-file-sharing-dark.svg" width="100%" alt="Secure File Sharing Platform — encrypted file sharing for teams, in development, private. Node.js, Express, MongoDB, S3, ClamAV, libsodium, Docker." />
 </picture>
 </a>
 
@@ -106,6 +114,12 @@ Each card traces what the system does, left to right. Click one to open it.
 - Every event runs through MITRE ATT&CK-mapped rules, anomaly and ML detectors
 - Analysts triage the alerts in a React dashboard
 - Built to keep AI explainable
+
+**[Secure File Sharing Platform](https://portfolio-alex-m-kamau.vercel.app/work/secure-file-sharing)** — in development, private
+- Per-file keys, every chunk sealed with **AES-256-GCM**
+- **Resumable** chunked uploads, streamed range downloads
+- Quarantined until **ClamAV** clears it; fails closed
+- Workspace roles, email-verified recipients, revocable links
 
 **[EuroAfrique Corporate Skills](https://www.euroafriquecorporateskills.com)** — in production, sole technical owner
 - Faster responses via **Redis + Cloudflare** caching
