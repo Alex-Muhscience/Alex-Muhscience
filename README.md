@@ -14,7 +14,7 @@
 
 <br/>
 
-I design, build and **operate** business-critical web platforms — from the first requirements conversation to the production server, and everything after it ships.
+I design, build and **operate** business-critical web platforms from the first requirements conversation to the production server, and everything after it ships.
 
 Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system, and a **secure file sharing platform** for teams. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
 
