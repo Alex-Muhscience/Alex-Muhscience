@@ -17,12 +17,12 @@ THEMES = {
     "dark": dict(
         panel="#0f1622", inset="#0b1019", stroke="#273244", text="#e6edf3",
         muted="#8b98a9", accent="#5b9cf8", accent2="#f2605c", ok="#3fb950", warn="#d6a13a",
-        blue="#5b9cf8", red="#f2605c", green="#3fb950", amber="#d6a13a", violet="#a78bfa", teal="#2dd4bf",
+        blue="#5b9cf8", red="#f2605c", green="#3fb950", amber="#d6a13a", violet="#a78bfa", teal="#2dd4bf", cyan="#38bdf8",
     ),
     "light": dict(
         panel="#f7f9fc", inset="#ffffff", stroke="#d5dce6", text="#0f172a",
         muted="#566273", accent="#2563eb", accent2="#dc2626", ok="#15803d", warn="#a16207",
-        blue="#2563eb", red="#dc2626", green="#15803d", amber="#a16207", violet="#7c3aed", teal="#0f766e",
+        blue="#2563eb", red="#dc2626", green="#15803d", amber="#a16207", violet="#7c3aed", teal="#0f766e", cyan="#0369a1",
     ),
 }
 
@@ -74,6 +74,10 @@ PROJECTS = [
      "Unified threat detection and response: events run through ATT&CK-mapped rules, anomaly and ML detectors, and analysts triage alerts in a React dashboard.",
      ["Event", "ATT&CK\nrules", "Anomaly +\nML detectors", "Analyst\ntriage"],
      ["Python", "FastAPI", "React", "TypeScript", "MongoDB", "C", "Docker"]),
+    ("secure-file-sharing", "cyan", "in development · private", "Secure File Sharing Platform",
+     "Encrypted file sharing for teams: resumable uploads encrypted chunk by chunk, malware scanning before release and verified recipients.",
+     ["Chunked\nupload", "AES-256-GCM\nat rest", "ClamAV\nquarantine", "Verified\ndownload"],
+     ["Node.js", "Express", "MongoDB", "S3", "ClamAV", "libsodium", "Docker"]),
     ("euroafrique", "green", "in production · sole technical owner", "EuroAfrique Corporate Skills",
      "Corporate training platform: programme publishing, applications, M-Pesa and card payments, and automated enrolment documents.",
      ["Programme", "Application", "M-Pesa /\ncard payment", "Enrolment\ndocuments"],
