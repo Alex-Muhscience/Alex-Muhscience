@@ -55,7 +55,7 @@ Each card traces what the system does, left to right. Click one to open it.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-utdrs-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="assets/project-utdrs-light.svg" />
-  <img src="assets/project-utdrs-dark.svg" width="100%" alt="UTDRS — unified threat detection and response, in development, Mozilla RCC Top 5. Python, FastAPI, React, TypeScript, MongoDB, C, Docker." />
+  <img src="assets/project-utdrs-dark.svg" width="100%" alt="UTDRS — unified threat detection and response, live on Vercel and Render, Mozilla RCC Top 5. Python, FastAPI, React, TypeScript, MongoDB, C, Docker." />
 </picture>
 </a>
 
@@ -110,10 +110,11 @@ Each card traces what the system does, left to right. Click one to open it.
 - JWT with rotating refresh tokens, TOTP 2FA
 - CI with Playwright E2E and **k6** load tests
 
-**[UTDRS](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)** — in development, private, Mozilla RCC Top 5
+**[UTDRS](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)** — live, private repository, Mozilla RCC Top 5 · [dashboard](https://utdrs-capstone-project.vercel.app)
 - Every event runs through MITRE ATT&CK-mapped rules, anomaly and ML detectors
 - Analysts triage the alerts in a React dashboard
 - Built to keep AI explainable
+- Dashboard on **Vercel**, gateway and engine on **Render**, data in MongoDB Atlas
 
 **[Secure File Sharing Platform](https://portfolio-alex-m-kamau.vercel.app/work/secure-file-sharing)** — in development, private
 - Per-file keys, every chunk sealed with **AES-256-GCM**
