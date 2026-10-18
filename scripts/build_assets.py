@@ -70,7 +70,7 @@ PROJECTS = [
      "Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance, HR and projects on one governed data model.",
      ["Tenant\nrequest", "Row-level\nsecurity", "Idempotent\nwrite", "Outbox +\nwebhooks"],
      ["Laravel 13", "Next.js 16", "PostgreSQL 18", "Redis", "Docker", "nginx"]),
-    ("utdrs", "red", "in development · private · Mozilla RCC Top 5", "UTDRS",
+    ("utdrs", "red", "live · Vercel + Render · Mozilla RCC Top 5", "UTDRS",
      "Unified threat detection and response: events run through ATT&CK-mapped rules, anomaly and ML detectors, and analysts triage alerts in a React dashboard.",
      ["Event", "ATT&CK\nrules", "Anomaly +\nML detectors", "Analyst\ntriage"],
      ["Python", "FastAPI", "React", "TypeScript", "MongoDB", "C", "Docker"]),
