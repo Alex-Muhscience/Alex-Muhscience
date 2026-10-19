@@ -167,10 +167,10 @@ Each card traces what the system does, left to right. Click one to open it.
 <div align="center">
 
 **Languages & frameworks**<br/>
-<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,python,fastapi,flask,php,laravel,tailwind,dart,flutter&perline=13" alt="TypeScript, JavaScript, React, Next.js, Node.js, Python, FastAPI, Flask, PHP, Laravel, Tailwind, Dart, Flutter" />
+<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,python,fastapi,flask,php,laravel,tailwind,dart,flutter,qt&perline=14" alt="TypeScript, JavaScript, React, Next.js, Node.js, Python, FastAPI, Flask, PHP, Laravel, Tailwind, Dart, Flutter, Qt" />
 
 **Data & infrastructure**<br/>
-<img src="https://skillicons.dev/icons?i=postgres,mysql,redis,mongodb,sqlite,docker,nginx,linux,githubactions,cloudflare,vercel,git&perline=12" alt="PostgreSQL, MySQL, Redis, MongoDB, SQLite, Docker, nginx, Linux, GitHub Actions, Cloudflare, Vercel, Git" />
+<img src="https://skillicons.dev/icons?i=postgres,mysql,redis,mongodb,sqlite,docker,nginx,linux,bash,githubactions,cloudflare,vercel,git&perline=13" alt="PostgreSQL, MySQL, Redis, MongoDB, SQLite, Docker, nginx, Linux, Bash, GitHub Actions, Cloudflare, Vercel, Git" />
 
 <sub>Also: Livewire · Alpine.js · Playwright · k6 · JWT · TOTP MFA · RBAC · Row-level security · M-Pesa · Paystack · Algolia · QML / Qt · Hyprland · RPM packaging · systemd</sub>
 

@@ -35,6 +35,7 @@ ROTATING = [
     "I build and run production platforms end to end",
     "Payments, multi-tenancy, RBAC and audit trails",
     "Linux, Docker, CI/CD and keeping it all running",
+    "Open source: Linux desktops, RPM packaging and QML",
 ]
 CLOSING = (
     "Let's build something that lasts",
