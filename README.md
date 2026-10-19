@@ -16,7 +16,7 @@
 
 I design, build and **operate** business-critical web platforms from the first requirements conversation to the production server, and everything after it ships.
 
-Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system, and a **secure file sharing platform** for teams. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
+Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system, and a **secure file sharing platform** for teams, and I maintain **[MuhOS](https://github.com/Alex-Muhscience/MuhOS)**, an open-source desktop shell for Hyprland on Fedora. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
 
 I pick the stack to fit the problem: **React** and **Next.js** on the front, **Node.js**, **Laravel**, **FastAPI** or **Flask** behind it, and **TypeScript**, **Python** and **PHP** as the working languages.
 
@@ -64,6 +64,14 @@ Each card traces what the system does, left to right. Click one to open it.
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-secure-file-sharing-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="assets/project-secure-file-sharing-light.svg" />
   <img src="assets/project-secure-file-sharing-dark.svg" width="100%" alt="Secure File Sharing Platform — encrypted file sharing for teams, in development, private. Node.js, Express, MongoDB, S3, ClamAV, libsodium, Docker." />
+</picture>
+</a>
+
+<a href="https://github.com/Alex-Muhscience/MuhOS">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-muhos-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-muhos-light.svg" />
+  <img src="assets/project-muhos-dark.svg" width="100%" alt="MuhOS — open-source desktop shell for Hyprland on Fedora, pre-release, AGPL-3.0. QML, Qt 6, Quickshell, Hyprland, Fedora RPM, systemd, Python." />
 </picture>
 </a>
 
@@ -122,6 +130,12 @@ Each card traces what the system does, left to right. Click one to open it.
 - Quarantined until **ClamAV** clears it; fails closed
 - Workspace roles, email-verified recipients, revocable links
 
+**[MuhOS](https://github.com/Alex-Muhscience/MuhOS)** — open source (AGPL-3.0), pre-release · [case study](https://portfolio-alex-m-kamau.vercel.app/work/muhos) · [releases](https://github.com/Alex-Muhscience/MuhOS/releases)
+- Fedora fork of the Serpantinum shell: **RPM packages** and a **GDM session** instead of a `curl | bash` installer
+- Redesigned menu bar and control centre in **QML**: GNOME layout, macOS-style glass, Adwaita icons
+- Every number measured in a **VM benchmark**: idle shell CPU 0.62% → 0.07% of a core
+- Every bundled font, sound and image **licence-checked** in CI
+
 **[EuroAfrique Corporate Skills](https://www.euroafriquecorporateskills.com)** — in production, sole technical owner
 - Faster responses via **Redis + Cloudflare** caching
 - Manual operations replaced with **automation**
@@ -158,7 +172,7 @@ Each card traces what the system does, left to right. Click one to open it.
 **Data & infrastructure**<br/>
 <img src="https://skillicons.dev/icons?i=postgres,mysql,redis,mongodb,sqlite,docker,nginx,linux,githubactions,cloudflare,vercel,git&perline=12" alt="PostgreSQL, MySQL, Redis, MongoDB, SQLite, Docker, nginx, Linux, GitHub Actions, Cloudflare, Vercel, Git" />
 
-<sub>Also: Livewire · Alpine.js · Playwright · k6 · JWT · TOTP MFA · RBAC · Row-level security · M-Pesa · Paystack · Algolia</sub>
+<sub>Also: Livewire · Alpine.js · Playwright · k6 · JWT · TOTP MFA · RBAC · Row-level security · M-Pesa · Paystack · Algolia · QML / Qt · Hyprland · RPM packaging · systemd</sub>
 
 </div>
 
