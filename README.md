@@ -196,6 +196,8 @@ Each card traces what the system does, left to right. Click one to open it.
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=Alex-Muhscience&layout=pie&langs_count=10&theme=transparent)](https://github-stats-extended.vercel.app/api/top-langs?username=Alex-Muhscience&layout=pie&langs_count=10&theme=transparent)
 
+[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=Alex-Muhscience&rank_icon=percentile&show_icons=true&include_all_commits=true&theme=dark_github)](https://github-stats-extended.vercel.app/api?username=Alex-Muhscience&rank_icon=percentile&show_icons=true&include_all_commits=true&theme=dark_github)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Alex-Muhscience/Alex-Muhscience/output/github-contribution-grid-snake.svg" />
