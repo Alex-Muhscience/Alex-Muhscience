@@ -4,11 +4,21 @@
 Run from the repository root:  python3 scripts/build_assets.py
 Standard library only. Edit the content below, re-run, commit the output.
 """
+import json
 import textwrap
 from pathlib import Path
 from xml.sax.saxutils import escape
 
 OUT = Path(__file__).resolve().parent.parent / "assets"
+# Brand logos vendored from Simple Icons (CC0); see scripts/icons.json.
+ICONS = json.loads((Path(__file__).resolve().parent / "icons.json").read_text(encoding="utf-8"))["icons"]
+# Outline symbols for items that have no logo (24 x 24, stroked).
+GLYPHS = {
+    "shield": "M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z M9 12l2 2 4-4",
+    "card": "M3 6.5h18v11H3z M3 10.5h18 M6.5 14.5h4",
+    "check": "M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z M8 12.5l2.7 2.7L16.5 9.5",
+    "gear": "M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z M12 2.5v3 M12 18.5v3 M2.5 12h3 M18.5 12h3 M5.3 5.3l2.1 2.1 M16.6 16.6l2.1 2.1 M5.3 18.7l2.1-2.1 M16.6 7.4l2.1-2.1",
+}
 
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif"
 MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace"
@@ -48,20 +58,23 @@ IMPACT = [
 PRINCIPLES = [
     ("Requirements first", "Architecture follows the problem. A content site and a multi-tenant ledger don't want the same design.", "blue"),
     ("Modular monolith first", "Services get extracted only when a domain proves it must scale or release on its own.", "violet"),
-    ("Contain failure", "A slow PDF render or a dead webhook must never fail an unrelated checkout.", "amber"),
-    ("Security is architecture", "Access control, MFA and audit trails are designed into the first schema, not bolted on.", "red"),
-    ("Measure, then optimise", "Find the real bottleneck with production-sized data, then fix that one thing.", "teal"),
-    ("Built to be operated", "Health checks, correlated logs, repeatable deploys and tested restores ship with the feature.", "green"),
+    ("Scale in measured steps", "Edge and Redis caching, indexes for real queries, queued slow work, stateless app servers. Scale out where load tests point.", "teal"),
+    ("Every change through CI/CD", "Lint, static analysis, dependency audits, unit, E2E and load tests gate each deploy. Releases are scripted and repeatable.", "green"),
+    ("Contain failure", "A slow PDF render or a dead webhook must never fail an unrelated checkout. Retries, backoff and an outbox.", "amber"),
+    ("Money paths are idempotent", "Payments are confirmed only by signed provider callbacks, and recording one is always safe to retry.", "red"),
+    ("Security is architecture", "Access control, MFA, row-level security and audit trails are designed into the first schema.", "red"),
+    ("Measure, then optimise", "Find the real bottleneck with production-sized data, then fix that one thing. Query budgets fail the build.", "blue"),
+    ("Built to be operated", "Health checks, correlated logs, verified backups and tested restores ship with the feature.", "green"),
 ]
 # The stack, by layer: (layer, tools, colour)
 STACK = [
-    ("FRONTEND", ["React", "Next.js", "TypeScript", "Tailwind CSS", "Livewire", "Alpine.js"], "blue"),
-    ("BACKEND", ["Laravel", "PHP", "Node.js", "FastAPI", "Flask", "Python"], "violet"),
-    ("DATA", ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite", "Full-text search"], "teal"),
-    ("INFRASTRUCTURE", ["Linux", "Docker", "nginx", "Cloudflare", "Vercel", "GitHub Actions"], "amber"),
-    ("SECURITY", ["RBAC", "TOTP MFA", "Row-level security", "JWT", "Audit trails"], "red"),
-    ("PAYMENTS & QUALITY", ["Paystack", "M-Pesa", "PHPUnit", "Playwright", "k6"], "green"),
-    ("SYSTEMS", ["QML / Qt 6", "Hyprland", "RPM packaging", "systemd"], "cyan"),
+    ("FRONTEND", [("React", "react"), ("Next.js", "nextdotjs"), ("TypeScript", "typescript"), ("Tailwind CSS", "tailwindcss"), ("Livewire", "livewire"), ("Alpine.js", "alpinedotjs")], "blue"),
+    ("BACKEND", [("Laravel", "laravel"), ("PHP", "php"), ("Node.js", "nodedotjs"), ("Python", "python"), ("FastAPI", "fastapi"), ("Flask", "flask")], "violet"),
+    ("DATA", [("PostgreSQL", "postgresql"), ("MySQL", "mysql"), ("MongoDB", "mongodb"), ("Redis", "redis"), ("SQLite", "sqlite"), ("Algolia", "algolia")], "teal"),
+    ("INFRASTRUCTURE", [("Linux", "linux"), ("Docker", "docker"), ("nginx", "nginx"), ("Cloudflare", "cloudflare"), ("Vercel", "vercel"), ("GitHub Actions", "githubactions")], "amber"),
+    ("SECURITY", [("JWT", "jsonwebtokens"), ("RBAC", "shield"), ("TOTP MFA", "shield"), ("Row-level security", "shield"), ("Audit trails", "shield")], "red"),
+    ("PAYMENTS & TESTING", [("Paystack", "card"), ("M-Pesa", "card"), ("PHPUnit", "check"), ("Playwright", "check"), ("k6", "k6")], "green"),
+    ("SYSTEMS", [("Qt 6 / QML", "qt"), ("Hyprland", "hyprland"), ("Fedora RPM", "fedora"), ("systemd", "gear")], "cyan"),
 ]
 CLOSING = (
     "Let's build something that lasts",
@@ -435,8 +448,23 @@ def principles(t):
     return svg(w, h, label, base_style(t), body)
 
 
+def luminance(hex_colour):
+    def channel(v):
+        v /= 255
+        return v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4
+    r, g, b = (int(hex_colour.lstrip("#")[k:k + 2], 16) for k in (0, 2, 4))
+    return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
+
+
+def logo_colour(t, hex_colour):
+    """Brand colour, unless it would vanish against the card (then the text colour)."""
+    a, b = luminance(hex_colour), luminance(t["panel"])
+    contrast = (max(a, b) + 0.05) / (min(a, b) + 0.05)
+    return f"#{hex_colour}" if contrast >= 2.2 else t["text"]
+
+
 def stack(t):
-    w, row = 1200, 54
+    w, row = 1200, 56
     h = len(STACK) * row + 36
     body = f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="{t["panel"]}" stroke="{t["stroke"]}"/>'
     for i, (layer, tools, colour) in enumerate(STACK):
@@ -444,18 +472,29 @@ def stack(t):
         if i:
             body += f'<line x1="32" x2="{w - 32}" y1="{y}" y2="{y}" stroke="{t["stroke"]}" stroke-dasharray="2 6"/>'
         body += (
-            f'<circle cx="44" cy="{y + row / 2}" r="5" fill="{c}"/>'
-            f'<text class="m" x="62" y="{y + row / 2 + 5}" font-size="13.5" font-weight="700" letter-spacing="1.3" fill="{c}">{escape(layer)}</text>'
+            f'<text class="m" x="40" y="{y + row / 2 + 5}" font-size="13.5" font-weight="700" letter-spacing="1.3" fill="{c}">{escape(layer)}</text>'
         )
-        cx = 300
-        for tool in tools:
-            cw = len(tool) * 8.6 + 26
+        cx = 290
+        for name, icon in tools:
+            cw = len(name) * 8.6 + 58
+            ix, iy = cx + 14, y + 17
+            if icon in ICONS:
+                mark = (
+                    f'<g transform="translate({ix},{iy}) scale(.9167)">'
+                    f'<path d="{ICONS[icon]["path"]}" fill="{logo_colour(t, ICONS[icon]["hex"])}"/></g>'
+                )
+            else:
+                mark = (
+                    f'<g transform="translate({ix},{iy}) scale(.9167)" fill="none" stroke="{t["muted"]}" '
+                    f'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="{GLYPHS[icon]}"/></g>'
+                )
             body += (
-                f'<rect x="{cx}" y="{y + 11}" width="{cw:.1f}" height="32" rx="16" fill="{t["inset"]}" stroke="{t["stroke"]}"/>'
-                f'<text class="s t" x="{cx + cw / 2:.1f}" y="{y + 32}" font-size="15" font-weight="500" text-anchor="middle">{escape(tool)}</text>'
+                f'<rect x="{cx}" y="{y + 10}" width="{cw:.1f}" height="36" rx="18" fill="{t["inset"]}" stroke="{t["stroke"]}"/>'
+                + mark
+                + f'<text class="s t" x="{cx + 44}" y="{y + 33}" font-size="15" font-weight="500">{escape(name)}</text>'
             )
             cx += cw + 9
-    label = "Stack by layer. " + " ".join(f"{a.title()}: {', '.join(b)}." for a, b, _ in STACK)
+    label = "Stack by layer. " + " ".join(f"{a.title()}: {', '.join(n for n, _ in b)}." for a, b, _ in STACK)
     return svg(w, h, label, base_style(t), body)
 
 
