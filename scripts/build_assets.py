@@ -90,6 +90,39 @@ LAYERS = [
     ("INFRASTRUCTURE", "Linux · Docker · nginx · CI/CD", "amber"),
 ]
 
+# Project cards, shown two per row in the README. Deliberately plain, like
+# GitHub's pinned-repository cards. (slug, dot colour, status, title, description, stack)
+GROUPS = {
+    "business": [
+        ("euroafrique", "green", "In production", "EuroAfrique Corporate Skills",
+         "Corporate training platform for a network of 25,000+ professionals in 50+ countries, with M-Pesa and card payments and automated enrolment documents.",
+         "Laravel · MySQL · Redis · M-Pesa"),
+        ("afriasia", "green", "In production", "AfriAsia Career Development Center",
+         "Executive-training and booking platform with Paystack in USD and KES, idempotent payment recording, queued invoices and certificates, and admin MFA.",
+         "Laravel · Livewire · MySQL · Redis"),
+        ("chania", "green", "In production", "Chania Publishers LMS",
+         "Learning management system for an educational publisher. Access only on verified payment, video streamed through an access-checked endpoint.",
+         "PHP · MySQL · JavaScript · Linux"),
+        ("chania-finance", "amber", "In development", "Chania Finance Consultancy",
+         "Finance-training platform built for catalogue scale: full-text search, calendar booking by venue, organisation invoicing, admin and trainer portals.",
+         "Laravel · Livewire · MySQL · DomPDF"),
+    ],
+    "products": [
+        ("businessos", "amber", "In development", "BusinessOS",
+         "Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance and HR on one data model, isolated with PostgreSQL row-level security.",
+         "Laravel · Next.js · PostgreSQL · Docker"),
+        ("utdrs", "green", "Live", "UTDRS",
+         "Threat detection and response: ATT&CK-mapped rules, anomaly and ML detectors, and analyst triage in React. Top 5, Mozilla Responsible Computing Challenge.",
+         "Python · FastAPI · React · MongoDB"),
+        ("secure-file-sharing", "amber", "In development", "Secure File Sharing",
+         "Encrypted file sharing for teams: resumable uploads sealed chunk by chunk with AES-256-GCM, quarantined until ClamAV clears them.",
+         "Node.js · MongoDB · S3 · ClamAV"),
+        ("muhos", "blue", "Pre-release · open source", "MuhOS",
+         "Desktop shell for Hyprland on Fedora, shipped as RPM packages with a GDM session. Idle shell CPU cut ~9×, measured in a VM.",
+         "QML · Qt 6 · Quickshell · systemd"),
+    ],
+}
+
 # (when, role, where, kind) — newest first; kind is "now", "past" or "study"
 JOURNEY = [
     ("Aug 2025 → now", "Full-Stack Developer & Technical Owner",
@@ -359,6 +392,24 @@ def architecture(t):
     return svg(w, h, label, style, body)
 
 
+# --- project cards -----------------------------------------------------------
+
+
+def card(t, colour, status, title, description, stack):
+    """A plain card: title, description, and one status line."""
+    w, h = 600, 236
+    lines = "".join(
+        f'<text class="s mu" x="28" y="{98 + i * 26}" font-size="18">{escape(line)}</text>'
+        for i, line in enumerate(textwrap.wrap(description, 54)[:3])
+    )
+    body = f"""<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="10" fill="{t['panel']}" stroke="{t['stroke']}"/>
+<text class="s t" x="28" y="56" font-size="23" font-weight="600">{escape(title)}</text>
+{lines}
+<circle cx="35" cy="{h - 35}" r="6.5" fill="{t[colour]}"/>
+<text class="s mu" x="50" y="{h - 29}" font-size="16">{escape(status)}  ·  {escape(stack)}</text>"""
+    return svg(w, h, f"{title} ({status}). {description} {stack}.", base_style(t), body)
+
+
 # --- how I work and the stack -------------------------------------------------
 
 
@@ -451,3 +502,8 @@ if __name__ == "__main__":
             path = OUT / f"{name}-{theme}.svg"
             path.write_text(build(tokens), encoding="utf-8")
             print(f"wrote {path.relative_to(OUT.parent)}")
+        for projects in GROUPS.values():
+            for slug, *spec in projects:
+                path = OUT / f"card-{slug}-{theme}.svg"
+                path.write_text(card(tokens, *spec), encoding="utf-8")
+                print(f"wrote {path.relative_to(OUT.parent)}")

@@ -20,93 +20,15 @@ Today I'm the sole technical owner of four companies' platforms, and I build my 
 
 ## Platforms I run for businesses
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<a href="https://www.euroafriquecorporateskills.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-euroafrique-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/card-euroafrique-light.svg" /><img src="assets/card-euroafrique-dark.svg" width="49%" alt="EuroAfrique Corporate Skills, in production: corporate training platform for 25,000+ professionals in 50+ countries" /></picture></a>&nbsp;<a href="https://afriasiacareercenter.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-afriasia-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/card-afriasia-light.svg" /><img src="assets/card-afriasia-dark.svg" width="49%" alt="AfriAsia Career Development Center, in production: executive-training and booking platform" /></picture></a>
 
-### [EuroAfrique Corporate Skills](https://www.euroafriquecorporateskills.com)
-
-Corporate training platform for a network of <b>25,000+ professionals in 50+ countries</b>. Programme publishing, applications, M-Pesa and card payments, and enrolment documents generated automatically.
-
-<sub>In production &nbsp;·&nbsp; Laravel · MySQL · Redis · M-Pesa · Cloudflare</sub>
-
-</td>
-<td width="50%" valign="top">
-
-### [AfriAsia Career Development Center](https://afriasiacareercenter.com)
-
-Executive-training and booking platform. Paystack in USD and KES with <b>idempotent payment recording</b>, queued invoices and certificates, and MFA for administrators.
-
-<sub>In production &nbsp;·&nbsp; Laravel 12 · Livewire · MySQL · Redis · Paystack</sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### [Chania Publishers LMS](https://chaniapublishers.com)
-
-Learning management system for an educational publisher. Access is granted only on verified payment, video is streamed through an access-checked endpoint, and pages load <b>~60% faster</b>.
-
-<sub>In production &nbsp;·&nbsp; PHP · MySQL · JavaScript · Linux</sub>
-
-</td>
-<td width="50%" valign="top">
-
-### [Chania Finance Consultancy](https://portfolio-alex-m-kamau.vercel.app/work/chania-finance-consultancy)
-
-Finance-training platform built for catalogue scale: full-text search, calendar booking by venue, organisation invoicing, and admin and trainer portals. <b>140+ tests</b>, including an N+1 query budget.
-
-<sub>In development &nbsp;·&nbsp; Laravel 12 · Livewire 4 · MySQL · DomPDF</sub>
-
-</td>
-</tr>
-</table>
+<a href="https://chaniapublishers.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-chania-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/card-chania-light.svg" /><img src="assets/card-chania-dark.svg" width="49%" alt="Chania Publishers LMS, in production: learning management system" /></picture></a>&nbsp;<a href="https://portfolio-alex-m-kamau.vercel.app/work/chania-finance-consultancy"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-chania-finance-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/card-chania-finance-light.svg" /><img src="assets/card-chania-finance-dark.svg" width="49%" alt="Chania Finance Consultancy, in development: finance-training and booking platform" /></picture></a>
 
 ## Products and open source
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<a href="https://portfolio-alex-m-kamau.vercel.app/work/businessos"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-businessos-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/card-businessos-light.svg" /><img src="assets/card-businessos-dark.svg" width="49%" alt="BusinessOS, in development: multi-tenant operating system for SMEs" /></picture></a>&nbsp;<a href="https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-utdrs-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/card-utdrs-light.svg" /><img src="assets/card-utdrs-dark.svg" width="49%" alt="UTDRS, live: threat detection and response, Mozilla Responsible Computing Top 5" /></picture></a>
 
-### [BusinessOS](https://portfolio-alex-m-kamau.vercel.app/work/businessos)
-
-Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance and HR on <b>one governed data model</b>, with tenant isolation enforced by PostgreSQL row-level security.
-
-<sub>In development · private &nbsp;·&nbsp; Laravel 13 · Next.js 16 · PostgreSQL · Redis · Docker</sub>
-
-</td>
-<td width="50%" valign="top">
-
-### [UTDRS](https://portfolio-alex-m-kamau.vercel.app/work/unified-threat-detection-response)
-
-Unified threat detection and response. Events run through ATT&amp;CK-mapped rules and anomaly and ML detectors, and analysts triage alerts in a React dashboard. <b>Top 5</b> in the Mozilla Responsible Computing Challenge.
-
-<sub>Live on Vercel and Render &nbsp;·&nbsp; Python · FastAPI · React · MongoDB · Docker</sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### [Secure File Sharing](https://portfolio-alex-m-kamau.vercel.app/work/secure-file-sharing)
-
-Encrypted file sharing for teams. Resumable uploads sealed chunk by chunk with AES-256-GCM, held in quarantine until ClamAV clears them, and a 1 GiB transfer in <b>~180 MiB of memory</b>.
-
-<sub>In development · private &nbsp;·&nbsp; Node.js · MongoDB · S3 · ClamAV · libsodium</sub>
-
-</td>
-<td width="50%" valign="top">
-
-### [MuhOS](https://github.com/Alex-Muhscience/MuhOS)
-
-Open-source desktop shell for Hyprland on Fedora, shipped as RPM packages with a GDM session. Every performance claim is measured in a VM: <b>~9× less idle shell CPU</b>.
-
-<sub>Pre-release · AGPL-3.0 &nbsp;·&nbsp; QML · Qt 6 · Quickshell · Fedora RPM · systemd</sub>
-
-</td>
-</tr>
-</table>
+<a href="https://portfolio-alex-m-kamau.vercel.app/work/secure-file-sharing"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-secure-file-sharing-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/card-secure-file-sharing-light.svg" /><img src="assets/card-secure-file-sharing-dark.svg" width="49%" alt="Secure File Sharing, in development: encrypted file sharing for teams" /></picture></a>&nbsp;<a href="https://github.com/Alex-Muhscience/MuhOS"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-muhos-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/card-muhos-light.svg" /><img src="assets/card-muhos-dark.svg" width="49%" alt="MuhOS, pre-release: open-source desktop shell for Hyprland on Fedora" /></picture></a>
 
 <sub>Also built: <a href="https://muhscience-tech-labs-website.vercel.app"><b>Muhscience Tech Labs</b></a>, a Next.js company site, and <a href="https://github.com/Alex-Muhscience/Pass-KeyGen"><b>KeyGen</b></a>, a Flutter password manager. Every project has a full case study on my <a href="https://portfolio-alex-m-kamau.vercel.app/work">portfolio</a>.</sub>
 
