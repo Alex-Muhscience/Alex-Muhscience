@@ -90,47 +90,6 @@ LAYERS = [
     ("INFRASTRUCTURE", "Linux · Docker · nginx · CI/CD", "amber"),
 ]
 
-# Project cards, shown two per row. Each group becomes a 2-column grid in the README.
-# (slug, colour, status, title, description, (metric, label), stack)
-GROUPS = {
-    "business": [
-        ("euroafrique", "green", "In production", "EuroAfrique Corporate Skills",
-         "Corporate training platform: programme publishing, applications, M-Pesa and card payments, automated enrolment documents.",
-         ("25,000+", "professionals across 50+ countries"),
-         ["Laravel", "MySQL", "Redis", "M-Pesa", "Cloudflare"]),
-        ("afriasia", "amber", "In production", "AfriAsia Career Development Center",
-         "Executive-training and booking platform: Paystack in USD/KES, queued invoices and certificates, admin MFA.",
-         ("USD · KES", "idempotent Paystack payments"),
-         ["Laravel 12", "Livewire", "MySQL", "Redis", "Paystack"]),
-        ("chania", "violet", "In production", "Chania Publishers LMS",
-         "Learning management system: access granted only on verified payment, video streamed through an access-checked endpoint.",
-         ("~60%", "faster page loads"),
-         ["PHP", "MySQL", "JavaScript", "Linux"]),
-        ("chania-finance", "red", "In development", "Chania Finance Consultancy",
-         "Finance-training platform: search at catalogue scale, calendar booking by venue, organisation invoicing, admin and trainer portals.",
-         ("140+", "tests, with an N+1 query budget"),
-         ["Laravel 12", "Livewire 4", "MySQL", "DomPDF"]),
-    ],
-    "products": [
-        ("businessos", "blue", "In development · private", "BusinessOS",
-         "Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance and HR on one governed data model.",
-         ("7", "business domains, one data model"),
-         ["Laravel 13", "Next.js 16", "PostgreSQL", "Redis", "Docker"]),
-        ("utdrs", "red", "Live · Mozilla RCC Top 5", "UTDRS",
-         "Unified threat detection and response: ATT&CK-mapped rules, anomaly and ML detectors, analyst triage in React.",
-         ("Top 5", "Mozilla Responsible Computing"),
-         ["Python", "FastAPI", "React", "MongoDB", "Docker"]),
-        ("secure-file-sharing", "cyan", "In development · private", "Secure File Sharing",
-         "Encrypted file sharing for teams: resumable uploads sealed chunk by chunk with AES-256-GCM, ClamAV quarantine, verified recipients.",
-         ("~180 MiB", "peak memory moving a 1 GiB file"),
-         ["Node.js", "MongoDB", "S3", "ClamAV", "libsodium"]),
-        ("muhos", "violet", "Pre-release · AGPL-3.0", "MuhOS",
-         "Open-source desktop shell for Hyprland on Fedora: RPM packaging, a GDM session and a redesigned GNOME-style interface.",
-         ("~9×", "less idle CPU, measured in a VM"),
-         ["QML", "Qt 6", "Quickshell", "Fedora RPM", "systemd"]),
-    ],
-}
-
 # (when, role, where, kind) — newest first; kind is "now", "past" or "study"
 JOURNEY = [
     ("Aug 2025 → now", "Full-Stack Developer & Technical Owner",
@@ -400,49 +359,6 @@ def architecture(t):
     return svg(w, h, label, style, body)
 
 
-# --- project cards -----------------------------------------------------------
-
-
-def card(t, colour, status, title, description, metric, stack):
-    """Compact card, drawn to sit two per row (each about half the README width)."""
-    w, h = 600, 300
-    c = t[colour]
-    lines = textwrap.wrap(description, 56)[:3]
-    desc = "".join(
-        f'<text class="s mu" x="34" y="{124 + i * 24}" font-size="16.5">{escape(line)}</text>'
-        for i, line in enumerate(lines)
-    )
-    value, label = metric
-    chips, cx = "", 34
-    for name in stack:
-        cw = len(name) * 8.2 + 20
-        if cx + cw > w - 24:
-            break
-        chips += (
-            f'<rect x="{cx}" y="{h - 52}" width="{cw:.1f}" height="28" rx="14" fill="{t["inset"]}" stroke="{t["stroke"]}"/>'
-            f'<text class="m mu" x="{cx + cw / 2:.1f}" y="{h - 33.5}" font-size="13.5" text-anchor="middle">{escape(name)}</text>'
-        )
-        cx += cw + 7
-    live = status.lower().startswith(("in production", "live"))
-    style = base_style(t) + "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}.p{animation:pulse 2.4s ease-in-out infinite}"
-    vw = len(value) * 17 + 4
-    body = f"""<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c}" stop-opacity=".16"/><stop offset=".55" stop-color="{c}" stop-opacity="0"/></linearGradient></defs>
-<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="{t['panel']}"/>
-<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="url(#g)"/>
-<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="none" stroke="{t['stroke']}"/>
-<rect x="34" y="1" width="72" height="3" rx="1.5" fill="{c}"/>
-<circle class="{'p' if live else ''}" cx="39" cy="40" r="5" fill="{c}"/>
-<text class="m" x="53" y="45" font-size="13.5" letter-spacing="1.1" font-weight="700" fill="{c}">{escape(status.upper())}</text>
-<text class="s mu" x="{w - 32}" y="46" font-size="20" text-anchor="end">↗</text>
-<text class="s t" x="33" y="90" font-size="28" font-weight="700" letter-spacing="-.6">{escape(title)}</text>
-{desc}
-<line x1="34" x2="{w - 34}" y1="{h - 112}" y2="{h - 112}" stroke="{t['stroke']}"/>
-<text class="s" x="34" y="{h - 72}" font-size="30" font-weight="800" letter-spacing="-.8" fill="{c}">{escape(value)}</text>
-<text class="s mu" x="{34 + vw + 10}" y="{h - 78}" font-size="15">{escape(label)}</text>
-{chips}"""
-    return svg(w, h, f"{title} ({status}). {description} {value} {label}. Stack: {', '.join(stack)}.", style, body)
-
-
 # --- how I work and the stack -------------------------------------------------
 
 
@@ -535,8 +451,3 @@ if __name__ == "__main__":
             path = OUT / f"{name}-{theme}.svg"
             path.write_text(build(tokens), encoding="utf-8")
             print(f"wrote {path.relative_to(OUT.parent)}")
-        for projects in GROUPS.values():
-            for slug, *spec in projects:
-                path = OUT / f"card-{slug}-{theme}.svg"
-                path.write_text(card(tokens, *spec), encoding="utf-8")
-                print(f"wrote {path.relative_to(OUT.parent)}")
