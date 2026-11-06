@@ -30,12 +30,38 @@ THEMES = {
 
 NAME = "Alex Murimi Kamau"
 STATUS = "open to remote · Nairobi, Kenya · UTC+3"
-ROLE = ("Full-stack developer", " · systems that run in production")
+ROLE = ("Senior full-stack engineer", " · technical owner")
 ROTATING = [
     "I build and run production platforms end to end",
     "Payments, multi-tenancy, RBAC and audit trails",
     "Linux, Docker, CI/CD and keeping it all running",
     "Open source: Linux desktops, RPM packaging and QML",
+]
+# Impact strip across the bottom of the hero: (value, label, colour)
+IMPACT = [
+    ("4", "platforms I own end to end", "blue"),
+    ("25,000+", "professionals served", "green"),
+    ("~60%", "less manual operations work", "amber"),
+    ("Top 5", "Mozilla Responsible Computing", "red"),
+]
+# How I work: (title, explanation, colour)
+PRINCIPLES = [
+    ("Requirements first", "Architecture follows the problem. A content site and a multi-tenant ledger don't want the same design.", "blue"),
+    ("Modular monolith first", "Services get extracted only when a domain proves it must scale or release on its own.", "violet"),
+    ("Contain failure", "A slow PDF render or a dead webhook must never fail an unrelated checkout.", "amber"),
+    ("Security is architecture", "Access control, MFA and audit trails are designed into the first schema, not bolted on.", "red"),
+    ("Measure, then optimise", "Find the real bottleneck with production-sized data, then fix that one thing.", "teal"),
+    ("Built to be operated", "Health checks, correlated logs, repeatable deploys and tested restores ship with the feature.", "green"),
+]
+# The stack, by layer: (layer, tools, colour)
+STACK = [
+    ("FRONTEND", ["React", "Next.js", "TypeScript", "Tailwind CSS", "Livewire", "Alpine.js"], "blue"),
+    ("BACKEND", ["Laravel", "PHP", "Node.js", "FastAPI", "Flask", "Python"], "violet"),
+    ("DATA", ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite", "Full-text search"], "teal"),
+    ("INFRASTRUCTURE", ["Linux", "Docker", "nginx", "Cloudflare", "Vercel", "GitHub Actions"], "amber"),
+    ("SECURITY", ["RBAC", "TOTP MFA", "Row-level security", "JWT", "Audit trails"], "red"),
+    ("PAYMENTS & QUALITY", ["Paystack", "M-Pesa", "PHPUnit", "Playwright", "k6"], "green"),
+    ("SYSTEMS", ["QML / Qt 6", "Hyprland", "RPM packaging", "systemd"], "cyan"),
 ]
 CLOSING = (
     "Let's build something that lasts",
@@ -65,34 +91,42 @@ LAYERS = [
 ]
 
 # Project cards, shown two per row. Each group becomes a 2-column grid in the README.
-# (slug, colour, status, title, description, stack)
+# (slug, colour, status, title, description, (metric, label), stack)
 GROUPS = {
     "business": [
         ("euroafrique", "green", "In production", "EuroAfrique Corporate Skills",
          "Corporate training platform: programme publishing, applications, M-Pesa and card payments, automated enrolment documents.",
+         ("25,000+", "professionals across 50+ countries"),
          ["Laravel", "MySQL", "Redis", "M-Pesa", "Cloudflare"]),
         ("afriasia", "amber", "In production", "AfriAsia Career Development Center",
          "Executive-training and booking platform: Paystack in USD/KES, queued invoices and certificates, admin MFA.",
+         ("USD · KES", "idempotent Paystack payments"),
          ["Laravel 12", "Livewire", "MySQL", "Redis", "Paystack"]),
         ("chania", "violet", "In production", "Chania Publishers LMS",
          "Learning management system: access granted only on verified payment, video streamed through an access-checked endpoint.",
+         ("~60%", "faster page loads"),
          ["PHP", "MySQL", "JavaScript", "Linux"]),
         ("chania-finance", "red", "In development", "Chania Finance Consultancy",
          "Finance-training platform: search at catalogue scale, calendar booking by venue, organisation invoicing, admin and trainer portals.",
+         ("140+", "tests, with an N+1 query budget"),
          ["Laravel 12", "Livewire 4", "MySQL", "DomPDF"]),
     ],
     "products": [
         ("businessos", "blue", "In development · private", "BusinessOS",
          "Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance and HR on one governed data model.",
+         ("7", "business domains, one data model"),
          ["Laravel 13", "Next.js 16", "PostgreSQL", "Redis", "Docker"]),
         ("utdrs", "red", "Live · Mozilla RCC Top 5", "UTDRS",
          "Unified threat detection and response: ATT&CK-mapped rules, anomaly and ML detectors, analyst triage in React.",
+         ("Top 5", "Mozilla Responsible Computing"),
          ["Python", "FastAPI", "React", "MongoDB", "Docker"]),
         ("secure-file-sharing", "cyan", "In development · private", "Secure File Sharing",
          "Encrypted file sharing for teams: resumable uploads sealed chunk by chunk with AES-256-GCM, ClamAV quarantine, verified recipients.",
+         ("~180 MiB", "peak memory moving a 1 GiB file"),
          ["Node.js", "MongoDB", "S3", "ClamAV", "libsodium"]),
         ("muhos", "violet", "Pre-release · AGPL-3.0", "MuhOS",
          "Open-source desktop shell for Hyprland on Fedora: RPM packaging, a GDM session and a redesigned GNOME-style interface.",
+         ("~9×", "less idle CPU, measured in a VM"),
          ["QML", "Qt 6", "Quickshell", "Fedora RPM", "systemd"]),
     ],
 }
@@ -148,7 +182,7 @@ def slab(t, colour, cx, cy, a, b, depth):
 
 
 def hero(t):
-    w, h = 1200, 320
+    w, h = 1200, 430
     share = 100 // len(ROTATING)  # each line's slice of the cycle, in percent
     style = base_style(t) + (
         "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}"
@@ -160,11 +194,11 @@ def hero(t):
     )
     rotating = "".join(
         f'<text class="m mu r{" r1" if i == 0 else ""}" style="animation-delay:{i * 4}s" '
-        f'x="82" y="262" font-size="17">{escape(line)}</text>'
+        f'x="82" y="254" font-size="17">{escape(line)}</text>'
         for i, line in enumerate(ROTATING)
     )
     # Isometric stack: each layer is a slab (top face plus two sides), drawn bottom-up.
-    cx, a, b, depth, first, step = 1036, 124, 62, 13, 88, 46
+    cx, a, b, depth, first, step = 1036, 124, 62, 13, 74, 46
     slabs = ""
     for i in reversed(range(len(LAYERS))):
         name, tools, colour = LAYERS[i]
@@ -180,6 +214,18 @@ def hero(t):
             + "</g>"
         )
     last = first + (len(LAYERS) - 1) * step
+    # Impact strip: four figures under a divider.
+    top, cell = 318, (w - 2) / len(IMPACT)
+    impact = f'<rect x="1" y="{top}" width="{w - 2}" height="{h - top - 1}" fill="{t["inset"]}" opacity=".55"/>'
+    impact += f'<line x1="1" x2="{w - 1}" y1="{top}" y2="{top}" stroke="{t["stroke"]}"/>'
+    for i, (value, label, colour) in enumerate(IMPACT):
+        x = 1 + i * cell
+        if i:
+            impact += f'<line x1="{x}" x2="{x}" y1="{top + 22}" y2="{h - 22}" stroke="{t["stroke"]}"/>'
+        impact += (
+            f'<text class="s" x="{x + 54}" y="{top + 58}" font-size="34" font-weight="800" letter-spacing="-1" fill="{t[colour]}">{escape(value)}</text>'
+            f'<text class="s mu" x="{x + 55}" y="{top + 86}" font-size="15">{escape(label)}</text>'
+        )
     # A request travelling down the stack's right edge, and the response coming back.
     wire = f"M{cx + a + 14},{first} V{last}"
     body = f"""<defs>
@@ -196,20 +242,22 @@ def hero(t):
 <rect width="{w}" height="{h}" fill="url(#glow)"/>
 </g>
 <rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="none" stroke="{t['stroke']}"/>
-<circle class="ok p" cx="62" cy="77" r="5"/>
-<text class="m mu" x="78" y="82" font-size="15">{escape(STATUS)}</text>
-<text class="s t" x="54" y="158" font-size="58" font-weight="700" letter-spacing="-1.2">{escape(NAME)}</text>
-<text class="s" x="56" y="202" font-size="21"><tspan class="t" font-weight="600">{escape(ROLE[0])}</tspan><tspan class="mu">{escape(ROLE[1])}</tspan></text>
-<rect x="56" y="222" width="64" height="4" rx="2" fill="url(#bar)"/>
-<text class="m ac" x="56" y="262" font-size="17" font-weight="700">›</text>
+<circle class="ok p" cx="62" cy="67" r="5"/>
+<text class="m mu" x="78" y="72" font-size="15">{escape(STATUS)}</text>
+<text class="s t" x="54" y="150" font-size="58" font-weight="700" letter-spacing="-1.2">{escape(NAME)}</text>
+<text class="s" x="56" y="194" font-size="21"><tspan class="t" font-weight="600">{escape(ROLE[0])}</tspan><tspan class="mu">{escape(ROLE[1])}</tspan></text>
+<rect x="56" y="214" width="64" height="4" rx="2" fill="url(#bar)"/>
+<text class="m ac" x="56" y="254" font-size="17" font-weight="700">›</text>
 {rotating}
 <ellipse cx="{cx}" cy="{last + b + depth + 8}" rx="{a * 0.8}" ry="8" fill="#000" opacity=".1"/>
 <path d="{wire}" stroke="{t['stroke']}" stroke-width="1.6" stroke-dasharray="3 5"/>
 <circle r="4" fill="{t['accent']}"><animateMotion dur="2.8s" repeatCount="indefinite" path="{wire}"/></circle>
 <circle r="4" fill="{t['accent2']}"><animateMotion dur="2.8s" begin="-1.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" path="{wire}"/></circle>
-{slabs}"""
+{slabs}
+{impact}"""
     layers = "; ".join(f"{name.lower()}: {tools}" for name, tools, _ in LAYERS)
-    return svg(w, h, f"{NAME} — full-stack developer, systems that run in production. The stack, top to bottom: {layers}.", style, body)
+    impact_text = "; ".join(f"{v} {l}" for v, l, _ in IMPACT)
+    return svg(w, h, f"{NAME} — senior full-stack engineer and technical owner of production platforms. {impact_text}. The stack, top to bottom: {layers}.", style, body)
 
 
 # --- link buttons and footer -------------------------------------------------
@@ -355,37 +403,93 @@ def architecture(t):
 # --- project cards -----------------------------------------------------------
 
 
-def card(t, colour, status, title, description, stack):
+def card(t, colour, status, title, description, metric, stack):
     """Compact card, drawn to sit two per row (each about half the README width)."""
-    w, h = 600, 250
+    w, h = 600, 300
     c = t[colour]
-    lines = textwrap.wrap(description, 54)[:3]
+    lines = textwrap.wrap(description, 56)[:3]
     desc = "".join(
-        f'<text class="s mu" x="34" y="{122 + i * 24}" font-size="17">{escape(line)}</text>'
+        f'<text class="s mu" x="34" y="{124 + i * 24}" font-size="16.5">{escape(line)}</text>'
         for i, line in enumerate(lines)
     )
+    value, label = metric
     chips, cx = "", 34
     for name in stack:
-        cw = len(name) * 8.4 + 20
+        cw = len(name) * 8.2 + 20
         if cx + cw > w - 24:
             break
         chips += (
-            f'<rect x="{cx}" y="{h - 56}" width="{cw:.1f}" height="30" rx="15" fill="none" stroke="{t["stroke"]}"/>'
-            f'<text class="m mu" x="{cx + cw / 2:.1f}" y="{h - 36}" font-size="14" text-anchor="middle">{escape(name)}</text>'
+            f'<rect x="{cx}" y="{h - 52}" width="{cw:.1f}" height="28" rx="14" fill="{t["inset"]}" stroke="{t["stroke"]}"/>'
+            f'<text class="m mu" x="{cx + cw / 2:.1f}" y="{h - 33.5}" font-size="13.5" text-anchor="middle">{escape(name)}</text>'
         )
         cx += cw + 7
     live = status.lower().startswith(("in production", "live"))
-    dot = f'<circle class="{"p" if live else ""}" cx="40" cy="41" r="5" fill="{c}"/>'
     style = base_style(t) + "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}.p{animation:pulse 2.4s ease-in-out infinite}"
-    body = f"""<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="16" fill="{t['panel']}" stroke="{t['stroke']}"/>
-<rect x="1" y="30" width="5" height="{h - 60}" rx="2.5" fill="{c}"/>
-{dot}
-<text class="m" x="54" y="46" font-size="14" letter-spacing="1"><tspan fill="{c}" font-weight="700">{escape(status.upper())}</tspan></text>
-<text class="s t" x="34" y="88" font-size="28" font-weight="700" letter-spacing="-.5">{escape(title)}</text>
-<text class="s mu" x="{w - 34}" y="46" font-size="20" text-anchor="end">↗</text>
+    vw = len(value) * 17 + 4
+    body = f"""<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c}" stop-opacity=".16"/><stop offset=".55" stop-color="{c}" stop-opacity="0"/></linearGradient></defs>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="{t['panel']}"/>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="url(#g)"/>
+<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="none" stroke="{t['stroke']}"/>
+<rect x="34" y="1" width="72" height="3" rx="1.5" fill="{c}"/>
+<circle class="{'p' if live else ''}" cx="39" cy="40" r="5" fill="{c}"/>
+<text class="m" x="53" y="45" font-size="13.5" letter-spacing="1.1" font-weight="700" fill="{c}">{escape(status.upper())}</text>
+<text class="s mu" x="{w - 32}" y="46" font-size="20" text-anchor="end">↗</text>
+<text class="s t" x="33" y="90" font-size="28" font-weight="700" letter-spacing="-.6">{escape(title)}</text>
 {desc}
+<line x1="34" x2="{w - 34}" y1="{h - 112}" y2="{h - 112}" stroke="{t['stroke']}"/>
+<text class="s" x="34" y="{h - 72}" font-size="30" font-weight="800" letter-spacing="-.8" fill="{c}">{escape(value)}</text>
+<text class="s mu" x="{34 + vw + 10}" y="{h - 78}" font-size="15">{escape(label)}</text>
 {chips}"""
-    return svg(w, h, f"{title} ({status}). {description} Stack: {', '.join(stack)}.", style, body)
+    return svg(w, h, f"{title} ({status}). {description} {value} {label}. Stack: {', '.join(stack)}.", style, body)
+
+
+# --- how I work and the stack -------------------------------------------------
+
+
+def principles(t):
+    w, cols, tw, th, gap = 1200, 3, 384, 176, 24
+    rows = (len(PRINCIPLES) + cols - 1) // cols
+    h = rows * th + (rows - 1) * gap
+    body = ""
+    for i, (title, text, colour) in enumerate(PRINCIPLES):
+        x, y, c = (i % cols) * (tw + gap), (i // cols) * (th + gap), t[colour]
+        lines = "".join(
+            f'<text class="s mu" x="{x + 28}" y="{y + 92 + j * 22}" font-size="15.5">{escape(line)}</text>'
+            for j, line in enumerate(textwrap.wrap(text, 42)[:3])
+        )
+        body += (
+            f'<rect x="{x + 1}" y="{y + 1}" width="{tw - 2}" height="{th - 2}" rx="16" fill="{t["panel"]}" stroke="{t["stroke"]}"/>'
+            f'<rect x="{x + 28}" y="{y + 1}" width="48" height="3" rx="1.5" fill="{c}"/>'
+            f'<text class="m" x="{x + 28}" y="{y + 40}" font-size="13" font-weight="700" letter-spacing="1.2" fill="{c}">{i + 1:02d}</text>'
+            f'<text class="s t" x="{x + 28}" y="{y + 66}" font-size="20" font-weight="700" letter-spacing="-.3">{escape(title)}</text>'
+            + lines
+        )
+    label = "How I work. " + " ".join(f"{a}: {b}" for a, b, _ in PRINCIPLES)
+    return svg(w, h, label, base_style(t), body)
+
+
+def stack(t):
+    w, row = 1200, 54
+    h = len(STACK) * row + 36
+    body = f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="{t["panel"]}" stroke="{t["stroke"]}"/>'
+    for i, (layer, tools, colour) in enumerate(STACK):
+        y, c = 18 + i * row, t[colour]
+        if i:
+            body += f'<line x1="32" x2="{w - 32}" y1="{y}" y2="{y}" stroke="{t["stroke"]}" stroke-dasharray="2 6"/>'
+        body += (
+            f'<circle cx="44" cy="{y + row / 2}" r="5" fill="{c}"/>'
+            f'<text class="m" x="62" y="{y + row / 2 + 5}" font-size="13.5" font-weight="700" letter-spacing="1.3" fill="{c}">{escape(layer)}</text>'
+        )
+        cx = 300
+        for tool in tools:
+            cw = len(tool) * 8.6 + 26
+            body += (
+                f'<rect x="{cx}" y="{y + 11}" width="{cw:.1f}" height="32" rx="16" fill="{t["inset"]}" stroke="{t["stroke"]}"/>'
+                f'<text class="s t" x="{cx + cw / 2:.1f}" y="{y + 32}" font-size="15" font-weight="500" text-anchor="middle">{escape(tool)}</text>'
+            )
+            cx += cw + 9
+    label = "Stack by layer. " + " ".join(f"{a.title()}: {', '.join(b)}." for a, b, _ in STACK)
+    return svg(w, h, label, base_style(t), body)
 
 
 # --- journey -----------------------------------------------------------------
@@ -427,7 +531,7 @@ if __name__ == "__main__":
         path.write_text(button(*spec), encoding="utf-8")
         print(f"wrote {path.relative_to(OUT.parent)}")
     for theme, tokens in THEMES.items():
-        for name, build in (("hero", hero), ("architecture", architecture), ("journey", journey), ("footer", footer)):
+        for name, build in (("hero", hero), ("architecture", architecture), ("principles", principles), ("stack", stack), ("journey", journey), ("footer", footer)):
             path = OUT / f"{name}-{theme}.svg"
             path.write_text(build(tokens), encoding="utf-8")
             print(f"wrote {path.relative_to(OUT.parent)}")
