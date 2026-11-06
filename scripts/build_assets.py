@@ -91,6 +91,10 @@ PROJECTS = [
      "Executive-training, booking and document platform with a public catalogue and an admin portal.",
      ["Catalogue", "Booking", "Paystack\nUSD / KES", "Invoice +\ncertificate"],
      ["Laravel 12", "Livewire", "Alpine.js", "Tailwind", "MySQL", "Redis"]),
+    ("chania-finance", "red", "in development · sole technical owner", "Chania Finance Consultancy",
+     "Finance-training platform: catalogue search at scale, calendar booking by venue, organisation invoicing, and admin and trainer portals.",
+     ["Course\nsearch", "Venue +\ncalendar", "Team\nregistration", "Invoice +\nPaystack"],
+     ["Laravel 12", "Livewire 4", "Alpine.js", "Tailwind", "MySQL", "DomPDF"]),
     ("chania", "violet", "in production · sole technical owner", "Chania Publishers LMS",
      "Learning management system built from concept to production for an educational publisher.",
      ["Subscriber", "Verified\npayment", "Access\ncheck", "Video\nstream"],
@@ -104,7 +108,7 @@ PROJECTS = [
 # (when, role, where, kind) — newest first; kind is "now", "past" or "study"
 JOURNEY = [
     ("Aug 2025 → now", "Full-Stack Developer & Technical Owner",
-     "EuroAfrique Corporate Skills · Chania Publishers · AfriAsia Career Development Center", "now"),
+     "EuroAfrique · Chania Publishers · AfriAsia Career Development Center · Chania Finance Consultancy", "now"),
     ("May – Aug 2025", "Freelance Web Development Tutor", "Self-employed", "past"),
     ("Aug 2024 – Feb 2025", "Network Technician", "Gicatech Enterprise Solutions", "past"),
     ("May – Aug 2024", "Software Development Intern", "Secunets Technologies", "past"),
