@@ -4,11 +4,21 @@
 Run from the repository root:  python3 scripts/build_assets.py
 Standard library only. Edit the content below, re-run, commit the output.
 """
+import json
 import textwrap
 from pathlib import Path
 from xml.sax.saxutils import escape
 
 OUT = Path(__file__).resolve().parent.parent / "assets"
+# Brand logos vendored from Simple Icons (CC0); see scripts/icons.json.
+ICONS = json.loads((Path(__file__).resolve().parent / "icons.json").read_text(encoding="utf-8"))["icons"]
+# Outline symbols for items that have no logo (24 x 24, stroked).
+GLYPHS = {
+    "shield": "M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z M9 12l2 2 4-4",
+    "card": "M3 6.5h18v11H3z M3 10.5h18 M6.5 14.5h4",
+    "check": "M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z M8 12.5l2.7 2.7L16.5 9.5",
+    "gear": "M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6z M12 2.5v3 M12 18.5v3 M2.5 12h3 M18.5 12h3 M5.3 5.3l2.1 2.1 M16.6 16.6l2.1 2.1 M5.3 18.7l2.1-2.1 M16.6 7.4l2.1-2.1",
+}
 
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif"
 MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace"
@@ -30,12 +40,34 @@ THEMES = {
 
 NAME = "Alex Murimi Kamau"
 STATUS = "open to remote · Nairobi, Kenya · UTC+3"
-ROLE = ("Full-stack developer", " · systems that run in production")
+ROLE = ("Senior full-stack engineer", " · technical owner")
 ROTATING = [
     "I build and run production platforms end to end",
     "Payments, multi-tenancy, RBAC and audit trails",
     "Linux, Docker, CI/CD and keeping it all running",
     "Open source: Linux desktops, RPM packaging and QML",
+]
+# How I work: (title, explanation, colour)
+PRINCIPLES = [
+    ("Requirements first", "Architecture follows the problem. A content site and a multi-tenant ledger don't want the same design.", "blue"),
+    ("Modular monolith first", "Services get extracted only when a domain proves it must scale or release on its own.", "violet"),
+    ("Scale in measured steps", "Edge and Redis caching, indexes for real queries, queued slow work, stateless app servers. Scale out where load tests point.", "teal"),
+    ("Every change through CI/CD", "Lint, static analysis, dependency audits, unit, E2E and load tests gate each deploy. Releases are scripted and repeatable.", "green"),
+    ("Contain failure", "A slow PDF render or a dead webhook must never fail an unrelated checkout. Retries, backoff and an outbox.", "amber"),
+    ("Money paths are idempotent", "Payments are confirmed only by signed provider callbacks, and recording one is always safe to retry.", "red"),
+    ("Security is architecture", "Access control, MFA, row-level security and audit trails are designed into the first schema.", "red"),
+    ("Measure, then optimise", "Find the real bottleneck with production-sized data, then fix that one thing. Query budgets fail the build.", "blue"),
+    ("Built to be operated", "Health checks, correlated logs, verified backups and tested restores ship with the feature.", "green"),
+]
+# The stack, by layer: (layer, tools, colour)
+STACK = [
+    ("FRONTEND", [("React", "react"), ("Next.js", "nextdotjs"), ("TypeScript", "typescript"), ("Tailwind CSS", "tailwindcss"), ("Livewire", "livewire"), ("Alpine.js", "alpinedotjs")], "blue"),
+    ("BACKEND", [("Laravel", "laravel"), ("PHP", "php"), ("Node.js", "nodedotjs"), ("Python", "python"), ("Django", "django"), ("FastAPI", "fastapi"), ("Flask", "flask")], "violet"),
+    ("DATA", [("PostgreSQL", "postgresql"), ("MySQL", "mysql"), ("MongoDB", "mongodb"), ("Redis", "redis"), ("SQLite", "sqlite"), ("Algolia", "algolia")], "teal"),
+    ("INFRASTRUCTURE", [("Linux", "linux"), ("Docker", "docker"), ("nginx", "nginx"), ("Cloudflare", "cloudflare"), ("Vercel", "vercel"), ("GitHub Actions", "githubactions")], "amber"),
+    ("SECURITY", [("JWT", "jsonwebtokens"), ("RBAC", "shield"), ("TOTP MFA", "shield"), ("Row-level security", "shield"), ("Audit trails", "shield")], "red"),
+    ("PAYMENTS & TESTING", [("Paystack", "card"), ("M-Pesa", "card"), ("PHPUnit", "check"), ("Playwright", "check"), ("k6", "k6")], "green"),
+    ("SYSTEMS", [("Qt 6 / QML", "qt"), ("Hyprland", "hyprland"), ("Fedora RPM", "fedora"), ("systemd", "gear")], "cyan"),
 ]
 CLOSING = (
     "Let's build something that lasts",
@@ -59,51 +91,43 @@ BUTTONS = [
 # The header draws the stack as four layers, top to bottom. (name, tools, colour)
 LAYERS = [
     ("INTERFACE", "React · Next.js · TypeScript", "blue"),
-    ("APPLICATION", "Node.js · Laravel · FastAPI · Flask", "violet"),
+    ("APPLICATION", "Laravel · Django · Node.js · FastAPI", "violet"),
     ("DATA", "PostgreSQL · MySQL · MongoDB · Redis", "teal"),
     ("INFRASTRUCTURE", "Linux · Docker · nginx · CI/CD", "amber"),
 ]
 
-# Featured projects. Each card shows what the system does as a four-step flow.
-# (slug, colour, status, title, description, flow steps, stack)
-PROJECTS = [
-    ("businessos", "blue", "in development · private", "BusinessOS",
-     "Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance, HR and projects on one governed data model.",
-     ["Tenant\nrequest", "Row-level\nsecurity", "Idempotent\nwrite", "Outbox +\nwebhooks"],
-     ["Laravel 13", "Next.js 16", "PostgreSQL 18", "Redis", "Docker", "nginx"]),
-    ("utdrs", "red", "live · Vercel + Render · Mozilla RCC Top 5", "UTDRS",
-     "Unified threat detection and response: events run through ATT&CK-mapped rules, anomaly and ML detectors, and analysts triage alerts in a React dashboard.",
-     ["Event", "ATT&CK\nrules", "Anomaly +\nML detectors", "Analyst\ntriage"],
-     ["Python", "FastAPI", "React", "TypeScript", "MongoDB", "C", "Docker"]),
-    ("secure-file-sharing", "cyan", "in development · private", "Secure File Sharing Platform",
-     "Encrypted file sharing for teams: resumable uploads encrypted chunk by chunk, malware scanning before release and verified recipients.",
-     ["Chunked\nupload", "AES-256-GCM\nat rest", "ClamAV\nquarantine", "Verified\ndownload"],
-     ["Node.js", "Express", "MongoDB", "S3", "ClamAV", "libsodium", "Docker"]),
-    ("muhos", "violet", "pre-release · open source · AGPL-3.0", "MuhOS",
-     "Open-source desktop shell for Hyprland on Fedora: RPM packaging and a GDM session, a redesigned GNOME-style interface, and benchmarked performance.",
-     ["GDM\nlogin", "systemd\nsession", "Hyprland +\nQuickshell", "MuhOS\ndesktop"],
-     ["QML", "Qt 6", "Quickshell", "Hyprland", "Fedora RPM", "systemd", "Python"]),
-    ("euroafrique", "green", "in production · sole technical owner", "EuroAfrique Corporate Skills",
-     "Corporate training platform: programme publishing, applications, M-Pesa and card payments, and automated enrolment documents.",
-     ["Programme", "Application", "M-Pesa /\ncard payment", "Enrolment\ndocuments"],
-     ["Laravel", "MySQL", "Redis", "Paystack", "M-Pesa", "Algolia", "Cloudflare"]),
-    ("afriasia", "amber", "in production · sole technical owner", "AfriAsia Career Development Center",
-     "Executive-training, booking and document platform with a public catalogue and an admin portal.",
-     ["Catalogue", "Booking", "Paystack\nUSD / KES", "Invoice +\ncertificate"],
-     ["Laravel 12", "Livewire", "Alpine.js", "Tailwind", "MySQL", "Redis"]),
-    ("chania-finance", "red", "in development · sole technical owner", "Chania Finance Consultancy",
-     "Finance-training platform: catalogue search at scale, calendar booking by venue, organisation invoicing, and admin and trainer portals.",
-     ["Course\nsearch", "Venue +\ncalendar", "Team\nregistration", "Invoice +\nPaystack"],
-     ["Laravel 12", "Livewire 4", "Alpine.js", "Tailwind", "MySQL", "DomPDF"]),
-    ("chania", "violet", "in production · sole technical owner", "Chania Publishers LMS",
-     "Learning management system built from concept to production for an educational publisher.",
-     ["Subscriber", "Verified\npayment", "Access\ncheck", "Video\nstream"],
-     ["PHP", "MySQL", "JavaScript", "Linux"]),
-    ("muhscience", "teal", "live on Vercel · open source", "Muhscience Tech Labs",
-     "Company site on the Next.js App Router with server-handled enquiry forms, technical SEO and security headers.",
-     ["Visitor", "App Router\npage", "Enquiry\nform", "Server\nhandler"],
-     ["Next.js 15", "React 19", "TypeScript", "Tailwind", "shadcn/ui", "MongoDB"]),
-]
+# Project cards, shown two per row in the README. Deliberately plain, like
+# GitHub's pinned-repository cards. (slug, dot colour, status, title, description, stack)
+GROUPS = {
+    "business": [
+        ("euroafrique", "green", "In production", "EuroAfrique Corporate Skills",
+         "Corporate training platform for a network of 25,000+ professionals in 50+ countries, with M-Pesa and card payments and automated enrolment documents.",
+         "Laravel · MySQL · Redis · M-Pesa"),
+        ("afriasia", "green", "In production", "AfriAsia Career Development Center",
+         "Executive-training and booking platform with Paystack in USD and KES, idempotent payment recording, queued invoices and certificates, and admin MFA.",
+         "Laravel · Livewire · MySQL · Redis"),
+        ("chania", "green", "In production", "Chania Publishers LMS",
+         "Learning management system for an educational publisher. Access only on verified payment, video streamed through an access-checked endpoint.",
+         "PHP · MySQL · JavaScript · Linux"),
+        ("chania-finance", "amber", "In development", "Chania Finance Consultancy",
+         "Finance-training platform built for catalogue scale: full-text search, calendar booking by venue, organisation invoicing, admin and trainer portals.",
+         "Laravel · Livewire · MySQL · DomPDF"),
+    ],
+    "products": [
+        ("businessos", "amber", "In development", "BusinessOS",
+         "Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance and HR on one data model, isolated with PostgreSQL row-level security.",
+         "Laravel · Next.js · PostgreSQL · Docker"),
+        ("utdrs", "green", "Live", "UTDRS",
+         "Threat detection and response: ATT&CK-mapped rules, anomaly and ML detectors, and analyst triage in React. Top 5, Mozilla Responsible Computing Challenge.",
+         "Python · FastAPI · React · MongoDB"),
+        ("secure-file-sharing", "amber", "In development", "Secure File Sharing",
+         "Encrypted file sharing for teams: resumable uploads sealed chunk by chunk with AES-256-GCM, quarantined until ClamAV clears them.",
+         "Node.js · MongoDB · S3 · ClamAV"),
+        ("muhos", "blue", "Pre-release · open source", "MuhOS",
+         "Desktop shell for Hyprland on Fedora, shipped as RPM packages with a GDM session. Idle shell CPU cut ~9×, measured in a VM.",
+         "QML · Qt 6 · Quickshell · systemd"),
+    ],
+}
 
 # (when, role, where, kind) — newest first; kind is "now", "past" or "study"
 JOURNEY = [
@@ -217,7 +241,7 @@ def hero(t):
 <circle r="4" fill="{t['accent2']}"><animateMotion dur="2.8s" begin="-1.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" path="{wire}"/></circle>
 {slabs}"""
     layers = "; ".join(f"{name.lower()}: {tools}" for name, tools, _ in LAYERS)
-    return svg(w, h, f"{NAME} — full-stack developer, systems that run in production. The stack, top to bottom: {layers}.", style, body)
+    return svg(w, h, f"{NAME} — senior full-stack engineer and technical owner of production platforms. The stack, top to bottom: {layers}.", style, body)
 
 
 # --- link buttons and footer -------------------------------------------------
@@ -278,7 +302,7 @@ BOXES = {
     "client": (24, 56, 160, 92, "Client", "browser · mobile"),
     "edge": (232, 56, 190, 92, "Cloudflare", "edge caching"),
     "nginx": (470, 56, 170, 92, "nginx", "reverse proxy · TLS"),
-    "app": (688, 56, 230, 92, "Application", "React · Next.js · Node.js\nLaravel · FastAPI · Flask"),
+    "app": (688, 56, 230, 92, "Application", "React · Next.js · Node.js\nLaravel · Django · FastAPI"),
     "pg": (966, 56, 210, 92, "Database", "PostgreSQL · MySQL\nMongoDB"),
     "pay": (232, 250, 190, 92, "Paystack · M-Pesa", "verified callbacks"),
     "redis": (688, 250, 230, 92, "Redis", "cache · sessions · queues"),
@@ -354,7 +378,7 @@ def architecture(t):
 {bands}"""
     label = (
         "How the platforms are put together: client, Cloudflare, nginx, the application (React, Next.js, Node.js, "
-        "Laravel, FastAPI, Flask) and the database on the request path; Redis, queue workers, documents, signed webhooks and payment "
+        "Laravel, Django, FastAPI) and the database on the request path; Redis, queue workers, documents, signed webhooks and payment "
         "callbacks behind it; security, delivery and operations on every layer."
     )
     return svg(w, h, label, style, body)
@@ -363,52 +387,94 @@ def architecture(t):
 # --- project cards -----------------------------------------------------------
 
 
-def project(t, index, colour, status, title, description, steps, stack):
-    w, h = 1000, 176
-    c = t[colour]
-    style = base_style(t) + (
-        "@keyframes flow{to{stroke-dashoffset:-20}}"
-        f".l{{fill:none;stroke:{t['muted']};stroke-width:1.6;stroke-dasharray:4 6;animation:flow 1.2s linear infinite}}"
+def card(t, colour, status, title, description, stack):
+    """A plain card: title, description, and one status line."""
+    w, h = 600, 236
+    lines = "".join(
+        f'<text class="s mu" x="28" y="{98 + i * 26}" font-size="18">{escape(line)}</text>'
+        for i, line in enumerate(textwrap.wrap(description, 54)[:3])
     )
-    lines = textwrap.wrap(description, 58)[:3]
-    desc = "".join(
-        f'<text class="s mu" x="30" y="{104 + i * 20}" font-size="14.5">{escape(line)}</text>'
-        for i, line in enumerate(lines)
-    )
-    # Flow: nodes sit on top of one animated line, so the packet shows only in the gaps.
-    nw, gap, x0, y0, nh = 113, 16, 474, 30, 52
-    nodes = ""
-    for i, step in enumerate(steps):
-        x = x0 + i * (nw + gap)
-        last = i == len(steps) - 1
-        parts = step.split("\n")
-        top = y0 + (31 if len(parts) == 1 else 23)
-        nodes += f'<rect x="{x}" y="{y0}" width="{nw}" height="{nh}" rx="9" fill="{t["inset"]}" stroke="{c if last else t["stroke"]}"/>'
-        for j, part in enumerate(parts):
-            nodes += (
-                f'<text class="s t" x="{x + nw / 2}" y="{top + j * 16}" font-size="12.5" '
-                f'font-weight="{600 if last else 500}" text-anchor="middle">{escape(part)}</text>'
-            )
-    x1, mid = x0 + len(steps) * (nw + gap) - gap, y0 + nh / 2
-    chips, cx = "", x0
-    for name in stack:
-        cw = len(name) * 7.2 + 16
-        chips += (
-            f'<rect x="{cx}" y="112" width="{cw:.1f}" height="26" rx="13" fill="none" stroke="{t["stroke"]}"/>'
-            f'<text class="m mu" x="{cx + cw / 2:.1f}" y="129.5" font-size="12" text-anchor="middle">{escape(name)}</text>'
+    body = f"""<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="10" fill="{t['panel']}" stroke="{t['stroke']}"/>
+<text class="s t" x="28" y="56" font-size="23" font-weight="600">{escape(title)}</text>
+{lines}
+<circle cx="35" cy="{h - 35}" r="6.5" fill="{t[colour]}"/>
+<text class="s mu" x="50" y="{h - 29}" font-size="16">{escape(status)}  ·  {escape(stack)}</text>"""
+    return svg(w, h, f"{title} ({status}). {description} {stack}.", base_style(t), body)
+
+
+# --- how I work and the stack -------------------------------------------------
+
+
+def principles(t):
+    w, cols, tw, th, gap = 1200, 3, 384, 176, 24
+    rows = (len(PRINCIPLES) + cols - 1) // cols
+    h = rows * th + (rows - 1) * gap
+    body = ""
+    for i, (title, text, colour) in enumerate(PRINCIPLES):
+        x, y, c = (i % cols) * (tw + gap), (i // cols) * (th + gap), t[colour]
+        lines = "".join(
+            f'<text class="s mu" x="{x + 28}" y="{y + 92 + j * 22}" font-size="15.5">{escape(line)}</text>'
+            for j, line in enumerate(textwrap.wrap(text, 42)[:3])
         )
-        cx += cw + 5
-    body = f"""<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="14" fill="{t['panel']}" stroke="{t['stroke']}"/>
-<rect x="1" y="26" width="4" height="{h - 52}" rx="2" fill="{c}"/>
-<text class="m" x="30" y="42" font-size="12.5" letter-spacing="1.2"><tspan fill="{c}" font-weight="700">{index:02d}</tspan><tspan class="mu">  {escape(status.upper())}</tspan></text>
-<text class="s t" x="30" y="76" font-size="24" font-weight="700" letter-spacing="-.4">{escape(title)}</text>
-{desc}
-<path class="l" d="M{x0},{mid} H{x1}"/>
-<circle r="4" fill="{c}"><animateMotion dur="3.6s" begin="-{index * 0.5}s" repeatCount="indefinite" path="M{x0},{mid} H{x1}"/></circle>
-{nodes}
-{chips}"""
-    label = f"{title} ({status}). {description} Flow: {', '.join(s.replace(chr(10), ' ') for s in steps)}. Stack: {', '.join(stack)}."
-    return svg(w, h, label, style, body)
+        body += (
+            f'<rect x="{x + 1}" y="{y + 1}" width="{tw - 2}" height="{th - 2}" rx="16" fill="{t["panel"]}" stroke="{t["stroke"]}"/>'
+            f'<rect x="{x + 28}" y="{y + 1}" width="48" height="3" rx="1.5" fill="{c}"/>'
+            f'<text class="m" x="{x + 28}" y="{y + 40}" font-size="13" font-weight="700" letter-spacing="1.2" fill="{c}">{i + 1:02d}</text>'
+            f'<text class="s t" x="{x + 28}" y="{y + 66}" font-size="20" font-weight="700" letter-spacing="-.3">{escape(title)}</text>'
+            + lines
+        )
+    label = "How I work. " + " ".join(f"{a}: {b}" for a, b, _ in PRINCIPLES)
+    return svg(w, h, label, base_style(t), body)
+
+
+def luminance(hex_colour):
+    def channel(v):
+        v /= 255
+        return v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4
+    r, g, b = (int(hex_colour.lstrip("#")[k:k + 2], 16) for k in (0, 2, 4))
+    return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
+
+
+def logo_colour(t, hex_colour):
+    """Brand colour, unless it would vanish against the card (then the text colour)."""
+    a, b = luminance(hex_colour), luminance(t["panel"])
+    contrast = (max(a, b) + 0.05) / (min(a, b) + 0.05)
+    return f"#{hex_colour}" if contrast >= 2.2 else t["text"]
+
+
+def stack(t):
+    w, row = 1200, 56
+    h = len(STACK) * row + 36
+    body = f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="{t["panel"]}" stroke="{t["stroke"]}"/>'
+    for i, (layer, tools, colour) in enumerate(STACK):
+        y, c = 18 + i * row, t[colour]
+        if i:
+            body += f'<line x1="32" x2="{w - 32}" y1="{y}" y2="{y}" stroke="{t["stroke"]}" stroke-dasharray="2 6"/>'
+        body += (
+            f'<text class="m" x="40" y="{y + row / 2 + 5}" font-size="13.5" font-weight="700" letter-spacing="1.3" fill="{c}">{escape(layer)}</text>'
+        )
+        cx = 290
+        for name, icon in tools:
+            cw = len(name) * 8.6 + 58
+            ix, iy = cx + 14, y + 17
+            if icon in ICONS:
+                mark = (
+                    f'<g transform="translate({ix},{iy}) scale(.9167)">'
+                    f'<path d="{ICONS[icon]["path"]}" fill="{logo_colour(t, ICONS[icon]["hex"])}"/></g>'
+                )
+            else:
+                mark = (
+                    f'<g transform="translate({ix},{iy}) scale(.9167)" fill="none" stroke="{t["muted"]}" '
+                    f'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="{GLYPHS[icon]}"/></g>'
+                )
+            body += (
+                f'<rect x="{cx}" y="{y + 10}" width="{cw:.1f}" height="36" rx="18" fill="{t["inset"]}" stroke="{t["stroke"]}"/>'
+                + mark
+                + f'<text class="s t" x="{cx + 44}" y="{y + 33}" font-size="15" font-weight="500">{escape(name)}</text>'
+            )
+            cx += cw + 9
+    label = "Stack by layer. " + " ".join(f"{a.title()}: {', '.join(n for n, _ in b)}." for a, b, _ in STACK)
+    return svg(w, h, label, base_style(t), body)
 
 
 # --- journey -----------------------------------------------------------------
@@ -450,11 +516,12 @@ if __name__ == "__main__":
         path.write_text(button(*spec), encoding="utf-8")
         print(f"wrote {path.relative_to(OUT.parent)}")
     for theme, tokens in THEMES.items():
-        for name, build in (("hero", hero), ("architecture", architecture), ("journey", journey), ("footer", footer)):
+        for name, build in (("hero", hero), ("architecture", architecture), ("principles", principles), ("stack", stack), ("journey", journey), ("footer", footer)):
             path = OUT / f"{name}-{theme}.svg"
             path.write_text(build(tokens), encoding="utf-8")
             print(f"wrote {path.relative_to(OUT.parent)}")
-        for index, (slug, *card) in enumerate(PROJECTS, 1):
-            path = OUT / f"project-{slug}-{theme}.svg"
-            path.write_text(project(tokens, index, *card), encoding="utf-8")
-            print(f"wrote {path.relative_to(OUT.parent)}")
+        for projects in GROUPS.values():
+            for slug, *spec in projects:
+                path = OUT / f"card-{slug}-{theme}.svg"
+                path.write_text(card(tokens, *spec), encoding="utf-8")
+                print(f"wrote {path.relative_to(OUT.parent)}")
