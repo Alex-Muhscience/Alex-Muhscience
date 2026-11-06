@@ -47,13 +47,6 @@ ROTATING = [
     "Linux, Docker, CI/CD and keeping it all running",
     "Open source: Linux desktops, RPM packaging and QML",
 ]
-# Impact strip across the bottom of the hero: (value, label, colour)
-IMPACT = [
-    ("4", "platforms I own end to end", "blue"),
-    ("25,000+", "professionals served", "green"),
-    ("~60%", "less manual operations work", "amber"),
-    ("Top 5", "Mozilla Responsible Computing", "red"),
-]
 # How I work: (title, explanation, colour)
 PRINCIPLES = [
     ("Requirements first", "Architecture follows the problem. A content site and a multi-tenant ledger don't want the same design.", "blue"),
@@ -69,7 +62,7 @@ PRINCIPLES = [
 # The stack, by layer: (layer, tools, colour)
 STACK = [
     ("FRONTEND", [("React", "react"), ("Next.js", "nextdotjs"), ("TypeScript", "typescript"), ("Tailwind CSS", "tailwindcss"), ("Livewire", "livewire"), ("Alpine.js", "alpinedotjs")], "blue"),
-    ("BACKEND", [("Laravel", "laravel"), ("PHP", "php"), ("Node.js", "nodedotjs"), ("Python", "python"), ("FastAPI", "fastapi"), ("Flask", "flask")], "violet"),
+    ("BACKEND", [("Laravel", "laravel"), ("PHP", "php"), ("Node.js", "nodedotjs"), ("Python", "python"), ("Django", "django"), ("FastAPI", "fastapi"), ("Flask", "flask")], "violet"),
     ("DATA", [("PostgreSQL", "postgresql"), ("MySQL", "mysql"), ("MongoDB", "mongodb"), ("Redis", "redis"), ("SQLite", "sqlite"), ("Algolia", "algolia")], "teal"),
     ("INFRASTRUCTURE", [("Linux", "linux"), ("Docker", "docker"), ("nginx", "nginx"), ("Cloudflare", "cloudflare"), ("Vercel", "vercel"), ("GitHub Actions", "githubactions")], "amber"),
     ("SECURITY", [("JWT", "jsonwebtokens"), ("RBAC", "shield"), ("TOTP MFA", "shield"), ("Row-level security", "shield"), ("Audit trails", "shield")], "red"),
@@ -98,7 +91,7 @@ BUTTONS = [
 # The header draws the stack as four layers, top to bottom. (name, tools, colour)
 LAYERS = [
     ("INTERFACE", "React · Next.js · TypeScript", "blue"),
-    ("APPLICATION", "Node.js · Laravel · FastAPI · Flask", "violet"),
+    ("APPLICATION", "Laravel · Django · Node.js · FastAPI", "violet"),
     ("DATA", "PostgreSQL · MySQL · MongoDB · Redis", "teal"),
     ("INFRASTRUCTURE", "Linux · Docker · nginx · CI/CD", "amber"),
 ]
@@ -187,7 +180,7 @@ def slab(t, colour, cx, cy, a, b, depth):
 
 
 def hero(t):
-    w, h = 1200, 430
+    w, h = 1200, 320
     share = 100 // len(ROTATING)  # each line's slice of the cycle, in percent
     style = base_style(t) + (
         "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}"
@@ -199,11 +192,11 @@ def hero(t):
     )
     rotating = "".join(
         f'<text class="m mu r{" r1" if i == 0 else ""}" style="animation-delay:{i * 4}s" '
-        f'x="82" y="254" font-size="17">{escape(line)}</text>'
+        f'x="82" y="262" font-size="17">{escape(line)}</text>'
         for i, line in enumerate(ROTATING)
     )
     # Isometric stack: each layer is a slab (top face plus two sides), drawn bottom-up.
-    cx, a, b, depth, first, step = 1036, 124, 62, 13, 74, 46
+    cx, a, b, depth, first, step = 1036, 124, 62, 13, 88, 46
     slabs = ""
     for i in reversed(range(len(LAYERS))):
         name, tools, colour = LAYERS[i]
@@ -219,18 +212,6 @@ def hero(t):
             + "</g>"
         )
     last = first + (len(LAYERS) - 1) * step
-    # Impact strip: four figures under a divider.
-    top, cell = 318, (w - 2) / len(IMPACT)
-    impact = f'<rect x="1" y="{top}" width="{w - 2}" height="{h - top - 1}" fill="{t["inset"]}" opacity=".55"/>'
-    impact += f'<line x1="1" x2="{w - 1}" y1="{top}" y2="{top}" stroke="{t["stroke"]}"/>'
-    for i, (value, label, colour) in enumerate(IMPACT):
-        x = 1 + i * cell
-        if i:
-            impact += f'<line x1="{x}" x2="{x}" y1="{top + 22}" y2="{h - 22}" stroke="{t["stroke"]}"/>'
-        impact += (
-            f'<text class="s" x="{x + 54}" y="{top + 58}" font-size="34" font-weight="800" letter-spacing="-1" fill="{t[colour]}">{escape(value)}</text>'
-            f'<text class="s mu" x="{x + 55}" y="{top + 86}" font-size="15">{escape(label)}</text>'
-        )
     # A request travelling down the stack's right edge, and the response coming back.
     wire = f"M{cx + a + 14},{first} V{last}"
     body = f"""<defs>
@@ -247,22 +228,20 @@ def hero(t):
 <rect width="{w}" height="{h}" fill="url(#glow)"/>
 </g>
 <rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="18" fill="none" stroke="{t['stroke']}"/>
-<circle class="ok p" cx="62" cy="67" r="5"/>
-<text class="m mu" x="78" y="72" font-size="15">{escape(STATUS)}</text>
-<text class="s t" x="54" y="150" font-size="58" font-weight="700" letter-spacing="-1.2">{escape(NAME)}</text>
-<text class="s" x="56" y="194" font-size="21"><tspan class="t" font-weight="600">{escape(ROLE[0])}</tspan><tspan class="mu">{escape(ROLE[1])}</tspan></text>
-<rect x="56" y="214" width="64" height="4" rx="2" fill="url(#bar)"/>
-<text class="m ac" x="56" y="254" font-size="17" font-weight="700">›</text>
+<circle class="ok p" cx="62" cy="77" r="5"/>
+<text class="m mu" x="78" y="82" font-size="15">{escape(STATUS)}</text>
+<text class="s t" x="54" y="158" font-size="58" font-weight="700" letter-spacing="-1.2">{escape(NAME)}</text>
+<text class="s" x="56" y="202" font-size="21"><tspan class="t" font-weight="600">{escape(ROLE[0])}</tspan><tspan class="mu">{escape(ROLE[1])}</tspan></text>
+<rect x="56" y="222" width="64" height="4" rx="2" fill="url(#bar)"/>
+<text class="m ac" x="56" y="262" font-size="17" font-weight="700">›</text>
 {rotating}
 <ellipse cx="{cx}" cy="{last + b + depth + 8}" rx="{a * 0.8}" ry="8" fill="#000" opacity=".1"/>
 <path d="{wire}" stroke="{t['stroke']}" stroke-width="1.6" stroke-dasharray="3 5"/>
 <circle r="4" fill="{t['accent']}"><animateMotion dur="2.8s" repeatCount="indefinite" path="{wire}"/></circle>
 <circle r="4" fill="{t['accent2']}"><animateMotion dur="2.8s" begin="-1.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" path="{wire}"/></circle>
-{slabs}
-{impact}"""
+{slabs}"""
     layers = "; ".join(f"{name.lower()}: {tools}" for name, tools, _ in LAYERS)
-    impact_text = "; ".join(f"{v} {l}" for v, l, _ in IMPACT)
-    return svg(w, h, f"{NAME} — senior full-stack engineer and technical owner of production platforms. {impact_text}. The stack, top to bottom: {layers}.", style, body)
+    return svg(w, h, f"{NAME} — senior full-stack engineer and technical owner of production platforms. The stack, top to bottom: {layers}.", style, body)
 
 
 # --- link buttons and footer -------------------------------------------------
@@ -323,7 +302,7 @@ BOXES = {
     "client": (24, 56, 160, 92, "Client", "browser · mobile"),
     "edge": (232, 56, 190, 92, "Cloudflare", "edge caching"),
     "nginx": (470, 56, 170, 92, "nginx", "reverse proxy · TLS"),
-    "app": (688, 56, 230, 92, "Application", "React · Next.js · Node.js\nLaravel · FastAPI · Flask"),
+    "app": (688, 56, 230, 92, "Application", "React · Next.js · Node.js\nLaravel · Django · FastAPI"),
     "pg": (966, 56, 210, 92, "Database", "PostgreSQL · MySQL\nMongoDB"),
     "pay": (232, 250, 190, 92, "Paystack · M-Pesa", "verified callbacks"),
     "redis": (688, 250, 230, 92, "Redis", "cache · sessions · queues"),
@@ -399,7 +378,7 @@ def architecture(t):
 {bands}"""
     label = (
         "How the platforms are put together: client, Cloudflare, nginx, the application (React, Next.js, Node.js, "
-        "Laravel, FastAPI, Flask) and the database on the request path; Redis, queue workers, documents, signed webhooks and payment "
+        "Laravel, Django, FastAPI) and the database on the request path; Redis, queue workers, documents, signed webhooks and payment "
         "callbacks behind it; security, delivery and operations on every layer."
     )
     return svg(w, h, label, style, body)

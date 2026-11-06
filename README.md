@@ -4,7 +4,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg" />
-  <img src="assets/hero-dark.svg" width="100%" alt="Alex Murimi Kamau — senior full-stack engineer and technical owner. 4 platforms owned end to end, 25,000+ professionals served, ~60% less manual operations work, Mozilla Responsible Computing Top 5." />
+  <img src="assets/hero-dark.svg" width="100%" alt="Alex Murimi Kamau — senior full-stack engineer and technical owner of production platforms"  />
 </picture>
 </a>
 
@@ -60,7 +60,7 @@ A boring, fast request path, with everything slow or failure-prone pushed behind
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg" />
-  <img src="assets/stack-dark.svg" width="100%" alt="Stack by layer. Frontend: React, Next.js, TypeScript, Tailwind CSS, Livewire, Alpine.js. Backend: Laravel, PHP, Node.js, Python, FastAPI, Flask. Data: PostgreSQL, MySQL, MongoDB, Redis, SQLite, Algolia. Infrastructure: Linux, Docker, nginx, Cloudflare, Vercel, GitHub Actions. Security: JWT, RBAC, TOTP MFA, row-level security, audit trails. Payments and testing: Paystack, M-Pesa, PHPUnit, Playwright, k6. Systems: Qt 6 / QML, Hyprland, Fedora RPM, systemd." />
+  <img src="assets/stack-dark.svg" width="100%" alt="Stack by layer. Frontend: React, Next.js, TypeScript, Tailwind CSS, Livewire, Alpine.js. Backend: Laravel, PHP, Node.js, Python, Django, FastAPI, Flask. Data: PostgreSQL, MySQL, MongoDB, Redis, SQLite, Algolia. Infrastructure: Linux, Docker, nginx, Cloudflare, Vercel, GitHub Actions. Security: JWT, RBAC, TOTP MFA, row-level security, audit trails. Payments and testing: Paystack, M-Pesa, PHPUnit, Playwright, k6. Systems: Qt 6 / QML, Hyprland, Fedora RPM, systemd." />
 </picture>
 
 ## Journey
