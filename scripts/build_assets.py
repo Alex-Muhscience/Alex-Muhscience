@@ -101,7 +101,7 @@ LAYERS = [
 GROUPS = {
     "business": [
         ("euroafrique", "green", "In production", "EuroAfrique Corporate Skills",
-         "Corporate training platform for a network of 25,000+ professionals in 50+ countries, with M-Pesa and card payments and automated enrolment documents.",
+         "Corporate training platform: programme publishing, applications, M-Pesa and card payments confirmed by signed callbacks, and automated enrolment documents.",
          "Laravel · MySQL · Redis · M-Pesa"),
         ("afriasia", "green", "In production", "AfriAsia Career Development Center",
          "Executive-training and booking platform with Paystack in USD and KES, idempotent payment recording, queued invoices and certificates, and admin MFA.",
