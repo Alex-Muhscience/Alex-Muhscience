@@ -64,46 +64,38 @@ LAYERS = [
     ("INFRASTRUCTURE", "Linux · Docker · nginx · CI/CD", "amber"),
 ]
 
-# Featured projects. Each card shows what the system does as a four-step flow.
-# (slug, colour, status, title, description, flow steps, stack)
-PROJECTS = [
-    ("businessos", "blue", "in development · private", "BusinessOS",
-     "Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance, HR and projects on one governed data model.",
-     ["Tenant\nrequest", "Row-level\nsecurity", "Idempotent\nwrite", "Outbox +\nwebhooks"],
-     ["Laravel 13", "Next.js 16", "PostgreSQL 18", "Redis", "Docker", "nginx"]),
-    ("utdrs", "red", "live · Vercel + Render · Mozilla RCC Top 5", "UTDRS",
-     "Unified threat detection and response: events run through ATT&CK-mapped rules, anomaly and ML detectors, and analysts triage alerts in a React dashboard.",
-     ["Event", "ATT&CK\nrules", "Anomaly +\nML detectors", "Analyst\ntriage"],
-     ["Python", "FastAPI", "React", "TypeScript", "MongoDB", "C", "Docker"]),
-    ("secure-file-sharing", "cyan", "in development · private", "Secure File Sharing Platform",
-     "Encrypted file sharing for teams: resumable uploads encrypted chunk by chunk, malware scanning before release and verified recipients.",
-     ["Chunked\nupload", "AES-256-GCM\nat rest", "ClamAV\nquarantine", "Verified\ndownload"],
-     ["Node.js", "Express", "MongoDB", "S3", "ClamAV", "libsodium", "Docker"]),
-    ("muhos", "violet", "pre-release · open source · AGPL-3.0", "MuhOS",
-     "Open-source desktop shell for Hyprland on Fedora: RPM packaging and a GDM session, a redesigned GNOME-style interface, and benchmarked performance.",
-     ["GDM\nlogin", "systemd\nsession", "Hyprland +\nQuickshell", "MuhOS\ndesktop"],
-     ["QML", "Qt 6", "Quickshell", "Hyprland", "Fedora RPM", "systemd", "Python"]),
-    ("euroafrique", "green", "in production · sole technical owner", "EuroAfrique Corporate Skills",
-     "Corporate training platform: programme publishing, applications, M-Pesa and card payments, and automated enrolment documents.",
-     ["Programme", "Application", "M-Pesa /\ncard payment", "Enrolment\ndocuments"],
-     ["Laravel", "MySQL", "Redis", "Paystack", "M-Pesa", "Algolia", "Cloudflare"]),
-    ("afriasia", "amber", "in production · sole technical owner", "AfriAsia Career Development Center",
-     "Executive-training, booking and document platform with a public catalogue and an admin portal.",
-     ["Catalogue", "Booking", "Paystack\nUSD / KES", "Invoice +\ncertificate"],
-     ["Laravel 12", "Livewire", "Alpine.js", "Tailwind", "MySQL", "Redis"]),
-    ("chania-finance", "red", "in development · sole technical owner", "Chania Finance Consultancy",
-     "Finance-training platform: catalogue search at scale, calendar booking by venue, organisation invoicing, and admin and trainer portals.",
-     ["Course\nsearch", "Venue +\ncalendar", "Team\nregistration", "Invoice +\nPaystack"],
-     ["Laravel 12", "Livewire 4", "Alpine.js", "Tailwind", "MySQL", "DomPDF"]),
-    ("chania", "violet", "in production · sole technical owner", "Chania Publishers LMS",
-     "Learning management system built from concept to production for an educational publisher.",
-     ["Subscriber", "Verified\npayment", "Access\ncheck", "Video\nstream"],
-     ["PHP", "MySQL", "JavaScript", "Linux"]),
-    ("muhscience", "teal", "live on Vercel · open source", "Muhscience Tech Labs",
-     "Company site on the Next.js App Router with server-handled enquiry forms, technical SEO and security headers.",
-     ["Visitor", "App Router\npage", "Enquiry\nform", "Server\nhandler"],
-     ["Next.js 15", "React 19", "TypeScript", "Tailwind", "shadcn/ui", "MongoDB"]),
-]
+# Project cards, shown two per row. Each group becomes a 2-column grid in the README.
+# (slug, colour, status, title, description, stack)
+GROUPS = {
+    "business": [
+        ("euroafrique", "green", "In production", "EuroAfrique Corporate Skills",
+         "Corporate training platform: programme publishing, applications, M-Pesa and card payments, automated enrolment documents.",
+         ["Laravel", "MySQL", "Redis", "M-Pesa", "Cloudflare"]),
+        ("afriasia", "amber", "In production", "AfriAsia Career Development Center",
+         "Executive-training and booking platform: Paystack in USD/KES, queued invoices and certificates, admin MFA.",
+         ["Laravel 12", "Livewire", "MySQL", "Redis", "Paystack"]),
+        ("chania", "violet", "In production", "Chania Publishers LMS",
+         "Learning management system: access granted only on verified payment, video streamed through an access-checked endpoint.",
+         ["PHP", "MySQL", "JavaScript", "Linux"]),
+        ("chania-finance", "red", "In development", "Chania Finance Consultancy",
+         "Finance-training platform: search at catalogue scale, calendar booking by venue, organisation invoicing, admin and trainer portals.",
+         ["Laravel 12", "Livewire 4", "MySQL", "DomPDF"]),
+    ],
+    "products": [
+        ("businessos", "blue", "In development · private", "BusinessOS",
+         "Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance and HR on one governed data model.",
+         ["Laravel 13", "Next.js 16", "PostgreSQL", "Redis", "Docker"]),
+        ("utdrs", "red", "Live · Mozilla RCC Top 5", "UTDRS",
+         "Unified threat detection and response: ATT&CK-mapped rules, anomaly and ML detectors, analyst triage in React.",
+         ["Python", "FastAPI", "React", "MongoDB", "Docker"]),
+        ("secure-file-sharing", "cyan", "In development · private", "Secure File Sharing",
+         "Encrypted file sharing for teams: resumable uploads sealed chunk by chunk with AES-256-GCM, ClamAV quarantine, verified recipients.",
+         ["Node.js", "MongoDB", "S3", "ClamAV", "libsodium"]),
+        ("muhos", "violet", "Pre-release · AGPL-3.0", "MuhOS",
+         "Open-source desktop shell for Hyprland on Fedora: RPM packaging, a GDM session and a redesigned GNOME-style interface.",
+         ["QML", "Qt 6", "Quickshell", "Fedora RPM", "systemd"]),
+    ],
+}
 
 # (when, role, where, kind) — newest first; kind is "now", "past" or "study"
 JOURNEY = [
@@ -363,52 +355,37 @@ def architecture(t):
 # --- project cards -----------------------------------------------------------
 
 
-def project(t, index, colour, status, title, description, steps, stack):
-    w, h = 1000, 176
+def card(t, colour, status, title, description, stack):
+    """Compact card, drawn to sit two per row (each about half the README width)."""
+    w, h = 600, 250
     c = t[colour]
-    style = base_style(t) + (
-        "@keyframes flow{to{stroke-dashoffset:-20}}"
-        f".l{{fill:none;stroke:{t['muted']};stroke-width:1.6;stroke-dasharray:4 6;animation:flow 1.2s linear infinite}}"
-    )
-    lines = textwrap.wrap(description, 58)[:3]
+    lines = textwrap.wrap(description, 54)[:3]
     desc = "".join(
-        f'<text class="s mu" x="30" y="{104 + i * 20}" font-size="14.5">{escape(line)}</text>'
+        f'<text class="s mu" x="34" y="{122 + i * 24}" font-size="17">{escape(line)}</text>'
         for i, line in enumerate(lines)
     )
-    # Flow: nodes sit on top of one animated line, so the packet shows only in the gaps.
-    nw, gap, x0, y0, nh = 113, 16, 474, 30, 52
-    nodes = ""
-    for i, step in enumerate(steps):
-        x = x0 + i * (nw + gap)
-        last = i == len(steps) - 1
-        parts = step.split("\n")
-        top = y0 + (31 if len(parts) == 1 else 23)
-        nodes += f'<rect x="{x}" y="{y0}" width="{nw}" height="{nh}" rx="9" fill="{t["inset"]}" stroke="{c if last else t["stroke"]}"/>'
-        for j, part in enumerate(parts):
-            nodes += (
-                f'<text class="s t" x="{x + nw / 2}" y="{top + j * 16}" font-size="12.5" '
-                f'font-weight="{600 if last else 500}" text-anchor="middle">{escape(part)}</text>'
-            )
-    x1, mid = x0 + len(steps) * (nw + gap) - gap, y0 + nh / 2
-    chips, cx = "", x0
+    chips, cx = "", 34
     for name in stack:
-        cw = len(name) * 7.2 + 16
+        cw = len(name) * 8.4 + 20
+        if cx + cw > w - 24:
+            break
         chips += (
-            f'<rect x="{cx}" y="112" width="{cw:.1f}" height="26" rx="13" fill="none" stroke="{t["stroke"]}"/>'
-            f'<text class="m mu" x="{cx + cw / 2:.1f}" y="129.5" font-size="12" text-anchor="middle">{escape(name)}</text>'
+            f'<rect x="{cx}" y="{h - 56}" width="{cw:.1f}" height="30" rx="15" fill="none" stroke="{t["stroke"]}"/>'
+            f'<text class="m mu" x="{cx + cw / 2:.1f}" y="{h - 36}" font-size="14" text-anchor="middle">{escape(name)}</text>'
         )
-        cx += cw + 5
-    body = f"""<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="14" fill="{t['panel']}" stroke="{t['stroke']}"/>
-<rect x="1" y="26" width="4" height="{h - 52}" rx="2" fill="{c}"/>
-<text class="m" x="30" y="42" font-size="12.5" letter-spacing="1.2"><tspan fill="{c}" font-weight="700">{index:02d}</tspan><tspan class="mu">  {escape(status.upper())}</tspan></text>
-<text class="s t" x="30" y="76" font-size="24" font-weight="700" letter-spacing="-.4">{escape(title)}</text>
+        cx += cw + 7
+    live = status.lower().startswith(("in production", "live"))
+    dot = f'<circle class="{"p" if live else ""}" cx="40" cy="41" r="5" fill="{c}"/>'
+    style = base_style(t) + "@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}.p{animation:pulse 2.4s ease-in-out infinite}"
+    body = f"""<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="16" fill="{t['panel']}" stroke="{t['stroke']}"/>
+<rect x="1" y="30" width="5" height="{h - 60}" rx="2.5" fill="{c}"/>
+{dot}
+<text class="m" x="54" y="46" font-size="14" letter-spacing="1"><tspan fill="{c}" font-weight="700">{escape(status.upper())}</tspan></text>
+<text class="s t" x="34" y="88" font-size="28" font-weight="700" letter-spacing="-.5">{escape(title)}</text>
+<text class="s mu" x="{w - 34}" y="46" font-size="20" text-anchor="end">↗</text>
 {desc}
-<path class="l" d="M{x0},{mid} H{x1}"/>
-<circle r="4" fill="{c}"><animateMotion dur="3.6s" begin="-{index * 0.5}s" repeatCount="indefinite" path="M{x0},{mid} H{x1}"/></circle>
-{nodes}
 {chips}"""
-    label = f"{title} ({status}). {description} Flow: {', '.join(s.replace(chr(10), ' ') for s in steps)}. Stack: {', '.join(stack)}."
-    return svg(w, h, label, style, body)
+    return svg(w, h, f"{title} ({status}). {description} Stack: {', '.join(stack)}.", style, body)
 
 
 # --- journey -----------------------------------------------------------------
@@ -454,7 +431,8 @@ if __name__ == "__main__":
             path = OUT / f"{name}-{theme}.svg"
             path.write_text(build(tokens), encoding="utf-8")
             print(f"wrote {path.relative_to(OUT.parent)}")
-        for index, (slug, *card) in enumerate(PROJECTS, 1):
-            path = OUT / f"project-{slug}-{theme}.svg"
-            path.write_text(project(tokens, index, *card), encoding="utf-8")
-            print(f"wrote {path.relative_to(OUT.parent)}")
+        for projects in GROUPS.values():
+            for slug, *spec in projects:
+                path = OUT / f"card-{slug}-{theme}.svg"
+                path.write_text(card(tokens, *spec), encoding="utf-8")
+                print(f"wrote {path.relative_to(OUT.parent)}")

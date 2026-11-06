@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" width="600" height="250" role="img" aria-label="BusinessOS (In development · private). Multi-tenant operating system for SMEs: CRM, sales, procurement, inventory, finance and HR on one governed data model. Stack: Laravel 13, Next.js 16, PostgreSQL, Redis, Docker.">
+<style>.s{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif}.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}.t{fill:#0f172a}.mu{fill:#566273}.ac{fill:#2563eb}.ok{fill:#15803d}.warn{fill:#a16207}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}.p{animation:pulse 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}.r1{opacity:1!important}}</style>
+<rect x="1" y="1" width="598" height="248" rx="16" fill="#f7f9fc" stroke="#d5dce6"/>
+<rect x="1" y="30" width="5" height="190" rx="2.5" fill="#2563eb"/>
+<circle class="" cx="40" cy="41" r="5" fill="#2563eb"/>
+<text class="m" x="54" y="46" font-size="14" letter-spacing="1"><tspan fill="#2563eb" font-weight="700">IN DEVELOPMENT · PRIVATE</tspan></text>
+<text class="s t" x="34" y="88" font-size="28" font-weight="700" letter-spacing="-.5">BusinessOS</text>
+<text class="s mu" x="566" y="46" font-size="20" text-anchor="end">↗</text>
+<text class="s mu" x="34" y="122" font-size="17">Multi-tenant operating system for SMEs: CRM, sales,</text><text class="s mu" x="34" y="146" font-size="17">procurement, inventory, finance and HR on one governed</text><text class="s mu" x="34" y="170" font-size="17">data model.</text>
+<rect x="34" y="194" width="104.0" height="30" rx="15" fill="none" stroke="#d5dce6"/><text class="m mu" x="86.0" y="214" font-size="14" text-anchor="middle">Laravel 13</text><rect x="145.0" y="194" width="104.0" height="30" rx="15" fill="none" stroke="#d5dce6"/><text class="m mu" x="197.0" y="214" font-size="14" text-anchor="middle">Next.js 16</text><rect x="256.0" y="194" width="104.0" height="30" rx="15" fill="none" stroke="#d5dce6"/><text class="m mu" x="308.0" y="214" font-size="14" text-anchor="middle">PostgreSQL</text><rect x="367.0" y="194" width="62.0" height="30" rx="15" fill="none" stroke="#d5dce6"/><text class="m mu" x="398.0" y="214" font-size="14" text-anchor="middle">Redis</text><rect x="436.0" y="194" width="70.4" height="30" rx="15" fill="none" stroke="#d5dce6"/><text class="m mu" x="471.2" y="214" font-size="14" text-anchor="middle">Docker</text>
+</svg>
