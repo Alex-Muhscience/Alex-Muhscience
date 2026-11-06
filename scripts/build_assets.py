@@ -40,7 +40,7 @@ THEMES = {
 
 NAME = "Alex Murimi Kamau"
 STATUS = "open to remote · Nairobi, Kenya · UTC+3"
-ROLE = ("Senior full-stack engineer", " · technical owner")
+ROLE = ("Full-stack engineer", " · technical owner")
 ROTATING = [
     "I build and run production platforms end to end",
     "Payments, multi-tenancy, RBAC and audit trails",
@@ -241,7 +241,7 @@ def hero(t):
 <circle r="4" fill="{t['accent2']}"><animateMotion dur="2.8s" begin="-1.4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" path="{wire}"/></circle>
 {slabs}"""
     layers = "; ".join(f"{name.lower()}: {tools}" for name, tools, _ in LAYERS)
-    return svg(w, h, f"{NAME} — senior full-stack engineer and technical owner of production platforms. The stack, top to bottom: {layers}.", style, body)
+    return svg(w, h, f"{NAME} — full-stack engineer and technical owner of production platforms. The stack, top to bottom: {layers}.", style, body)
 
 
 # --- link buttons and footer -------------------------------------------------
