@@ -4,7 +4,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg" />
-  <img src="assets/hero-dark.svg" width="100%" alt="Alex Murimi Kamau — senior full-stack engineer and technical owner of production platforms"  />
+  <img src="assets/hero-dark.svg" width="100%" alt="Alex Murimi Kamau — full-stack engineer and technical owner of production platforms"  />
 </picture>
 </a>
 
@@ -14,7 +14,7 @@
 
 <br/>
 
-I'm a senior full-stack engineer who designs, builds and **runs** the platforms businesses depend on, from the first requirements conversation to the Linux server and every release after it.
+I'm a full-stack engineer who designs, builds and **runs** the platforms businesses depend on, from the first requirements conversation to the Linux server and every release after it.
 
 Today I'm the sole technical owner of four companies' platforms, and I build my own products and open-source software alongside. My bias is towards systems that are calm to operate: clear data models, payments that can't double-charge, security designed into the first schema, and performance measured before it's optimised.
 
