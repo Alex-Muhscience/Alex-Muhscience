@@ -16,7 +16,7 @@
 
 I design, build and **operate** business-critical web platforms from the first requirements conversation to the production server, and everything after it ships.
 
-Today I'm the full-stack developer and sole technical owner for three companies: **EuroAfrique Corporate Skills**, **Chania Publishers** and **AfriAsia Career Development Center**. Each runs on a platform I architected, built, deployed and keep running. On the side, I'm building **BusinessOS**, a multi-tenant business operating system, and a **secure file sharing platform** for teams, and I maintain **[MuhOS](https://github.com/Alex-Muhscience/MuhOS)**, an open-source desktop shell for Hyprland on Fedora. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
+Today I'm the full-stack developer and sole technical owner for four companies: **EuroAfrique Corporate Skills**, **Chania Publishers**, **AfriAsia Career Development Center** and **Chania Finance Consultancy**. Each has a platform I architected and built, and I deploy and run them: three are in production, and Chania Finance Consultancy's is in final development. On the side, I'm building **BusinessOS**, a multi-tenant business operating system, and a **secure file sharing platform** for teams, and I maintain **[MuhOS](https://github.com/Alex-Muhscience/MuhOS)**, an open-source desktop shell for Hyprland on Fedora. I was a **Top 5 finalist** in the Mozilla Responsible Computing Challenge.
 
 I pick the stack to fit the problem: **React** and **Next.js** on the front, **Node.js**, **Laravel**, **FastAPI** or **Flask** behind it, and **TypeScript**, **Python** and **PHP** as the working languages.
 
@@ -91,6 +91,14 @@ Each card traces what the system does, left to right. Click one to open it.
 </picture>
 </a>
 
+<a href="https://portfolio-alex-m-kamau.vercel.app/work/chania-finance-consultancy">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-chania-finance-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-chania-finance-light.svg" />
+  <img src="assets/project-chania-finance-dark.svg" width="100%" alt="Chania Finance Consultancy — finance-training and booking platform, in development. Laravel 12, Livewire 4, Alpine.js, Tailwind, MySQL, DomPDF." />
+</picture>
+</a>
+
 <a href="https://chaniapublishers.com">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-chania-dark.svg" />
@@ -147,6 +155,12 @@ Each card traces what the system does, left to right. Click one to open it.
 - Queued PDF/DOCX invoices, letters and certificates
 - Admin **TOTP MFA**, single-session enforcement
 - Spatie roles & permissions, audit logs
+
+**[Chania Finance Consultancy](https://portfolio-alex-m-kamau.vercel.app/work/chania-finance-consultancy)** — in development, sole technical owner
+- Three-step booking: format → venue and fee → start week on a **12-month calendar**
+- Sessions belong to venues; **Monday-to-Friday** rule enforced in the model, auto-expiry at 00:01
+- **FULLTEXT** course search with synonyms, built for tens of thousands of courses
+- **N+1 query budget** enforced by the test suite; admin notification counters from one indexed query
 
 **[Chania Publishers LMS](https://chaniapublishers.com)** — in production, sole technical owner
 - Access granted only on **verified payment**
