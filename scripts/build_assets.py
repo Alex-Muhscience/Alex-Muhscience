@@ -113,8 +113,8 @@ GROUPS = {
          "Corporate training platform: programme publishing, applications, M-Pesa and card payments confirmed by signed callbacks, and automated enrolment documents.",
          "Laravel · MySQL · Redis · M-Pesa"),
         ("afriasia", "green", "In production", "AfriAsia Career Development Center",
-         "Executive-training and booking platform with Paystack in USD and KES, idempotent payment recording, queued invoices and certificates, and admin MFA.",
-         "Laravel · Livewire · MySQL · Redis"),
+         "Executive-training platform: 17,000+ courses in 16 cities, booking by city and date, Paystack in USD and KES, and releases built in CI through a staging site.",
+         "Laravel · Livewire · MySQL · GitHub Actions"),
         ("chania", "green", "In production", "Chania Publishers LMS",
          "Learning management system for an educational publisher. Access only on verified payment, video streamed through an access-checked endpoint.",
          "PHP · MySQL · JavaScript · Linux"),
@@ -141,7 +141,7 @@ GROUPS = {
 # Screenshots for the cards (scripts/shots, cropped from the live sites), embedded in the SVGs.
 SHOTS = {
     "euroafrique": "euroafriquecorporateskills.com",
-    "afriasia": "afriasiacareercenter.com",
+    "afriasia": "www.afriasiacareercenter.com",
     "chania": "chaniapublishers.com",
     "chania-finance": "chaniafinanceconsultancy.com",
     "utdrs": "utdrs-capstone-project.vercel.app",
