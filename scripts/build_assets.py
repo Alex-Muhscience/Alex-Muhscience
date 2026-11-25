@@ -132,7 +132,7 @@ GROUPS = {
         ("secure-file-sharing", "amber", "In development", "Secure File Sharing",
          "Encrypted file sharing for teams: resumable uploads sealed chunk by chunk with AES-256-GCM, quarantined until ClamAV clears them.",
          "Node.js · MongoDB · S3 · ClamAV"),
-        ("muhos", "green", "v0.1.0 released · open source", "MuhOS",
+        ("muhos", "green", "Released · open source", "MuhOS",
          "macOS-style desktop for Fedora on Hyprland, shipped as RPMs with a GDM session, a one-command installer and updates. Idle shell CPU cut ~9× in a VM.",
          "QML · Qt 6 · Quickshell · systemd"),
     ],
